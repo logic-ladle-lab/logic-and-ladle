@@ -191,3 +191,116 @@ td strong {
     font-size: 1rem;
     color: #888;
 }
+
+/* --- トップページ用デザイン --- */
+
+/* ヘッダーのレイアウト調整 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.site-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* ヒーローエリア（看板） */
+.hero {
+    text-align: center;
+    padding: 60px 0 80px;
+}
+
+.hero h1 {
+    font-size: 3.5rem; /* かなり大きく */
+    font-family: var(--font-mono); /* 英語フォントでカッコよく */
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.accent-text {
+    color: var(--color-accent);
+}
+
+.hero p {
+    color: #888;
+    font-size: 1rem;
+}
+
+/* セクションタイトル */
+.section-title {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--color-line);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    color: #888;
+}
+
+/* 記事一覧グリッド */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 画面幅に合わせて列数を自動調整 */
+    gap: 20px;
+}
+
+/* 記事カード */
+.article-card {
+    display: block;
+    background-color: #252526;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    padding: 25px;
+    text-decoration: none; /* リンクの下線を消す */
+    color: var(--color-text);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.article-card:hover {
+    transform: translateY(-5px); /* ホバー時に少し浮く */
+    border-color: var(--color-accent); /* 枠がオレンジに */
+}
+
+.category {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.article-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: var(--color-text); /* リンク色でなく文字色にする */
+}
+
+.article-card p {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.card-meta {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: #666;
+    font-family: var(--font-mono);
+    text-align: right;
+}
+
+/* ダミーカード（準備中） */
+.dummy {
+    opacity: 0.5;
+    pointer-events: none;
+}
