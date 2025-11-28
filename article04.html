@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コラーゲンの熱分解 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- ファビコン -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <!-- 記事コンテンツ -->
+    <main class="article-container">
+        <article>
+            <div class="article-header header-collagen">
+                <span class="article-id">Exp.04</span>
+                <span class="category-tag">Protein / Meat</span>
+                <h1 class="article-main-title">コラーゲンの熱分解：<br>硬い肉を「ゼラチン」に変えるＴ-Ｔカーブ</h1>
+                <p class="lead">
+                    「煮込み」とは、単に湯で加熱することではない。<br>
+                    それは、強固な結合組織（コラーゲン）の三重螺旋構造を物理的に解きほぐし、可溶性の「ゼラチン」へと相転移させる化学プロセスだ。<br>
+                    圧力鍋の是非と、80℃の長時間調理がもたらす至高の食感について。
+                </p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：なぜスネ肉は硬いのか</h2>
+                <p>
+                    ヒレ肉が柔らかく、スネ肉や肩肉が硬いのはなぜか。それは「運動量」の違いにある。
+                    よく動く部位は、筋肉を支えるための結合組織（Connective Tissue）が発達する。
+                    この結合組織の主成分こそが<strong>コラーゲン (Collagen)</strong> だ。
+                </p>
+                <div class="callout">
+                    <strong>Historical Note:</strong><br>
+                    コラーゲンの語源はギリシャ語の「kolla（にかわ/接着剤）」にある。
+                    古代から人類は、動物の皮や骨を煮詰めてコラーゲンを抽出・濃縮し、強力な接着剤「膠（にかわ）」として利用してきた。
+                    煮込み料理とは、この「接着剤」を溶かしてソースにする行為に他ならない。
+                </div>
+            </section>
+
+            <section>
+                <h2>2.0 基礎原理：三重螺旋の崩壊</h2>
+                <p>
+                    生のコラーゲンは、3本のポリペプチド鎖が強く絡み合った<strong>「三重螺旋構造 (Triple Helix)」</strong>をしている。
+                    これはロープのように極めて強靭で、噛み切ることができない。
+                    しかし、長時間熱を加えると、この螺旋がほどけ、バラバラの水溶性タンパク質へと変化する。これが<strong>「ゼラチン化 (Gelatinization)」</strong>だ。
+                </p>
+
+                <!-- コラーゲン分解図解 -->
+                <div class="reaction-diagram-box collagen-diagram">
+                    <div class="molecule-step">
+                        <div class="helix-structure">
+                            <div class="strand s1"></div>
+                            <div class="strand s2"></div>
+                            <div class="strand s3"></div>
+                        </div>
+                        <span class="molecule-desc">Collagen<br>(三重螺旋・不溶性)</span>
+                    </div>
+                    <div class="operator arrow-right">
+                        <span class="heat-label">HEAT + WATER</span>
+                        →
+                    </div>
+                    <div class="molecule-step">
+                        <div class="gelatin-structure">
+                            <div class="strand wavy w1"></div>
+                            <div class="strand wavy w2"></div>
+                            <div class="strand wavy w3"></div>
+                        </div>
+                        <span class="molecule-desc">Gelatin<br>(一本鎖・水溶性)</span>
+                    </div>
+                </div>
+
+                <p>
+                    ゼラチン化した肉は、繊維一本一本がほぐれ、口の中でとろける食感を生む。
+                    さらに、冷えるとゼラチンが水を抱え込んでゲル化し、煮凝り（Aspic）となる。
+                </p>
+            </section>
+
+            <section>
+                <h2>3.0 データ：Time-Temperature (T-T) カーブ</h2>
+                <p>
+                    コラーゲンの分解は「温度」だけで決まるのではない。<strong>「温度 × 時間」の積分値</strong>で決まる。
+                    高温なら短時間で分解するが、副作用として筋繊維（ミオシン・アクチン）が過収縮し、肉自体はパサパサになる。
+                    逆に低温なら、肉汁を保ったまま分解できるが、膨大な時間がかかる。
+                </p>
+
+                <!-- T-Tグラフ -->
+                <div class="visualization-container">
+                    <h3>Collagen Breakdown vs Time</h3>
+                    <div id="reaction-chart">
+                        <div class="chart-curve chart-pressure"></div>
+                        <div class="chart-curve chart-boil"></div>
+                        <div class="chart-curve chart-simmer"></div>
+                        <div class="chart-labels">
+                            <span>0h</span>
+                            <span>1h</span>
+                            <span>3h</span>
+                            <span>12h</span>
+                            <span>24h</span>
+                        </div>
+                        <div class="chart-legend">
+                            <span class="legend-item pressure">120°C (Pressure)</span>
+                            <span class="legend-item boil">100°C (Boil)</span>
+                            <span class="legend-item simmer">80°C (Simmer)</span>
+                        </div>
+                    </div>
+                    <p class="caption">※120℃（圧力鍋）は速いが、80℃で長時間煮込んだ場合が最も水分保持率（ジューシーさ）が高い。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：至高の煮込みメソッド</h2>
+                <p>
+                    物理法則に従い、目的に応じた最適な煮込み温度を選択する。
+                </p>
+
+                <h3>Protocol A: 80℃の長時間シチュー (The Simmer)</h3>
+                <p>
+                    最高のビーフシチューを作るなら、沸騰させてはいけない。
+                    筋繊維の収縮が緩やかで、かつコラーゲンが分解されるスイートスポットは<strong>80℃付近</strong>だ。
+                </p>
+                <ul>
+                    <li><strong>Action:</strong> 鍋の表面がポコポコと泡立たない程度の火加減（Simmering）を3時間〜5時間キープする。オーブン煮込み（150℃設定で蓋をする）が最も管理しやすい。</li>
+                </ul>
+
+                <h3>Protocol B: 圧力鍋の使い所 (The Pressure)</h3>
+                <p>
+                    圧力鍋は水の沸点を約120℃まで引き上げ、反応速度を劇的に高める（約1/4の時間）。
+                    しかし、高温すぎるため筋繊維は完全に収縮し、水分は絞り出されてしまう。
+                </p>
+                <ul>
+                    <li><strong>Best For:</strong> 「出汁（ストック）」や「角煮」のように、肉の繊維感よりもトロトロ感や抽出効率を優先する場合に最適。</li>
+                    <li><strong>Not For:</strong> 肉自体のジューシーさを味わうシチューには不向き。</li>
+                </ul>
+
+                <h3>Protocol C: 酵素による事前分解 (Enzymatic Tenderization)</h3>
+                <p>
+                    熱を加える前に、化学的にコラーゲンを切断しておく方法もある。
+                    植物性プロテアーゼ（タンパク質分解酵素）の活用だ。
+                </p>
+                <div class="diagram-placeholder" style="padding:20px;">
+                    [ ENZYME LIST ]<br>
+                    Bromelain (パイナップル) / Papain (パパイヤ) / Actinidin (キウイ) / Protease (舞茸・麹)<br>
+                    <span style="opacity:0.7; font-size:0.7rem;">※60℃以上で失活するため、必ず「生」の状態でマリネすること。</span>
+                </div>
+                <ul>
+                    <li><strong>Action:</strong> 舞茸や刻んだパイナップルと一緒に肉を30分マリネしてから煮込む。驚くほど短時間で繊維がほぐれるようになる。</li>
+                </ul>
+            </section>
+
+            <div class="references">
+                <h3>References</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner. pp.162-163 (Collagen & Gelatin).</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab. (Sous-vide tough cuts).</li>
+                    <li>[3] Purslow, P. P. (2005). <em>Intramuscular connective tissue and its role in meat texture</em>.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

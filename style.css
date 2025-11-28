@@ -649,3 +649,334 @@ body:has(.article-id:contains('Exp.02')) .article-header {
     color: #F2F2F2;
     text-shadow: 0 4px 20px rgba(0,0,0,0.8);
 }
+
+/* --- Index Page Restructuring (Database Style) --- */
+
+/* フィルタナビゲーション */
+.filter-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 40px 40px;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--color-line);
+    color: var(--color-sub);
+    padding: 8px 16px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 0.1em;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+/* グリッドコンテナ */
+.grid-container {
+    display: grid;
+    /* 画面幅に合わせて列数を自動調整（最低300px幅） */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1px; /* グリッドの線を見せるため隙間を空ける */
+    background-color: var(--color-line); /* 隙間の色 */
+    border-bottom: 1px solid var(--color-line);
+}
+
+/* 記事カード（JavaScriptで生成される要素） */
+.article-card {
+    background-color: var(--color-bg);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.article-card:hover {
+    background-color: var(--color-surface);
+}
+
+/* カード内部のデザイン */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+}
+.card-id { color: var(--color-accent); }
+.card-cat { color: var(--color-sub); border: 1px solid var(--color-line); padding: 2px 6px; }
+
+.card-title {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--color-text);
+    margin: 0 0 30px 0;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-sub);
+}
+
+.card-arrow {
+    color: var(--color-accent);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s;
+}
+.article-card:hover .card-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* --- Article 03: Myoglobin Specific Styles --- */
+
+/* ミオグロビン・カラーサイクル図解 */
+.myoglobin-cycle .molecule {
+    width: 80px; height: 80px;
+    border-width: 3px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+/* 1. 還元型 (Deoxy): 紫 */
+.deoxymyoglobin {
+    border-color: #8E44AD; /* 紫 */
+    color: #8E44AD;
+    background: radial-gradient(circle at 30% 30%, #2c1a35, #0a0a0a);
+}
+
+/* 2. 酸素化型 (Oxy): 鮮赤 */
+.oxymyoglobin {
+    border-color: #E74C3C; /* 赤 */
+    color: #E74C3C;
+    background: radial-gradient(circle at 30% 30%, #3a1515, #0a0a0a);
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.4); /* 発光 */
+}
+
+/* 3. 酸化型 (Met): 褐色 */
+.metmyoglobin {
+    border-color: #8D6E63; /* 茶 */
+    color: #8D6E63;
+    background: radial-gradient(circle at 30% 30%, #2d2624, #0a0a0a);
+}
+
+/* グラフの曲線（ミオグロビン用：逆S字） */
+.chart-myoglobin {
+    background: none;
+}
+.chart-myoglobin::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; /* 上からスタート */
+    width: 200%; height: 200%;
+    /* 赤色が急激に失われるカーブ */
+    border-top: 3px solid #E74C3C;
+    border-radius: 0;
+    /* ベジェ曲線で減衰を表現 */
+    border-left: 3px solid transparent; 
+    transform: translate(-50%, 20%) rotate(20deg); /* 擬似的な下降カーブ */
+    box-shadow: none;
+    
+    /* ※CSSだけで正確な逆S字を描くのは難しいため、
+       ここでは簡易的に「右肩下がりの赤いライン」として表現しています。
+       より正確にはSVG推奨ですが、トンマナとしてはこれで機能します */
+    border-top: 3px solid #E74C3C;
+    box-shadow: 0 -5px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* 記事ヘッダー背景（個別設定） */
+/* 必要であれば生成した画像を myoglobin-bg.png として保存し、ここを有効化してください */
+/*
+body:has(.article-id:contains('Exp.03')) .article-header {
+    background-image: url('myoglobin-bg.png');
+}
+
+/* --- 記事ヘッダー背景設定 (Article 03) --- */
+
+/* 記事ごとに背景を変えるための個別設定 */
+/* HTML側でクラスを追加する必要があります */
+
+.header-myoglobin {
+    background-image: url('myoglobin-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-myoglobin::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 15, 16, 0.6); /* 文字を見やすくするフィルター */
+    z-index: -1;
+}
+
+.header-myoglobin .article-main-title,
+.header-myoglobin .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+/* --- Article 04: Collagen Specific Styles --- */
+
+/* 三重螺旋図解 (Triple Helix) */
+.collagen-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+    margin: 40px 0;
+    border: 1px dashed var(--color-line);
+    background: rgba(255,255,255,0.02);
+    overflow: hidden;
+}
+
+.helix-structure, .gelatin-structure {
+    width: 60px;
+    height: 120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.strand {
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    border-radius: 3px;
+}
+
+/* 螺旋状態：ねじれた紐のように */
+.helix-structure .s1 { background: #E57373; left: 10px; transform: skewX(20deg); z-index: 3; }
+.helix-structure .s2 { background: #FFD54F; left: 27px; transform: skewX(-20deg); z-index: 2; }
+.helix-structure .s3 { background: #4FC3F7; left: 44px; transform: skewX(20deg); z-index: 1; }
+
+/* ゼラチン状態：波打ってほどけた様子 */
+.gelatin-structure .w1 { 
+    background: #E57373; left: 0; 
+    animation: wave 3s infinite ease-in-out; 
+}
+.gelatin-structure .w2 { 
+    background: #FFD54F; left: 27px; 
+    animation: wave 3s infinite ease-in-out 0.5s; 
+}
+.gelatin-structure .w3 { 
+    background: #4FC3F7; left: 54px; 
+    animation: wave 3s infinite ease-in-out 1s; 
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0) scaleY(1); }
+    50% { transform: translateY(10px) scaleY(1.1); }
+}
+
+/* T-Tグラフ (3本のカーブ) */
+#reaction-chart { position: relative; }
+
+.chart-pressure {
+    /* 圧力鍋：急激に立ち上がる */
+    border-top: 3px solid #E57373; /* 赤 */
+    width: 40%; height: 200%; left: 0; bottom: 0; position: absolute;
+    border-radius: 0 100% 0 0;
+    transform: translate(0, 50%);
+    box-shadow: 0 -5px 10px rgba(229, 115, 115, 0.3);
+}
+
+.chart-boil {
+    /* 沸騰：標準的 */
+    border-top: 3px solid #FFD54F; /* 黄 */
+    width: 80%; height: 200%; left: 0; bottom: 0; position: absolute;
+    border-radius: 0 100% 0 0;
+    transform: translate(0, 50%);
+    box-shadow: 0 -5px 10px rgba(255, 213, 79, 0.3);
+}
+
+.chart-simmer {
+    /* シマー：緩やか */
+    border-top: 3px solid #4FC3F7; /* 青 */
+    width: 150%; height: 200%; left: 0; bottom: 0; position: absolute;
+    border-radius: 0 100% 0 0;
+    transform: translate(0, 50%);
+    box-shadow: 0 -5px 10px rgba(79, 195, 247, 0.3);
+}
+
+.chart-legend {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    background: rgba(0,0,0,0.8);
+    padding: 10px;
+    border: 1px solid var(--color-line);
+}
+.legend-item::before {
+    content: '●'; margin-right: 5px;
+}
+.pressure { color: #E57373; }
+.boil { color: #FFD54F; }
+.simmer { color: #4FC3F7; }
+
+/* 記事ヘッダー背景（個別設定） */
+/* 必要であれば生成した画像を collagen-bg.png として保存し、ここを有効化してください */
+/*
+body:has(.article-id:contains('Exp.04')) .article-header {
+    background-image: url('collagen-bg.png');
+}
+
+/* --- 記事ヘッダー背景設定 (Article 04) --- */
+
+/* 記事ごとに背景を変えるための個別設定 */
+/* HTML側でクラスを追加する必要があります */
+
+.header-collagen {
+    background-image: url('collagen-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-collagen::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 15, 16, 0.6); /* 文字を見やすくするフィルター */
+    z-index: -1;
+}
+
+.header-collagen .article-main-title,
+.header-collagen .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}

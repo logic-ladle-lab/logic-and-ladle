@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミオグロビンの変色ロジック - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- ファビコン -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <!-- 記事コンテンツ -->
+    <main class="article-container">
+        <article>
+            <div class="article-header header-myoglobin">
+                <span class="article-id">Exp.03</span>
+                <span class="category-tag">Protein / Meat</span>
+                <h1 class="article-main-title">ミオグロビンの変色ロジック：<br>肉の色が「赤→褐→桃」へ変わる化学</h1>
+                <p class="lead">
+                    精肉店に並ぶ肉の鮮やかな赤。加熱したステーキの茶色。ローストビーフの妖艶なバラ色。<br>
+                    これらは全て、たった一つのタンパク質「ミオグロビン」の化学変化によって支配されている。<br>
+                    肉の鮮度管理と、狙った焼き色を定着させるための色彩制御理論。
+                </p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：それは「血」ではない</h2>
+                <p>
+                    レアステーキから滴る赤い液体を「血」と呼ぶのは、料理人として正確ではない。
+                    血液の大部分は屠畜時の放血処理で除かれている。
+                    あの赤色は、筋肉細胞内に酸素を貯蔵するためのタンパク質<strong>「ミオグロビン (Myoglobin)」</strong>と水が混ざったものだ。
+                </p>
+                <div class="callout">
+                    <strong>Biological Context:</strong><br>
+                    ミオグロビンは鉄（ヘム鉄）を含み、酸素と結合して赤くなる性質を持つ。<br>
+                    マグロの赤身やクジラ肉が赤いのも、彼らが酸素を大量に消費する回遊魚・海洋哺乳類であり、筋肉中に大量のミオグロビンを保有しているからである。
+                </div>
+            </section>
+
+            <section>
+                <h2>2.0 基礎原理：3つの「顔」を持つタンパク質</h2>
+                <p>
+                    生の肉の色は、ミオグロビンが「酸素」とどう関わっているかで3色に変化する。
+                    これを理解することが鮮度管理の基本だ。
+                </p>
+
+                <!-- ミオグロビン変色サイクル図解 -->
+                <div class="reaction-diagram-box myoglobin-cycle">
+                    <div class="molecule-step">
+                        <div class="molecule deoxymyoglobin">Deoxy<br>(紫)</div>
+                        <span class="molecule-desc">還元型<br>(真空・切断直後)</span>
+                    </div>
+                    <div class="operator arrow-right">
+                        <span class="heat-label">Blooming (酸素化)</span>
+                        →
+                    </div>
+                    <div class="molecule-step">
+                        <div class="molecule oxymyoglobin">Oxy<br>(鮮赤)</div>
+                        <span class="molecule-desc">酸素化型<br>(理想的な赤)</span>
+                    </div>
+                    <div class="operator arrow-right">
+                        <span class="heat-label">Oxidation (酸化)</span>
+                        →
+                    </div>
+                    <div class="molecule-step">
+                        <div class="molecule metmyoglobin">Met<br>(褐色)</div>
+                        <span class="molecule-desc">酸化型<br>(劣化・加熱)</span>
+                    </div>
+                </div>
+
+                <ul>
+                    <li><strong>還元型 (Deoxy-):</strong> 新鮮な肉の内部や真空パック中。酸素がないため<strong>暗い紫色</strong>をしている。</li>
+                    <li><strong>酸素化型 (Oxy-):</strong> 空気に触れる（ブルーミング）と、鉄が酸素を取り込み<strong>鮮やかな赤色</strong>になる。スーパーのパック肉はこの状態。</li>
+                    <li><strong>酸化型 (Met-):</strong> 長時間放置により鉄が酸化($Fe^{2+} \to Fe^{3+}$)すると、酸素を離して<strong>褐色</strong>になる。加熱によってもこの状態へ不可逆的に移行する。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3.0 データ：加熱温度と「変性」の壁</h2>
+                <p>
+                    焼くことによる色の変化（赤→茶）は、熱によるタンパク質の変性（立体構造の崩壊）によって起こる。
+                    どの温度でミオグロビンが機能を失い、色が変わるのか。その境界線は極めて明確だ。
+                </p>
+
+                <!-- グラフエリア -->
+                <div class="visualization-container">
+                    <h3>Temperature vs Color Denaturation</h3>
+                    <div id="reaction-chart">
+                        <div class="chart-curve chart-myoglobin"></div>
+                        <div class="chart-labels">
+                            <span>40°C (Raw)</span>
+                            <span>60°C (Rare/Pink)</span>
+                            <span>66°C (Medium)</span>
+                            <span>75°C (Well/Grey)</span>
+                        </div>
+                    </div>
+                    <p class="caption">※60℃までは赤みを保つが、65℃を超えると急速に褐色化し、70℃以上で完全に灰色（Grey）となる。</p>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>中心温度</th>
+                                <th>焼き加減</th>
+                                <th>ミオグロビンの状態</th>
+                                <th>色の特徴</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>50 - 55℃</strong></td>
+                                <td>Rare</td>
+                                <td>未変性</td>
+                                <td>鮮やかな赤、生に近い</td>
+                            </tr>
+                            <tr>
+                                <td><strong>55 - 60℃</strong></td>
+                                <td>Medium Rare</td>
+                                <td>部分変性</td>
+                                <td><strong>ロゼ（Rosé）色</strong>のピーク</td>
+                            </tr>
+                            <tr>
+                                <td><strong>60 - 65℃</strong></td>
+                                <td>Medium</td>
+                                <td>変性進行</td>
+                                <td>ピンク色が薄まり茶色が混じる</td>
+                            </tr>
+                            <tr>
+                                <td><strong>70℃以上</strong></td>
+                                <td>Well Done</td>
+                                <td>完全変性</td>
+                                <td>灰色〜褐色、肉汁流出</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：色彩制御メソッド</h2>
+                <p>
+                    肉の色を操ることは、客の食欲を操ることだ。
+                    鮮やかな赤を出す技術と、狙ったロゼ色を固定する技術。
+                </p>
+
+                <h3>Protocol A: 真空パック肉の「ブルーミング (Blooming)」</h3>
+                <p>
+                    真空パックから出した直後の肉は、酸素不足でドス黒い紫色（還元型）をしている。
+                    これを「傷んでいる」と勘違いしてはいけない。
+                </p>
+                <ul>
+                    <li><strong>Action:</strong> 客に提供する（または焼く）<strong>少なくとも15分〜30分前</strong>に開封し、空気に晒すこと。酸素と結合し、鮮やかなルビー色（酸素化型）に戻る現象「ブルーミング」を待て。</li>
+                </ul>
+
+                <h3>Protocol B: ローストビーフの「60℃の壁」</h3>
+                <p>
+                    ローストビーフの理想的な「バラ色」は、生ではない。ミオグロビンが熱変性する直前の、最も不安定で美しい状態だ。
+                </p>
+                <ul>
+                    <li><strong>Action:</strong> 湯煎やオーブンの温度を<strong>58℃〜60℃</strong>に徹底固定する。65℃を一瞬でも超えると、バラ色は永遠に失われ、茶色く濁る（不可逆反応）。</li>
+                    <li><strong>Note:</strong> 低温調理器を使うのが物理的に最も確実な解である。感覚で60℃を維持するのは人間には不可能だ。</li>
+                </ul>
+
+                <h3>Protocol C: 亜硝酸塩による「ピンク色の固定」</h3>
+                <p>
+                    ハムやベーコンが焼いても茶色くならず、鮮やかなピンク色をしているのはなぜか？
+                    これは発色剤（亜硝酸ナトリウム）がミオグロビンと結合し、熱に安定な<strong>「ニトロソミオグロビン」</strong>を形成しているからだ。
+                </p>
+                <ul>
+                    <li><strong>Application:</strong> 自家製パストラミやコンビーフを作る際、岩塩（硝石を含む）やキュアリングソルトを使うのは、味だけでなく、加熱しても失われない「赤」を作る化学的操作である。</li>
+                </ul>
+            </section>
+
+            <div class="references">
+                <h3>References</h3>
+                <ul>
+                    <li>[1] Lawrie, R. A. (2006). <em>Lawrie’s Meat Science</em>. Woodhead Publishing.</li>
+                    <li>[2] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner. pp.148-150 (Meat Color).</li>
+                    <li>[3] American Meat Science Association. (2012). <em>Meat Color Measurement Guidelines</em>.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>
