@@ -3,186 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIC & LADLE - メイラード反応の科学</title>
+    <title>メイラード反応の完全講義 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SH94ZN45EG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      /* IDを統一しました */
-      gtag('config', 'G-SH94ZN45EG');
-    </script>
-
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "ud2ip9kwbz");
-    </script>
 </head>
-
 <body>
     <header>
-        <a href="index.html" style="text-decoration: none; color: inherit;">
-            <div class="site-logo">LOGIC & LADLE</div>
-        </a>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
     </header>
 
-    <main>
+    <main class="article-container">
         <article>
             <div class="article-header">
-                <span class="category-tag">Maillard Reaction</span>
-                <h1>「焼き色」の向こう側：<br>メイラード反応を『調味』として扱うための実践ロジック</h1>
+                <span class="article-id">Exp.01</span>
+                <span class="category-tag">Chemical Reaction</span>
+                <h1 class="article-main-title">メイラード反応の統一理論：<br>「美味しい焼き色」の正体と制御術</h1>
                 <p class="lead">
-                    メイラード反応を単なる「褐変（焼き色）」と捉えてはいないか。<br>
-                    これは熱による<strong>「香りと旨味の化学合成プロセス」</strong>である。<br>
-                    塩を振るように、熱で「新しい味」を添加する。そのための制御変数は「水分」「pH」「糖」の3つに集約される。
+                    ステーキの焼き目、焼きたてパンの皮、ローストオニオンの甘み。<br>
+                    これらに共通するのは「茶色い色」と「魅惑的な香り」だ。<br>
+                    料理における最も重要で、最も複雑な化学反応。その基礎理論から、明日使えるプロの調理ハックまでを網羅する。
                 </p>
             </div>
 
             <section>
-                <h2>1. 「155℃」の壁：水分活性 ($a_w$) との戦い</h2>
+                <h2>1.0 序論：料理という名の化学実験</h2>
                 <p>
-                    メイラード反応は常温でも進行するが、厨房での勝負は秒単位だ。
-                    反応速度が爆発的に加速し、香ばしいフレーバーが生成されるのは<strong>155℃ (310°F)</strong> 付近からである<sup>[1]</sup>。
+                    我々が普段「焼く（Grill / Sauté）」と呼んでいる調理工程の本質は、単なる加熱殺菌ではない。
+                    熱エネルギーを触媒として、食材に含まれる物質同士を強制的に結びつけ、<strong>「自然界には存在しなかった新しい味と香り」</strong>を合成する化学プロセスである。
                 </p>
-                <p>
-                    しかし、食材には水分が含まれている。水が存在する限り、気化熱によって表面温度は<strong>100℃（沸点）</strong>を超えない。
-                    つまり、<strong>「いかに早く表面の自由水を飛ばし、155℃帯へ突入させるか」</strong>が勝負となる。
-                </p>
-                
-                
-
-[Image of Maillard Reaction Pathway Diagram]
-
-
                 <div class="callout">
-                    <strong>Chef's Logic:</strong><br>
-                    「ドライ・エイジング」や、焼く前に肉を冷蔵庫で裸にして乾かす工程は、単なる熟成ではない。<br>
-                    表面の水分活性($a_w$)をあらかじめ下げ、鍋に入れた瞬間の<strong>「反応初速」を上げるための事前準備</strong>である<sup>[2]</sup>。
-                </div>
-
-                <div class="visualization-container">
-                    <h3>Temperature vs Reaction Rate</h3>
-                    <div id="reaction-chart">
-                        <div class="chart-curve"></div>
-                        <div class="chart-labels">
-                            <span>20°C</span>
-                            <span>100°C</span>
-                            <span>155°C</span>
-                            <span>180°C</span>
-                        </div>
-                    </div>
-                    <p class="caption">※100℃までは緩慢だが、水分が蒸発し155℃を超えると反応速度は指数関数的に増大する。</p>
+                    <strong>Evolutionary Perspective:</strong>
+                    なぜ人間はこの「焦げた匂い」を美味しいと感じるのか？<br>
+                    進化生物学的な仮説によれば、加熱調理された食品は「消化吸収が良く」「殺菌されており安全」である。<br>
+                    我々の脳は、メイラード反応の香りを<strong>「高カロリーで安全な食料のシグナル」</strong>として認識するようプログラムされているのだ。
                 </div>
             </section>
 
             <section>
-                <h2>2. pHコントロール：アルカリ性は「加速装置」</h2>
+                <h2>2.0 基礎原理：何が起きているのか？</h2>
                 <p>
-                    メイラード反応は、pH値が上昇（アルカリ性に傾く）するほど加速する。
-                    アミノ基 ($-\text{NH}_2$) がプロトン化されにくくなり、求核攻撃性が高まるためである<sup>[3]</sup>。
-                    逆に、酸性下では反応は極端に抑制される。
+                    メイラード反応を一行で説明するなら、<strong>「アミノ酸と糖の結合」</strong>である。
+                    1912年、フランスの化学者ルイ・カミーユ・メイラードによって発見されたこの反応は、以下の条件で進行する。
+                </p>
+
+                <h3>2.1 主役となる2つのプレイヤー</h3>
+                <ul>
+                    <li><strong>アミノ化合物 (Amino Group):</strong>
+                        タンパク質の構成要素である「アミノ酸」。肉、魚、卵、大豆などに含まれる旨味の元。</li>
+                    <li><strong>還元糖 (Reducing Sugar):</strong>
+                        全ての糖が反応するわけではない。反応するのは<strong>ブドウ糖、果糖、乳糖</strong>などだ。
+                        <br>※家庭にある「砂糖（ショ糖）」はそのままでは反応しない（後述）。</li>
+                </ul>
+
+                <div class="reaction-diagram-box">
+                    <div class="molecule-step">
+                        <div class="molecule amino">Amino<br>Acid</div>
+                        <span class="molecule-desc">タンパク質</span>
+                    </div>
+                    <div class="operator">+</div>
+                    <div class="molecule-step">
+                        <div class="molecule sugar">Red.<br>Sugar</div>
+                        <span class="molecule-desc">還元糖</span>
+                    </div>
+                    <div class="operator arrow-right">
+                        <span class="heat-label">HEAT (155°C)</span>
+                        →
+                    </div>
+                    <div class="molecule-step">
+                        <div class="molecule flavor">Flavor<br>& Color</div>
+                        <span class="molecule-desc">香り・焼き色</span>
+                    </div>
+                </div>
+                </section>
+
+            <section>
+                <h2>3.0 比較：メイラード vs キャラメリゼ</h2>
+                <p>
+                    多くの料理愛好家が混同しているのが「キャラメリゼ（カラメル化）」との違いだ。
+                    どちらも「茶色くなる」現象だが、化学的には全くの別物である。この違いを理解することが、適切な火入れの第一歩となる。
                 </p>
 
                 <div class="table-container">
                     <table>
                         <thead>
                             <tr>
-                                <th>操作</th>
-                                <th>pH変化</th>
-                                <th>結果</th>
-                                <th>実用例</th>
+                                <th>比較項目</th>
+                                <th>メイラード反応 (Maillard)</th>
+                                <th>キャラメリゼ (Caramelization)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>重曹を加える</strong></td>
-                                <td>アルカリ化 (↑)</td>
-                                <td><strong>反応速度 激増</strong></td>
-                                <td>飴色玉ねぎの時短（30分→10分）、プレッツェルの皮</td>
+                                <td><strong>反応物質</strong></td>
+                                <td><strong>糖 ＋ アミノ酸</strong></td>
+                                <td><strong>糖のみ</strong>（アミノ酸不要）</td>
                             </tr>
                             <tr>
-                                <td><strong>酸でマリネする</strong></td>
-                                <td>酸性化 (↓)</td>
-                                <td><strong>反応 抑制</strong></td>
-                                <td>肉の保水性は上がるが、焼き色はつきにくくなる</td>
+                                <td><strong>発生温度</strong></td>
+                                <td>常温〜155℃でピーク</td>
+                                <td><strong>165℃以上</strong>（より高温が必要）</td>
+                            </tr>
+                            <tr>
+                                <td><strong>香りの特徴</strong></td>
+                                <td>肉、花、土、香ばしさ<br>（セイボリーな香り）</td>
+                                <td>ナッツ、苦味、甘い香り<br>（スイーツ的な香り）</td>
+                            </tr>
+                            <tr>
+                                <td><strong>代表例</strong></td>
+                                <td>ステーキ、パンの耳、醤油</td>
+                                <td>プリンのソース、綿あめ</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="annotation">
-                    ※注意：重曹は細胞壁（ペクチン）の分解も促進するため、入れすぎると食材がドロドロになる。食感を残したいソテーには不向き<sup>[4]</sup>。
+            </section>
+
+            <section>
+                <h2>4.0 理論：「155℃」の壁と水分活性</h2>
+                <p>
+                    メイラード反応の速度が指数関数的に跳ね上がる特異点、それが<strong>155℃ (310°F)</strong>である。
+                    この温度帯に達して初めて、爆発的な香りの生成が行われる。
+                </p>
+
+                <div class="visualization-container">
+                    <h3>Temperature vs Reaction Velocity</h3>
+                    <div id="reaction-chart">
+                        <div class="chart-curve"></div>
+                        <div class="chart-labels">
+                            <span>20°C</span>
+                            <span>100°C (Boiling)</span>
+                            <span>155°C (Threshold)</span>
+                            <span>180°C (Burn)</span>
+                        </div>
+                    </div>
+                    <p class="caption">※100℃（沸点）の壁を超え、水分が蒸発した瞬間に反応速度が急上昇する。</p>
+                </div>
+
+                <p>
+                    しかし、食材には「水」が含まれている。
+                    水が液体として存在する限り、気化熱により表面温度は<strong>100℃を超えない</strong>。
+                    煮込み料理や蒸し料理に焼き色がつかないのは、物理的に155℃に到達できないからだ。
                 </p>
             </section>
 
             <section>
-                <h2>3. 糖の選択：スクロース（砂糖）は反応しない</h2>
+                <h2>5.0 LABORATORY PROTOCOLS：料理別・最適化メソッド</h2>
                 <p>
-                    ここが最大の盲点だ。一般的な上白糖やグラニュー糖（スクロース）は「非還元糖」であり、分子構造が安定しているため、<strong>そのままではメイラード反応を起こさない</strong><sup>[5]</sup>。
-                    熱で分解（加水分解）されて初めて反応に参加する。
+                    ここからは理論を実践に落とし込む。
+                    プロの厨房で行われている「なぜか美味しくなる手順」の多くは、メイラード反応を最大化するための理にかなった行動だ。
+                    明日から使える具体的なテクニックを4つ紹介する。
                 </p>
+
+                <h3>Protocol A: ステーキの「クリスピー・クラスト」生成</h3>
                 <p>
-                    即座に焼き色をつけたい場合、最初から「還元糖」を含む甘味料を選択すべきである。
+                    多くの人が陥る失敗は、肉をフライパンに入れた瞬間に「ジューッ」といわず、煮えてしまうことだ。
+                    これは肉の表面水分が温度を下げているために起こる。
                 </p>
                 <ul>
-                    <li><strong>反応する糖（還元糖）：</strong> ブドウ糖（グルコース）、果糖（フルクトース）、乳糖（ラクトース）、麦芽糖。</li>
-                    <li><strong>食材例：</strong> ハチミツ、水飴、みりん、牛乳（乳糖）、玉ねぎ（加熱分解後）。</li>
+                    <li><strong>Action 1 (脱水):</strong> 焼く15分前に塩を振り、浮いてきた水分をペーパータオルで<strong>徹底的に拭き取る</strong>。表面の水分活性($a_w$)を下げることで、投入直後から100℃超えを狙う。</li>
+                    <li><strong>Action 2 (オイル):</strong> オイルをケチってはいけない。油は熱伝導媒体であり、肉の表面の凹凸を埋め、均一に熱を伝える役割がある。</li>
+                    <li><strong>Action 3 (アロゼ):</strong> 仕上げにバターを溶かして肉にかける（アロゼ）。これはバターに含まれる「乳糖」と「乳タンパク」を肉の表面に付着させ、追加のメイラード反応を起こしてナッツのような香りを足す工程だ。</li>
+                </ul>
+
+                <h3>Protocol B: 飴色玉ねぎの「高速化」ハック</h3>
+                <p>
+                    通常30〜40分かかる飴色玉ねぎ（オニオングラタンスープのベース）は、化学の力で10分に短縮できる。
+                </p>
+                <ul>
+                    <li><strong>Theory:</strong> メイラード反応は<strong>アルカリ性で加速</strong>する。</li>
+                    <li><strong>Action:</strong> 玉ねぎを炒める際、耳かき1杯程度の<strong>重曹（Baking Soda）</strong>を加える。pHが上がり、反応速度が劇的に向上する。</li>
+                    <li><strong>Note:</strong> アルカリ性は野菜の細胞壁（ペクチン）を分解するため、玉ねぎはペースト状になる。食感を残したいソテーには不向きだが、カレーやスープのベース作りには最強の時短術となる。</li>
+                </ul>
+
+                <h3>Protocol C: 煮込み料理における「メイラードの先取り」</h3>
+                <p>
+                    カレーやシチューの肉を、なぜ煮る前に焼くのか？
+                    「肉汁を閉じ込めるため」というのは誤りだ（実際には焼くことで水分は失われる）。
+                    正解は<strong>「煮込み（100℃）では生成できないメイラード反応のフレーバーを、あらかじめ155℃で作っておくため」</strong>である。
+                </p>
+                <ul>
+                    <li><strong>Action:</strong> 鍋底に焦げ付く茶色い膜（Fond）こそが旨味の凝縮体だ。肉を取り出した後、少量のワインや水を入れ、こそげ落とす（デグラッセ）。この茶色い液体こそが、煮込み料理に深みを与える正体である。</li>
+                </ul>
+
+                <h3>Protocol D: 野菜ローストの「スイート・スポット」</h3>
+                <p>
+                    カリフラワーや人参をオーブンで焼く際、パサパサになるか、美味しくなるかの境界線はどこか。
+                </p>
+                <ul>
+                    <li><strong>Action 1 (空間):</strong> 天板に野菜を詰め込みすぎてはいけない。野菜同士が近いと、放出された水分が蒸気となり、局所的に「蒸し料理（100℃）」になってしまう。隙間を開けて空気の流れを作り、水分を飛ばすこと。</li>
+                    <li><strong>Action 2 (糖化):</strong> 野菜は加熱によりデンプンが糖に変わる。じっくり加熱して内部の糖度を高めつつ、表面でその糖とアミノ酸を反応させるイメージを持つこと。</li>
                 </ul>
             </section>
 
             <section>
-                <h2>4. 香りのデザイン：アミノ酸によるフレーバー制御</h2>
+                <h2>6.0 応用：香りを設計する（アロマ・マトリクス）</h2>
                 <p>
-                    「焦げた匂い」と一括りにするなかれ。反応するアミノ酸の種類によって、生成される香気成分（アルデヒド類）は明確に異なる（ストレッカー分解）<sup>[6]</sup>。
+                    最後に、上級者向けの知識を。
+                    「焦げた匂い」と一括りにされがちだが、反応するアミノ酸の種類によって、生成される香り成分は異なる。
+                    これを理解すれば、足りない風味を意図的に添加できる。
                 </p>
                 
                 <div class="aroma-matrix">
                     <div class="aroma-item">
                         <span class="chem-name">Cysteine + Sugar</span>
                         <span class="chem-ja">システイン（硫黄系）</span>
-                        <div class="scent-bar sulfur">Meaty (肉の香り)</div>
-                        <p class="example">牛肉、玉ねぎ、ニンニク。<br>※ベジブロスにコクを出す鍵。</p>
+                        <div class="scent-bar sulfur">MEATY / SULFUR</div>
+                        <p class="example">牛肉、玉ねぎ、ニンニク<br>※「肉々しさ」の正体</p>
                     </div>
                     <div class="aroma-item">
                         <span class="chem-name">Proline + Sugar</span>
                         <span class="chem-ja">プロリン（環状）</span>
-                        <div class="scent-bar bread">Crusty / Bakery (香ばしさ)</div>
-                        <p class="example">小麦粉（グルテン）、ゼラチン。<br>※パンの皮やパイ生地の香り。</p>
+                        <div class="scent-bar bread">BAKERY / CRUST</div>
+                        <p class="example">小麦粉、パンの耳、おこげ<br>※香ばしい穀物の香り</p>
                     </div>
                     <div class="aroma-item">
                         <span class="chem-name">Glycine + Sugar</span>
                         <span class="chem-ja">グリシン</span>
-                        <div class="scent-bar caramel">Caramel-like (甘い香り)</div>
-                        <p class="example">甲殻類、ホタテ。<br>※焼きガニの甘い香りの正体。</p>
+                        <div class="scent-bar caramel">CARAMEL / SWEET</div>
+                        <p class="example">ホタテ、カニ、エビ<br>※焼いた甲殻類の甘い香り</p>
                     </div>
                 </div>
             </section>
 
             <div class="references">
-                <h3>References & Evidence</h3>
+                <h3>References & Further Reading</h3>
                 <ul>
-                    <li>[1] McGee, H. (2004). <em>On Food and Cooking</em>. Scribner. p.778. (Reaction rates vs Temperature)</li>
-                    <li>[2] Labuza, T. P. (1970). <em>Properties of Water in Foods</em>. (Water Activity mechanics)</li>
-                    <li>[3] Myhrvold, N. (2011). <em>Modernist Cuisine: The Art and Science of Cooking</em>. Vol.3, p.298. (pH influence)</li>
-                    <li>[4] López-Alt, J. K. (2015). <em>The Food Lab</em>. (Maillard reaction in onions / Baking soda effect)</li>
-                    <li>[5] Fennema, O. R. (2007). <em>Fennema's Food Chemistry, 4th Ed</em>. (Reducing vs Non-reducing sugars)</li>
-                    <li>[6] Mottram, D. S. (1998). <em>Flavour formation in meat and meat products</em>. Food Chemistry.</li>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking: The Science and Lore of the Kitchen</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine: The Art and Science of Cooking</em>. The Cooking Lab.</li>
+                    <li>[3] López-Alt, J. Kenji. (2015). <em>The Food Lab: Better Home Cooking Through Science</em>. W. W. Norton & Company.</li>
+                    <li>[4] Maillard, L. C. (1912). <em>Action of Amino Acids on Sugars</em>. Comptes Rendus.</li>
                 </ul>
             </div>
         </article>
     </main>
 
     <footer>
-        &copy; 2024 LOGIC & LADLE
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
     </footer>
 </body>
 </html>

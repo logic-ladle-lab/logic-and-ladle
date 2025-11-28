@@ -9,53 +9,88 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
     
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
     </head>
 <body>
-
     <header>
-        <div class="site-logo">LOGIC & LADLE</div>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
         <nav class="site-nav">
             <a href="#">About</a>
-            <a href="#">Experiments</a>
+            <a href="#">Data</a>
+            <a href="#">Contact</a>
         </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>COOKING <br>IS <span class="accent-text">SCIENCE</span>.</h1>
+        <div class="hero-text-wrapper">
+            <h1 class="hero-title">
+                <span class="line">COOKING</span>
+                <span class="line">IS</span>
+                <span class="line text-outline">SCIENCE</span>
+            </h1>
+        </div>
+        <div class="hero-sub">
             <p>感覚を疑え。データを信じろ。<br>論理で攻める料理人のための実験室。</p>
+            <div class="scroll-down">↓ SCROLL</div>
         </div>
     </section>
 
-    <main class="top-main">
-        <h2 class="section-title">LATEST EXPERIMENTS</h2>
-        
-        <div class="article-grid">
-            <a href="article01.html" class="article-card">
-                <div class="card-content">
-                    <span class="category">Reaction</span>
-                    <h3>メイラード反応の科学：アミノ酸と糖の劇的な出会い</h3>
-                    <p>120℃を超えた時、肉に何が起きるのか？「香ばしさ」の正体をグラフで可視化する。</p>
-                    <div class="card-meta">2025.11.28</div>
+    <main>
+        <div class="list-header">
+            <span>LATEST EXPERIMENTS</span>
+            <span>Date / Category</span>
+        </div>
+
+        <div class="article-list">
+            <a href="article01.html" class="article-row">
+                <div class="row-left">
+                    <span class="article-id">Exp.01</span>
+                    <h2 class="article-title">メイラード反応の解像度を高める</h2>
+                </div>
+                <div class="row-right">
+                    <span class="article-cat">Chemical Reaction</span>
+                    <span class="article-date">2025.11.28</span>
+                    <span class="arrow">→</span>
                 </div>
             </a>
 
-            <div class="article-card dummy">
-                <div class="card-content">
-                    <span class="category">Emulsion</span>
-                    <h3>乳化のパラドクス（Coming Soon）</h3>
-                    <p>水と油を混ぜるための物理学。マヨネーズが分離する理由とは？</p>
+            <div class="article-row dummy">
+                <div class="row-left">
+                    <span class="article-id">Exp.02</span>
+                    <h2 class="article-title">乳化のパラドクス（Coming Soon）</h2>
+                </div>
+                <div class="row-right">
+                    <span class="article-cat">Emulsion</span>
+                    <span class="article-date">----.--.--</span>
+                    <span class="arrow">→</span>
+                </div>
+            </div>
+
+             <div class="article-row dummy">
+                <div class="row-left">
+                    <span class="article-id">Exp.03</span>
+                    <h2 class="article-title">真空調理とタンパク質変性</h2>
+                </div>
+                <div class="row-right">
+                    <span class="article-cat">Sous-vide</span>
+                    <span class="article-date">----.--.--</span>
+                    <span class="arrow">→</span>
                 </div>
             </div>
         </div>
     </main>
 
     <footer>
-        &copy; 2024 LOGIC & LADLE
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
     </footer>
 </body>
 </html>
