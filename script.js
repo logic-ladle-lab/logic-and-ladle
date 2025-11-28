@@ -5,9 +5,9 @@ const articles = [
     { id: "Exp.02", category: "PHYSICS", title: "乳化のパラドクス", date: "2025.12.05", link: "article02.html" },
     { id: "Exp.03", category: "INGREDIENT", title: "ミオグロビンの変色ロジック", date: "2025.12.12", link: "article03.html" },
     { id: "Exp.04", category: "INGREDIENT", title: "コラーゲンの熱分解とゼラチン化", date: "2025.12.19", link: "article04.html" },
+    { id: "Exp.05", category: "PHYSICS", title: "浸透圧と拡散係数：塩の物理学", date: "2025.12.26", link: "article05.html" },
 
-    // --- 以下、企画・執筆待ち記事 ---
-    { id: "Exp.05", category: "PHYSICS", title: "浸透圧と拡散係数：塩の物理学", date: "Coming Soon", link: "#" },
+    // --- 以下、企画・執筆待ち記事 --- 
     { id: "Exp.06", category: "INGREDIENT", title: "卵の熱凝固ヒステリシス", date: "Coming Soon", link: "#" },
     { id: "Exp.07", category: "INGREDIENT", title: "澱粉の糊化と老化のメカニズム", date: "Coming Soon", link: "#" },
     { id: "Exp.08", category: "INGREDIENT", title: "油脂の酸化と発煙点管理", date: "Coming Soon", link: "#" },

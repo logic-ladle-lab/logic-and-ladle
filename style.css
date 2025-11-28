@@ -980,3 +980,150 @@ body:has(.article-id:contains('Exp.04')) .article-header {
     color: #F2F2F2;
     text-shadow: 0 4px 20px rgba(0,0,0,0.8);
 }
+
+/* --- Article 05: Osmosis Specific Styles --- */
+
+/* 浸透圧・拡散図解 */
+.osmosis-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    margin: 40px 0;
+    border: 1px dashed var(--color-line);
+    background: rgba(255,255,255,0.02);
+    position: relative;
+    overflow: hidden;
+}
+
+.cell-visual {
+    position: relative;
+    width: 200px;
+    height: 150px;
+}
+
+.cell-membrane {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 60%;
+    background: #2a2a2a;
+    border: 2px solid #555;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.cell-label {
+    font-family: var(--font-mono); font-size: 0.8rem; color: #888;
+}
+
+.salt-layer {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+.salt-particle {
+    font-family: var(--font-mono);
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: #fff; color: #000;
+}
+.na { background: #FFD54F; } /* Na: 黄色 */
+.cl { background: #4FC3F7; } /* Cl: 青 */
+
+.water-molecule {
+    position: absolute;
+    font-size: 0.7rem; color: #4FC3F7;
+    font-family: var(--font-mono);
+}
+.w1 { bottom: 10px; left: 20px; animation: osmosisOut 3s infinite ease-in-out; }
+.w2 { bottom: 20px; right: 20px; animation: osmosisOut 3s infinite ease-in-out 1.5s; }
+
+@keyframes osmosisOut {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-60px); opacity: 0.8; } /* 外へ出る動き */
+    100% { transform: translateY(-80px); opacity: 0; }
+}
+
+.flow-arrow {
+    position: absolute;
+    font-size: 0.7rem;
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+}
+.out { right: -80px; top: 20px; text-align: left; }
+.in { left: -80px; top: 60px; text-align: right; }
+
+
+/* U字型グラフ (Moisture Curve) */
+.chart-moisture {
+    background: none;
+}
+.chart-moisture::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 200%; height: 200%;
+    /* U字カーブを描く */
+    border-bottom: 3px solid #4FC3F7; /* 水分量を示す青 */
+    border-radius: 50%;
+    transform: translate(-50%, -80%); /* 位置調整 */
+    box-shadow: 0 5px 15px rgba(79, 195, 247, 0.3);
+}
+
+.danger-zone {
+    position: absolute;
+    left: 25%; width: 35%; /* 10分〜40分の間 */
+    top: 0; bottom: 0;
+    background: rgba(229, 115, 115, 0.1); /* 赤い帯 */
+    border-left: 1px dashed #E57373;
+    border-right: 1px dashed #E57373;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #E57373;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+}
+
+/* 記事ヘッダー背景（個別設定） */
+/*
+body:has(.article-id:contains('Exp.05')) .article-header {
+    background-image: url('salt-bg.png');
+}
+
+/* --- 記事ヘッダー背景設定 (Article 05) --- */
+
+/* 記事ごとに背景を変えるための個別設定 */
+/* HTML側でクラスを追加する必要があります */
+
+.header-salt {
+    background-image: url('salt-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-salt::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 15, 16, 0.7); /* 文字を見やすくするフィルター */
+    z-index: -1;
+}
+
+.header-salt .article-main-title,
+.header-salt .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}

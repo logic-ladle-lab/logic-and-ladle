@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浸透圧と拡散係数 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- ファビコン -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <!-- 記事コンテンツ -->
+    <main class="article-container">
+        <article>
+            <div class="article-header header-salt">
+                <span class="article-id">Exp.05</span>
+                <span class="category-tag">Physics / Meat</span>
+                <h1 class="article-main-title">浸透圧と拡散係数：<br>「塩」をいつ振るべきかの数理モデル</h1>
+                <p class="lead">
+                    「塩を振る」という行為には2つの物理現象が同時に発生する。<br>
+                    水分を引き出す「浸透」と、塩分が内部へ移動する「拡散」だ。<br>
+                    このタイムラグを理解することで、ステーキの焼き上がりとジューシーさを完全に制御する。
+                </p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：塩はただの味付けではない</h2>
+                <p>
+                    塩（NaCl）は料理において最も特殊な調味料だ。
+                    なぜなら、唯一「岩石（ミネラル）」であり、かつ食材の物理的構造（タンパク質の変性や細胞の脱水）を劇的に変化させる力を持っているからだ。
+                    古代より保存食作りに使われてきたこの力を、現代の厨房では「食感のコントロール」に応用する。
+                </p>
+                <div class="callout">
+                    <strong>The Debate:</strong><br>
+                    ステーキに塩を振るタイミングについて、「焼く直前派」と「事前派」で意見が割れるのはなぜか？<br>
+                    それは、時間の経過とともに肉の状態が<strong>「U字型」に変化</strong>するからである。中途半端な時間が一番悪い結果を招く。
+                </div>
+            </section>
+
+            <section>
+                <h2>2.0 基礎原理：浸透と拡散のダンス</h2>
+                <p>
+                    肉の表面に塩を振ると、2つのフェーズが進行する。
+                </p>
+                <ul>
+                    <li><strong>Phase 1: 浸透 (Osmosis)</strong> - 水が出る。<br>塩分濃度の高い外部へ向かって、細胞内の水が半透膜を通って移動する。肉の表面は濡れる。</li>
+                    <li><strong>Phase 2: 拡散 (Diffusion) & 再吸収</strong> - 塩が入る。<br>溶けた塩水が、今度は濃度の低い肉の内部へとゆっくり移動していく。同時に、変性したタンパク質が水を再び抱え込む。</li>
+                </ul>
+
+                <!-- 浸透圧メカニズム図解 -->
+                <div class="reaction-diagram-box osmosis-diagram">
+                    <div class="cell-visual">
+                        <div class="cell-membrane">
+                            <span class="cell-label">Meat Cell</span>
+                            <div class="water-molecule w1">H₂O</div>
+                            <div class="water-molecule w2">H₂O</div>
+                        </div>
+                        <div class="salt-layer">
+                            <span class="salt-particle na">Na⁺</span>
+                            <span class="salt-particle cl">Cl⁻</span>
+                            <span class="salt-particle na">Na⁺</span>
+                        </div>
+                        <div class="flow-arrow out">
+                            <span>Osmosis</span>
+                            → 水が出る
+                        </div>
+                        <div class="flow-arrow in">
+                            <span>Diffusion</span>
+                            ← 塩が入る
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 データ：魔の「10分〜30分」</h2>
+                <p>
+                    塩を振ってからの時間経過と、肉の表面状態（焼きやすさ）の関係は以下のグラフのようになる。
+                    最も焼いてはいけないタイミングが存在する。
+                </p>
+
+                <!-- 状態変化グラフ -->
+                <div class="visualization-container">
+                    <h3>Time vs Surface Moisture</h3>
+                    <div id="reaction-chart">
+                        <div class="chart-curve chart-moisture"></div>
+                        <div class="chart-labels">
+                            <span>0 min</span>
+                            <span>10 min (Wet)</span>
+                            <span>40 min (Dry)</span>
+                            <span>60 min</span>
+                        </div>
+                        <!-- 危険地帯の表示 -->
+                        <div class="danger-zone">
+                            <span>DANGER ZONE<br>(蒸し焼きになる)</span>
+                        </div>
+                    </div>
+                    <p class="caption">※10分〜30分の間は、浸透圧で出た水分が表面に溜まっている最悪の状態。40分を過ぎると再吸収され、表面は乾く。</p>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>経過時間</th>
+                                <th>表面の状態</th>
+                                <th>内部の変化</th>
+                                <th>調理適性</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>0分 (直前)</strong></td>
+                                <td>ドライ</td>
+                                <td>変化なし</td>
+                                <td><strong>◎ (Crispy)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>10〜30分</strong></td>
+                                <td><strong>ウェット (最悪)</strong></td>
+                                <td>脱水中</td>
+                                <td>× (Steam/煮える)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>40分以上</strong></td>
+                                <td>ドライ (再吸収)</td>
+                                <td>タンパク質が変性・保水</td>
+                                <td><strong>◎ (Juicy)</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：塩の最適解</h2>
+                <p>
+                    物理学的見地から、目的に応じた塩のタイミングを決定する。
+                </p>
+
+                <h3>Protocol A: ステーキの「2択」</h3>
+                <p>
+                    「中途半端」こそが失敗の元凶である。方針を明確にする必要がある。
+                </p>
+                <ul>
+                    <li><strong>Option 1: 焼く直前 (Just before)</strong><br>
+                        肉を焼く直前、フライパンに入れる数秒前に塩を振る。塩が溶け出し水分を引き出す前に焼き固めることで、クリスピーな表面を作る。</li>
+                    <li><strong>Option 2: 40分前 (The Cure)</strong><br>
+                        厚切りの肉なら、焼く40分〜1時間前に塩を振り、常温で放置する。
+                        出た水分は塩水となり、再び肉に戻る（再吸収）。この塩水が筋原繊維タンパク質（ミオシン）を分解し、加熱しても固くなりにくい「保水力のある構造」へと変化させる。</li>
+                </ul>
+
+                <h3>Protocol B: 魚の「紙塩 (Kami-shio)」脱水法</h3>
+                <p>
+                    魚は肉より水分が多く、臭みを含んでいる。直接塩を振ると塩辛くなりすぎる場合がある。
+                </p>
+                <ul>
+                    <li><strong>Action:</strong> 魚に和紙（またはペーパータオル）を乗せ、その上から塩を振る、あるいは塩の上から霧吹きをする。
+                    浸透圧の作用は紙を通して伝わり、臭みのある余分な水分だけを紙が吸い取る。身は締まり、塩味はマイルドに仕上がる。</li>
+                </ul>
+
+                <h3>Protocol C: ソミュール液（Brine）の濃度比</h3>
+                <p>
+                    鶏胸肉や豚ロースなど、パサつきがちな肉をジューシーにする「ブライン液（塩水漬け）」。
+                    拡散係数に基づいた最適な濃度は以下の通りだ。
+                </p>
+                <div class="diagram-placeholder" style="padding:20px; text-align:left;">
+                    [ BRINE RATIO ]<br>
+                    <strong>水 (Water):</strong> 1000ml<br>
+                    <strong>塩 (Salt):</strong> 50g (5%)<br>
+                    <strong>砂糖 (Sugar):</strong> 25g (2.5%)<br>
+                    <span style="opacity:0.7; font-size:0.7rem;">※砂糖は浸透圧を緩和し、細胞膜を保護する役割がある。</span>
+                </div>
+            </section>
+
+            <div class="references">
+                <h3>References</h3>
+                <ul>
+                    <li>[1] López-Alt, J. Kenji. (2015). <em>The Food Lab</em>. W. W. Norton & Company. (Steak Salting Timing).</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. Vol.3. (Brining & Diffusion).</li>
+                    <li>[3] Offer, G., & Trinick, J. (1983). <em>On the mechanism of water holding in meat</em>. Meat Science.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>
