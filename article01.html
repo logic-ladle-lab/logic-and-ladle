@@ -39,139 +39,143 @@
     <main>
         <article>
             <div class="article-header">
-                <span class="category-tag">Chemical Reaction</span>
-                <h1>メイラード反応の解像度を高める：<br>アミノ酸ごとの香気生成ロジック</h1>
+                <span class="category-tag">Maillard Reaction</span>
+                <h1>「焼き色」の向こう側：<br>メイラード反応を『調味』として扱うための実践ロジック</h1>
                 <p class="lead">
-                    「焼き色」は単なる焦げではない。それは数千種類の化合物が織りなすカオスだ。<br>
-                    プロの料理人が制御すべきは、温度、pH、そして<strong>「アミノ酸の選択」</strong>である。
+                    メイラード反応を単なる「褐変（焼き色）」と捉えてはいないか。<br>
+                    これは熱による<strong>「香りと旨味の化学合成プロセス」</strong>である。<br>
+                    塩を振るように、熱で「新しい味」を添加する。そのための制御変数は「水分」「pH」「糖」の3つに集約される。
                 </p>
             </div>
 
             <section>
-                <h2>1. 反応のブラックボックスを開ける（3段階プロセス）</h2>
+                <h2>1. 「155℃」の壁：水分活性 ($a_w$) との戦い</h2>
                 <p>
-                    メイラード反応は「糖とタンパク質が熱でくっつく」ほど単純ではない。Hodge (1953) の定義によれば、この反応は明確に3つのステージに分類される。
+                    メイラード反応は常温でも進行するが、厨房での勝負は秒単位だ。
+                    反応速度が爆発的に加速し、香ばしいフレーバーが生成されるのは<strong>155℃ (310°F)</strong> 付近からである<sup>[1]</sup>。
                 </p>
-                <div class="process-flow">
-                    <div class="step">
-                        <span class="step-num">Step 01</span>
-                        <h3>初期段階 (無色)</h3>
-                        <p>還元糖のカルボニル基がアミノ基へ求核攻撃。<strong>シッフ塩基</strong>を形成し、<strong>アマドリ転位化合物</strong>へと安定化する。この時点で香りはまだない。</p>
-                    </div>
-                    <div class="step">
-                        <span class="step-num">Step 02</span>
-                        <h3>中期段階 (黄色〜淡褐色)</h3>
-                        <p>ここが分岐点だ。脱水反応や開裂を経て、<strong>フルフラール類</strong>や<strong>レダクトン</strong>が生成される。さらに<strong>ストレッカー分解</strong>により、アミノ酸特有のアルデヒド（香り成分）が爆発的に生まれる。</p>
-                    </div>
-                    <div class="step">
-                        <span class="step-num">Step 03</span>
-                        <h3>最終段階 (褐色〜黒色)</h3>
-                        <p>これらの中間体が重合し、高分子色素<strong>メラノイジン</strong>を形成。抗酸化作用を持つが、行き過ぎると「苦味」と「発がん性物質（アクリルアミド等）」のリスクが生じる。</p>
-                    </div>
-                </div>
-            </section>
+                <p>
+                    しかし、食材には水分が含まれている。水が存在する限り、気化熱によって表面温度は<strong>100℃（沸点）</strong>を超えない。
+                    つまり、<strong>「いかに早く表面の自由水を飛ばし、155℃帯へ突入させるか」</strong>が勝負となる。
+                </p>
+                
+                
 
-            <section>
-                <h2>2. データ可視化：反応速度の閾値</h2>
-                <p>反応速度は温度に対して指数関数的に上昇する。特に水分が蒸発し、表面温度が155℃を超えた地点で反応速度は最大化する。</p>
+[Image of Maillard Reaction Pathway Diagram]
+
+
+                <div class="callout">
+                    <strong>Chef's Logic:</strong><br>
+                    「ドライ・エイジング」や、焼く前に肉を冷蔵庫で裸にして乾かす工程は、単なる熟成ではない。<br>
+                    表面の水分活性($a_w$)をあらかじめ下げ、鍋に入れた瞬間の<strong>「反応初速」を上げるための事前準備</strong>である<sup>[2]</sup>。
+                </div>
+
                 <div class="visualization-container">
-                    <h3>Reaction Velocity vs Temperature</h3>
+                    <h3>Temperature vs Reaction Rate</h3>
                     <div id="reaction-chart">
                         <div class="chart-curve"></div>
                         <div class="chart-labels">
                             <span>20°C</span>
                             <span>100°C</span>
-                            <span>140°C</span>
+                            <span>155°C</span>
                             <span>180°C</span>
                         </div>
                     </div>
-                    <p class="caption">※120℃で開始し、155℃付近でピーク速度に達する。180℃を超えると炭化（Caramelization/Pyrolysis）が優勢となる。</p>
+                    <p class="caption">※100℃までは緩慢だが、水分が蒸発し155℃を超えると反応速度は指数関数的に増大する。</p>
                 </div>
             </section>
 
             <section>
-                <h2>3. 香りのマトリクス：アミノ酸による制御</h2>
+                <h2>2. pHコントロール：アルカリ性は「加速装置」</h2>
                 <p>
-                    「香ばしさ」の内訳は、食材に含まれるアミノ酸の種類によって決定づけられる。
-                    <br>狙った風味を出すために、どのアミノ酸が多い食材（または調味料）を添加すべきか？
+                    メイラード反応は、pH値が上昇（アルカリ性に傾く）するほど加速する。
+                    アミノ基 ($-\text{NH}_2$) がプロトン化されにくくなり、求核攻撃性が高まるためである<sup>[3]</sup>。
+                    逆に、酸性下では反応は極端に抑制される。
                 </p>
-                
-                <div class="aroma-matrix">
-                    <div class="aroma-item">
-                        <span class="chem-name">Cysteine</span>
-                        <span class="chem-ja">システイン</span>
-                        <div class="scent-bar sulfur">Meaty / Sulfur (肉・硫黄)</div>
-                        <p class="example">牛肉、玉ねぎ、ニンニク</p>
-                    </div>
-                    <div class="aroma-item">
-                        <span class="chem-name">Proline</span>
-                        <span class="chem-ja">プロリン</span>
-                        <div class="scent-bar bread">Crusty / Bakery (パンの皮・香ばしさ)</div>
-                        <p class="example">小麦粉、ゼラチン</p>
-                    </div>
-                    <div class="aroma-item">
-                        <span class="chem-name">Phenylalanine</span>
-                        <span class="chem-ja">フェニルアラニン</span>
-                        <div class="scent-bar floral">Floral / Honey (花・蜂蜜)</div>
-                        <p class="example">熟成肉、特定のチーズ</p>
-                    </div>
-                    <div class="aroma-item">
-                        <span class="chem-name">Glycine</span>
-                        <span class="chem-ja">グリシン</span>
-                        <div class="scent-bar caramel">Sweet / Caramel (甘味・キャラメル)</div>
-                        <p class="example">甲殻類、ホタテ</p>
-                    </div>
-                </div>
-            </section>
 
-            <section>
-                <h2>4. 水分活性 ($a_w$) のパラドクス</h2>
-                <p>
-                    メイラード反応は「脱水縮合」を含むプロセスである。
-                    化学平衡の法則（ル・シャトリエの原理）に従えば、生成物である<strong>「水」が多い環境では、反応は抑制される。</strong>
-                </p>
-                <div class="callout">
-                    <strong>Logic:</strong><br>
-                    食材表面の水分を拭き取る、あるいは塩を振って浸透圧で水分を出す工程は、単なる「水跳ね防止」ではない。<br>
-                    <strong>「反応系から生成物（H₂O）を除去し、正反応を加速させる」</strong>ための化学的操作である。
-                </div>
-                
                 <div class="table-container">
                     <table>
                         <thead>
                             <tr>
-                                <th>条件</th>
-                                <th>反応速度</th>
+                                <th>操作</th>
+                                <th>pH変化</th>
+                                <th>結果</th>
                                 <th>実用例</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>$a_w$ > 0.9 (高水分)</strong></td>
-                                <td>極めて遅い</td>
-                                <td>煮込み料理（100℃止まり＋水分過多）</td>
+                                <td><strong>重曹を加える</strong></td>
+                                <td>アルカリ化 (↑)</td>
+                                <td><strong>反応速度 激増</strong></td>
+                                <td>飴色玉ねぎの時短（30分→10分）、プレッツェルの皮</td>
                             </tr>
                             <tr>
-                                <td><strong>$a_w$ 0.6 〜 0.8</strong></td>
-                                <td><strong>最大 (Maximum)</strong></td>
-                                <td>焼き菓子、乾燥熟成肉の表面</td>
-                            </tr>
-                            <tr>
-                                <td><strong>$a_w$ < 0.3 (完全乾燥)</strong></td>
-                                <td>停止</td>
-                                <td>粉末の状態では反応しない</td>
+                                <td><strong>酸でマリネする</strong></td>
+                                <td>酸性化 (↓)</td>
+                                <td><strong>反応 抑制</strong></td>
+                                <td>肉の保水性は上がるが、焼き色はつきにくくなる</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                <p class="annotation">
+                    ※注意：重曹は細胞壁（ペクチン）の分解も促進するため、入れすぎると食材がドロドロになる。食感を残したいソテーには不向き<sup>[4]</sup>。
+                </p>
+            </section>
+
+            <section>
+                <h2>3. 糖の選択：スクロース（砂糖）は反応しない</h2>
+                <p>
+                    ここが最大の盲点だ。一般的な上白糖やグラニュー糖（スクロース）は「非還元糖」であり、分子構造が安定しているため、<strong>そのままではメイラード反応を起こさない</strong><sup>[5]</sup>。
+                    熱で分解（加水分解）されて初めて反応に参加する。
+                </p>
+                <p>
+                    即座に焼き色をつけたい場合、最初から「還元糖」を含む甘味料を選択すべきである。
+                </p>
+                <ul>
+                    <li><strong>反応する糖（還元糖）：</strong> ブドウ糖（グルコース）、果糖（フルクトース）、乳糖（ラクトース）、麦芽糖。</li>
+                    <li><strong>食材例：</strong> ハチミツ、水飴、みりん、牛乳（乳糖）、玉ねぎ（加熱分解後）。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. 香りのデザイン：アミノ酸によるフレーバー制御</h2>
+                <p>
+                    「焦げた匂い」と一括りにするなかれ。反応するアミノ酸の種類によって、生成される香気成分（アルデヒド類）は明確に異なる（ストレッカー分解）<sup>[6]</sup>。
+                </p>
+                
+                <div class="aroma-matrix">
+                    <div class="aroma-item">
+                        <span class="chem-name">Cysteine + Sugar</span>
+                        <span class="chem-ja">システイン（硫黄系）</span>
+                        <div class="scent-bar sulfur">Meaty (肉の香り)</div>
+                        <p class="example">牛肉、玉ねぎ、ニンニク。<br>※ベジブロスにコクを出す鍵。</p>
+                    </div>
+                    <div class="aroma-item">
+                        <span class="chem-name">Proline + Sugar</span>
+                        <span class="chem-ja">プロリン（環状）</span>
+                        <div class="scent-bar bread">Crusty / Bakery (香ばしさ)</div>
+                        <p class="example">小麦粉（グルテン）、ゼラチン。<br>※パンの皮やパイ生地の香り。</p>
+                    </div>
+                    <div class="aroma-item">
+                        <span class="chem-name">Glycine + Sugar</span>
+                        <span class="chem-ja">グリシン</span>
+                        <div class="scent-bar caramel">Caramel-like (甘い香り)</div>
+                        <p class="example">甲殻類、ホタテ。<br>※焼きガニの甘い香りの正体。</p>
+                    </div>
+                </div>
             </section>
 
             <div class="references">
-                <h3>References</h3>
+                <h3>References & Evidence</h3>
                 <ul>
-                    <li>Hodge, J. E. (1953). <em>Dehydrated Foods, Chemistry of Browning Reactions in Model Systems</em>. Journal of Agricultural and Food Chemistry.</li>
-                    <li>McGee, H. (2004). <em>On Food and Cooking: The Science and Lore of the Kitchen</em>. Scribner.</li>
-                    <li>Labuza, T. P., & Saltmarch, M. (1981). <em>The nonenzymatic browning reaction as affected by water in foods</em>.</li>
+                    <li>[1] McGee, H. (2004). <em>On Food and Cooking</em>. Scribner. p.778. (Reaction rates vs Temperature)</li>
+                    <li>[2] Labuza, T. P. (1970). <em>Properties of Water in Foods</em>. (Water Activity mechanics)</li>
+                    <li>[3] Myhrvold, N. (2011). <em>Modernist Cuisine: The Art and Science of Cooking</em>. Vol.3, p.298. (pH influence)</li>
+                    <li>[4] López-Alt, J. K. (2015). <em>The Food Lab</em>. (Maillard reaction in onions / Baking soda effect)</li>
+                    <li>[5] Fennema, O. R. (2007). <em>Fennema's Food Chemistry, 4th Ed</em>. (Reducing vs Non-reducing sugars)</li>
+                    <li>[6] Mottram, D. S. (1998). <em>Flavour formation in meat and meat products</em>. Food Chemistry.</li>
                 </ul>
             </div>
         </article>

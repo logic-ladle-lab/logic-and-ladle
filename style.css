@@ -410,3 +410,29 @@ header {
     font-family: var(--font-mono);
     font-style: normal;
 }
+
+/* --- 参考文献・注釈用のスタイル --- */
+
+/* 文中の注釈番号 */
+sup {
+    color: var(--color-accent);
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+/* 補足注釈（※注意...の部分） */
+.annotation {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-top: 10px;
+    padding-left: 1em;
+    text-indent: -1em; /* 2行目以降を字下げ */
+}
+
+/* 参考文献リスト */
+.references li {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 5px;
+    font-family: var(--font-mono); /* 論文リストっぽく等幅フォントで */
+}
