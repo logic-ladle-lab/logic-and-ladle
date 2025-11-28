@@ -1,20 +1,27 @@
 /* style.css - 完全版 */
 
 :root {
-    --color-bg: #1E1E1E;       /* 背景：濃いグレー */
-    --color-text: #F0F0F0;     /* 文字：白に近いグレー */
-    --color-accent: #FF8C00;   /* アクセント：メイラード反応のオレンジ */
-    --color-line: #444444;     /* 線：薄いグレー */
-    --font-body: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    --color-bg: #1E1E1E;
+    --color-text: #F0F0F0;
+    --color-accent: #FF8C00;
+    --color-line: #444444;
+    /* フォント設定を更新：日本語はNoto Sans、数字/データはRoboto Mono */
+    --font-body: 'Noto Sans JP', sans-serif;
+    --font-mono: 'Roboto Mono', monospace; 
 }
 
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
-    font-family: var(--font-body);
-    line-height: 1.6;
+    font-family: var(--font-body); /* 全体をNoto Sans JPに */
+    line-height: 1.8; /* 少し行間を広げて読みやすく */
     margin: 0;
     padding: 20px;
+}
+
+/* グラフの数値や、表の数字を「データっぽく」する */
+.chart-labels, th, td {
+    font-family: var(--font-mono); /* ここだけ等幅フォントに */
 }
 
 /* 記事全体のレイアウト */
