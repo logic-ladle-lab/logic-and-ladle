@@ -438,3 +438,32 @@ footer {
     }
     .operator { font-size: 1rem; }
 }
+
+/* 記事ヘッダーに背景画像を追加 */
+.article-header {
+    /* 画像のパスを指定（ファイル名が違う場合は変更してください） */
+    background-image: url('maillard-bg');
+    background-size: cover; /* 枠に合わせて拡大縮小 */
+    background-position: center; /* 中央寄せ */
+    
+    /* 文字を読みやすくするために、画像の上に暗いフィルターをかける */
+    position: relative;
+    z-index: 1;
+    padding: 80px 40px; /* 余白を広げて画像をしっかり見せる */
+    border-bottom: none; /* 下線は不要なので消す */
+}
+
+/* フィルター用の疑似要素 */
+.article-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 15, 16, 0.8); /* 背景色と同じ黒で透過させる */
+    z-index: -1; /* 文字の下に配置 */
+}
+
+/* タイトルなどの文字色を調整（背景が暗くなるので明るく） */
+.article-main-title, .lead {
+    color: #F2F2F2;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* 影をつけて可読性アップ */
+}
