@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卵の熱凝固ヒステリシス - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- ファビコン -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <!-- 記事コンテンツ -->
+    <main class="article-container">
+        <article>
+            <div class="article-header header-egg">
+                <span class="article-id">Exp.06</span>
+                <span class="category-tag">Protein / Egg</span>
+                <h1 class="article-main-title">卵の熱凝固ヒステリシス：<br>63℃〜70℃の「タンパク質変性リレー」</h1>
+                <p class="lead">
+                    卵は単一の物質ではない。異なる凝固温度を持つ複数のタンパク質の集合体だ。<br>
+                    黄身だけ固めて白身は液体の「逆・温泉卵」は作れるのか？<br>
+                    温度差（ヒステリシス）を利用した、食感の完全制御ロジック。
+                </p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：卵料理は温度の芸術</h2>
+                <p>
+                    「温泉卵」という料理は、世界でも稀な調理法だ。
+                    通常、熱は外から中へ伝わるため、外側（白身）が固く、内側（黄身）が柔らかくなるはずである。
+                    しかし温泉卵はその逆だ。これが可能なのは、<strong>卵白と卵黄で「固まる温度」が違う</strong>という物理特性をハックしているからに他ならない。
+                </p>
+            </section>
+
+            <section>
+                <h2>2.0 基礎原理：主要タンパク質の凝固点</h2>
+                <p>
+                    卵の凝固は、タンパク質が熱で変性し、網目構造（ゲル）を作ることで起こる。
+                    重要なプレイヤーは以下の通りだ。
+                </p>
+
+                <!-- タンパク質変性温度の図解 -->
+                <div class="reaction-diagram-box egg-protein-chart">
+                    <div class="protein-bar p-ovotransferrin">
+                        <span class="p-name">Ovotransferrin (卵白)</span>
+                        <span class="p-temp">60-65°C</span>
+                        <span class="p-state">白く濁るが、まだ柔らかい</span>
+                    </div>
+                    <div class="protein-bar p-yolk">
+                        <span class="p-name">Yolk Lipoproteins (卵黄)</span>
+                        <span class="p-temp">65-70°C</span>
+                        <span class="p-state">ねっとりと固化 (Custard)</span>
+                    </div>
+                    <div class="protein-bar p-ovalbumin">
+                        <span class="p-name">Ovalbumin (卵白)</span>
+                        <span class="p-temp">75-80°C</span>
+                        <span class="p-state">完全に硬化 (Rubber)</span>
+                    </div>
+                </div>
+
+                <p>
+                    <strong>パラドクス:</strong> 卵白は60℃付近から白くなり始めるが、完全に構造を維持する（固まる）には80℃近い熱が必要だ（オボアルブミンの変性）。
+                    一方、卵黄は65℃〜70℃で完全に粘度を増し、固まる。
+                    つまり、<strong>「65℃〜70℃」の狭い温度帯</strong>を維持すれば、卵黄は固まるが、卵白はフルフルと柔らかい状態を保てる。これが温泉卵の正体だ。
+                </p>
+            </section>
+
+            <section>
+                <h2>3.0 データ：温度 vs 粘度 (Viscosity)</h2>
+                <p>
+                    加熱温度と「硬さ（粘度）」の関係をグラフ化すると、卵黄と卵白の挙動が逆転するクロスポイントが見えてくる。
+                </p>
+
+                <!-- 粘度変化グラフ -->
+                <div class="visualization-container">
+                    <h3>Temperature vs Texture (Viscosity)</h3>
+                    <div id="reaction-chart">
+                        <div class="chart-curve curve-white"></div>
+                        <div class="chart-curve curve-yolk"></div>
+                        <div class="chart-labels">
+                            <span>60°C</span>
+                            <span>65°C (Onsen)</span>
+                            <span>70°C</span>
+                            <span>80°C (Boil)</span>
+                        </div>
+                        <div class="chart-legend">
+                            <span class="legend-item l-white">Egg White (卵白)</span>
+                            <span class="legend-item l-yolk">Egg Yolk (卵黄)</span>
+                        </div>
+                        <!-- 温泉卵ゾーン -->
+                        <div class="onsen-zone">Onsen Zone</div>
+                    </div>
+                    <p class="caption">※卵黄（黄線）は65℃で急激に粘度が上がるが、卵白（白線）は80℃まで完全硬化しない。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：火入れの数式</h2>
+                <p>
+                    この温度差を利用すれば、あらゆる卵料理の食感を設計できる。
+                </p>
+
+                <h3>Protocol A: 完璧な温泉卵 (The 67°C Equilibrium)</h3>
+                <p>
+                    温泉卵に「茹で時間」という概念は不要だ。必要なのは「平衡温度」である。
+                </p>
+                <ul>
+                    <li><strong>Action:</strong> 67℃の湯に卵を入れ、30分以上放置する。
+                    芯まで67℃になれば、それ以上硬くなることはない。卵黄はねっとりとした宝石のような質感になり、卵白は崩れないギリギリの柔らかさで留まる。</li>
+                </ul>
+
+                <h3>Protocol B: トロトロスクランブルエッグ (Carry-over Calculation)</h3>
+                <p>
+                    ホテルのようなクリーミーなスクランブルエッグを作るには、オボアルブミン（80℃変性）を固めてはいけない。
+                </p>
+                <ul>
+                    <li><strong>Theory:</strong> 目標は「全体を均一に70℃にする」こと。</li>
+                    <li><strong>Action:</strong> フライパンの上で絶えずかき混ぜ（撹拌による温度均一化）、固まり始めたら火から外す。余熱（Carry-over cooking）で火を通すイメージを持つこと。フライパンに接地している部分だけが80℃を超えて「炒り卵」になるのを防ぐ。</li>
+                </ul>
+
+                <h3>Protocol C: ゆで卵の殻剥き (The Shock)</h3>
+                <p>
+                    新鮮な卵ほど殻が剥きにくいのは、卵白のpHが低く、薄皮と強く接着しているからだ。
+                </p>
+                <ul>
+                    <li><strong>Action 1 (Aging):</strong> 産卵後数日経った卵を使う（pHが上がり剥きやすくなる）。</li>
+                    <li><strong>Action 2 (Shock):</strong> 沸騰した湯からスタートし、茹で上がり直後に氷水に叩き込む。急激な温度収縮差により、中身と殻の間に物理的な隙間を生ませる。</li>
+                </ul>
+            </section>
+
+            <div class="references">
+                <h3>References</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner. pp.75-84 (Egg Science).</li>
+                    <li>[2] Vega, C., & Mercadé-Prieto, R. (2011). <em>Culinary biophysics: on the nature of the 6X°C egg</em>. Food Biophysics.</li>
+                    <li>[3] This, Hervé. (2006). <em>Molecular Gastronomy</em>. Columbia University Press.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

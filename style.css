@@ -1127,3 +1127,166 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     color: #F2F2F2;
     text-shadow: 0 4px 20px rgba(0,0,0,0.8);
 }
+
+/* --- Article 02: Emulsion Specific Styles --- */
+
+/* 乳化メカニズム図解 (Emulsion Diagram) */
+.emulsion-diagram-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+    margin: 40px 0;
+    border: 1px dashed var(--color-line);
+    background: rgba(255,255,255,0.02);
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.diagram-caption {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-sub);
+    margin-top: 20px;
+    font-family: var(--font-mono);
+}
+
+/* 界面活性剤モデル */
+.surfactant-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-accent); /* 親水基はアクセント色 */
+    color: #000;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.6rem; font-weight: bold;
+    z-index: 2;
+}
+.tail {
+    width: 4px; height: 60px;
+    background-color: var(--color-sub); /* 疎水基はグレー */
+    margin-top: -5px;
+    display: flex; align-items: flex-end; justify-content: center;
+    color: var(--color-sub);
+    font-size: 0.6rem;
+    writing-mode: vertical-rl;
+}
+
+/* ミセル構造モデル */
+.micelle-visual {
+    position: relative;
+    width: 180px; height: 180px;
+    display: flex; align-items: center; justify-content: center;
+}
+.water-matrix {
+    position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px;
+    border: 1px solid #334; /* 水相のイメージ */
+    z-index: 0;
+    display: flex; align-items: flex-end; justify-content: right;
+    padding: 5px; font-size: 0.7rem; color: #556;
+}
+.oil-droplet {
+    width: 100px; height: 100px;
+    background-color: #222; /* 油滴 */
+    border-radius: 50%;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 1;
+}
+.oil-droplet .label { color: #555; font-weight: bold; }
+
+/* 油滴を取り囲む界面活性剤たち */
+.surfactant {
+    position: absolute;
+    width: 10px; height: 30px;
+    background-color: var(--color-sub); /* 尻尾 */
+    top: 50%; left: 50%;
+    transform-origin: 50% 0; /* 中心から放射状に */
+}
+.surfactant::after {
+    content: '';
+    position: absolute; bottom: -8px; left: -3px;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background-color: var(--color-accent); /* 頭（外側） */
+}
+
+/* 放射状に配置 */
+.s1 { transform: translate(-50%, -50%) rotate(0deg) translateY(-50px); }
+.s2 { transform: translate(-50%, -50%) rotate(45deg) translateY(-50px); }
+.s3 { transform: translate(-50%, -50%) rotate(90deg) translateY(-50px); }
+.s4 { transform: translate(-50%, -50%) rotate(135deg) translateY(-50px); }
+.s5 { transform: translate(-50%, -50%) rotate(180deg) translateY(-50px); }
+.s6 { transform: translate(-50%, -50%) rotate(225deg) translateY(-50px); }
+.s7 { transform: translate(-50%, -50%) rotate(270deg) translateY(-50px); }
+.s8 { transform: translate(-50%, -50%) rotate(315deg) translateY(-50px); }
+
+
+/* 剪断力グラフ (Shear Chart) */
+#shear-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-left: 1px solid var(--color-line);
+}
+.shear-bar {
+    height: 40px;
+    background: linear-gradient(90deg, var(--color-accent) 0%, transparent 100%);
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    position: relative;
+    border-radius: 2px;
+}
+/* グラフの長さ */
+.b1 { width: 90%; opacity: 0.5; } /* 粒子が大きい＝不安定 */
+.b2 { width: 60%; opacity: 0.8; }
+.b3 { width: 30%; opacity: 1.0; } /* 粒子が小さい＝安定 */
+
+.shear-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+.droplet-size {
+    position: absolute;
+    right: -150px; /* バーの外側に数値を出す */
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-text);
+}
+
+/* スマホ対応微調整 */
+@media (max-width: 600px) {
+    .droplet-size { position: static; margin-left: auto; padding-right: 10px; font-size: 0.7rem; }
+    .shear-bar { width: 100% !important; justify-content: space-between; } /* スマホでは全幅にして中に文字を入れる */
+}
+
+.header-egg {
+    background-image: url('egg-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+.header-egg::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+.header-egg .article-main-title, .header-egg .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
