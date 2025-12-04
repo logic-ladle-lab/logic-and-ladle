@@ -1572,3 +1572,157 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     color: #F2F2F2;
     text-shadow: 0 4px 20px rgba(0,0,0,0.8);
 }
+
+/* --- Article 09: Aroma Extraction Specific Styles --- */
+
+/* 溶解性モデル図解 (Extraction Diagram) */
+.extraction-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 40px 20px;
+    margin: 40px 0;
+    border: 1px dashed var(--color-line);
+    background: rgba(255,255,255,0.02);
+    position: relative;
+}
+
+.solvent-container {
+    width: 150px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-line);
+    position: relative;
+    padding: 10px;
+}
+
+.solvent-label {
+    position: absolute; top: 10px;
+    font-family: var(--font-mono); font-size: 0.7rem; color: #888;
+}
+
+.aroma-molecule {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+/* 親水性分子 */
+.hydrophilic {
+    border: 2px solid #4FC3F7;
+    color: #4FC3F7;
+    background: radial-gradient(circle, rgba(79, 195, 247, 0.2), transparent);
+    box-shadow: 0 0 10px rgba(79, 195, 247, 0.2);
+}
+
+/* 疎水性分子 */
+.hydrophobic {
+    border: 2px solid #FFD54F;
+    color: #FFD54F;
+    background: radial-gradient(circle, rgba(255, 213, 79, 0.2), transparent);
+    box-shadow: 0 0 10px rgba(255, 213, 79, 0.2);
+}
+
+.m-label { font-size: 0.6rem; display: block; margin-bottom: 2px; }
+.m-ex { font-size: 0.6rem; opacity: 0.8; font-weight: normal; }
+
+.separator {
+    width: 2px; height: 100px;
+    background-color: var(--color-line);
+}
+
+
+/* 抽出効率グラフ (3本線) */
+.curve-oil {
+    /* 油：脂溶性成分の抽出（高い） */
+    border-top: 3px solid #FFD54F; /* 黄 */
+    width: 150%; height: 200%; left: 0; bottom: 0; position: absolute;
+    border-radius: 0 100% 0 0;
+    transform: translate(0, 20%);
+    box-shadow: 0 -5px 10px rgba(255, 213, 79, 0.3);
+}
+
+.curve-alcohol {
+    /* アルコール：両親媒性（中〜高） */
+    border-top: 3px solid #66BB6A; /* 緑 */
+    width: 120%; height: 200%; left: 0; bottom: 0; position: absolute;
+    border-radius: 0 100% 0 0;
+    transform: translate(0, 40%);
+    box-shadow: 0 -5px 10px rgba(102, 187, 106, 0.3);
+}
+
+.curve-water {
+    /* 水：脂溶性成分は溶けない（低い） */
+    border-top: 2px dashed #4FC3F7; /* 青 */
+    width: 100%; height: 200%; left: 0; bottom: 0; position: absolute;
+    border-radius: 0 100% 0 0;
+    transform: translate(0, 85%); /* 低空飛行 */
+    opacity: 0.7;
+}
+
+.l-oil { color: #FFD54F; }
+.l-alcohol { color: #66BB6A; }
+.l-water { color: #4FC3F7; }
+
+/* 記事ヘッダー背景（個別設定） */
+/* 必要に応じて有効化
+.header-aroma {
+    background-image: url('aroma-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+.header-aroma::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+.header-aroma .article-main-title, .header-aroma .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+/* --- 記事ヘッダー背景設定 (Article 09) --- */
+
+/* 記事ごとに背景を変えるための個別設定 */
+/* HTML側でクラスを追加する必要があります */
+
+.header-aroma {
+    background-image: url('aroma-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-aroma::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 15, 16, 0.7); /* 文字を見やすくするフィルター */
+    z-index: -1;
+}
+
+.header-aroma .article-main-title,
+.header-aroma .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}

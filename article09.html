@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>揮発性香気成分の抽出理論 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- ファビコン -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <!-- 記事コンテンツ -->
+    <main class="article-container">
+        <article>
+            <div class="article-header header-aroma">
+                <span class="article-id">Exp.09</span>
+                <span class="category-tag">Flavor / Aroma</span>
+                <h1 class="article-main-title">揮発性香気成分の「抽出」理論：<br>水溶性と脂溶性の使い分け</h1>
+                <p class="lead">
+                    スパイスを油で炒める理由。ハーブを熱湯で蒸らす理由。<br>
+                    香りの正体は「揮発性化合物」であり、それぞれに最適な「溶媒（Solvent）」が存在する。<br>
+                    水と油、そしてアルコール。香りを分子レベルで捕まえるための溶解度ロジック。
+                </p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：香りは「記憶」であり「物理」である</h2>
+                <p>
+                    人間が感じる「風味（Flavor）」の約80%は、味覚ではなく嗅覚によるものだ。
+                    鼻から入る香り（オルソネイザル）と、喉から抜ける香り（レトロネイザル）が、食事の立体感を作る。
+                    しかし、香気成分は非常に不安定で揮発しやすい。料理人の使命は、この儚い分子を食材から引き剥がし、ソースやスープの中に「固定（Fixation）」することにある。
+                </p>
+            </section>
+
+            <section>
+                <h2>2.0 基礎原理：似たものは似たものに溶ける</h2>
+                <p>
+                    化学の基本原則<strong>「Like dissolves like（類は友を呼ぶ）」</strong>に従い、香気成分もその極性によって溶ける相手を選ぶ。
+                </p>
+
+                <!-- 溶解性モデル図解 -->
+                <div class="reaction-diagram-box extraction-diagram">
+                    <div class="solvent-container">
+                        <div class="solvent-label">Water (Polar)</div>
+                        <div class="aroma-molecule hydrophilic">
+                            <span class="m-label">Hydrophilic</span>
+                            <span class="m-ex">Sugar / Acid</span>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="solvent-container">
+                        <div class="solvent-label">Oil (Non-polar)</div>
+                        <div class="aroma-molecule hydrophobic">
+                            <span class="m-label">Hydrophobic</span>
+                            <span class="m-ex">Spice / Herb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li><strong>水溶性 (Hydrophilic):</strong> 極性を持つ分子。糖、酸、一部のフルーツ香など。水やアルコールによく溶ける。</li>
+                    <li><strong>脂溶性 (Hydrophobic):</strong> 非極性分子。スパイスの精油成分（テルペン類）、ハーブの香りなど。水にはほとんど溶けず、<strong>油や高濃度アルコール</strong>に溶ける。</li>
+                </ul>
+                <p>
+                    カレーのスパイスを水で煮ても香りが立たないのは、主要成分が脂溶性（疎水性）であり、水分子に弾かれて抽出されないからだ。
+                </p>
+            </section>
+
+            <section>
+                <h2>3.0 データ：温度とアルコール濃度の相関</h2>
+                <p>
+                    抽出効率は「溶媒の種類」だけでなく、「温度」と「アルコール濃度」にも依存する。
+                    バニラエッセンスがなぜ40%近いアルコールを含んでいるのか、その理由がここにある。
+                </p>
+
+                <!-- 抽出効率グラフ -->
+                <div class="visualization-container">
+                    <h3>Extraction Efficiency vs Solvent</h3>
+                    <div id="reaction-chart">
+                        <div class="chart-curve curve-oil"></div>
+                        <div class="chart-curve curve-water"></div>
+                        <div class="chart-curve curve-alcohol"></div>
+                        <div class="chart-labels">
+                            <span>20°C</span>
+                            <span>40°C</span>
+                            <span>60°C</span>
+                            <span>80°C</span>
+                        </div>
+                        <div class="chart-legend">
+                            <span class="legend-item l-oil">Oil (Lipophilic)</span>
+                            <span class="legend-item l-alcohol">Alcohol (Amphiphilic)</span>
+                            <span class="legend-item l-water">Water (Hydrophilic)</span>
+                        </div>
+                    </div>
+                    <p class="caption">※脂溶性成分（スパイス等）の場合、水（青線）では温度を上げても抽出されにくいが、油（黄線）やアルコール（緑線）では劇的に抽出される。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：香りの最大化メソッド</h2>
+                <p>
+                    対象となる香気成分の性質を見極め、最適なアプローチを選択する。
+                </p>
+
+                <h3>Protocol A: スパイスのテンパリング (Tempering)</h3>
+                <p>
+                    インド料理の基本技術。クミンやカルダモンなどのホールスパイスを、調理の最初に油で加熱する工程。
+                </p>
+                <ul>
+                    <li><strong>Mechanism:</strong> スパイスの精油成分（脂溶性）を、熱い油に溶かし出す抽出作業。水を入れる前に油だけで行うのが絶対条件。</li>
+                    <li><strong>Action:</strong> 冷たい油にスパイスを入れ、弱火でじっくり加熱する。気泡が出て香りが立ってきたら（成分が油に移ったら）、次の食材を入れる。</li>
+                </ul>
+
+                <h3>Protocol B: バニラの抽出溶媒 (The Alcohol Extraction)</h3>
+                <p>
+                    バニラの主成分バニリンは、水よりもアルコールや脂肪によく溶ける。
+                </p>
+                <ul>
+                    <li><strong>Action:</strong> 自家製バニラエクストラクトを作るなら、水ではなくウォッカやラム酒（アルコール40%以上）に漬け込む。プリン液（牛乳・脂肪分）に入れて加熱するのも、乳脂肪分への抽出を狙った合理的な方法だ。</li>
+                </ul>
+
+                <h3>Protocol C: ハーブティーの「蓋」 (The Trap)</h3>
+                <p>
+                    フレッシュハーブの香りは揮発性が極めて高い。熱湯を注いだ瞬間に、香り成分も蒸気と共に逃げてしまう。
+                </p>
+                <ul>
+                    <li><strong>Action:</strong> 湯を注いだら即座にソーサーなどで蓋をする。揮発した成分を逃さず、冷やされて結露し、再びカップの中に戻る（還流）のを待つ。3分間の蒸らしは「抽出」と「還流」の時間だ。</li>
+                </ul>
+            </section>
+
+            <div class="references">
+                <h3>References</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner. pp.385-390 (Herbs & Spices).</li>
+                    <li>[2] Reineccius, G. (2006). <em>Flavor Chemistry and Technology</em>. CRC Press.</li>
+                    <li>[3] This, Hervé. (2006). <em>Molecular Gastronomy</em>. Columbia University Press.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>
