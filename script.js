@@ -9,10 +9,10 @@ const articles = [
     { id: "Exp.06", category: "INGREDIENT", title: "卵の熱凝固ヒステリシス", date: "2026.01.08", link: "article06.html" },
     { id: "Exp.07", category: "INGREDIENT", title: "澱粉の糊化と老化のメカニズム", date: "2026.01.15", link: "article07.html" },
     { id: "Exp.08", category: "INGREDIENT", title: "油脂の酸化と発煙点管理", date: "2026.01.22", link: "article08.html" },
-     { id: "Exp.09", category: "SENSORY", title: "揮発性香気成分の抽出理論", date: "2026.01.29", link: "article09.html" },
+    { id: "Exp.09", category: "SENSORY", title: "揮発性香気成分の抽出理論", date: "2026.01.29", link: "article09.html" },
+    { id: "Exp.10", category: "PHYSICS", title: "熱伝導・対流・放射の最適解", date: "2026.02.05", link: "article10.html" },
 
     // --- 以下、企画・執筆待ち記事 --- 
-    { id: "Exp.10", category: "PHYSICS", title: "熱伝導・対流・放射の最適解", date: "Coming Soon", link: "#" },
     { id: "Exp.11", category: "REACTION", title: "酵素的褐変の抑制生化学", date: "Coming Soon", link: "#" },
     { id: "Exp.12", category: "PHYSICS", title: "ペクチンのゲル化メカニズム", date: "Coming Soon", link: "#" },
     { id: "Exp.13", category: "REACTION", title: "乳酸発酵の制御と微生物学", date: "Coming Soon", link: "#" },

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熱伝導・対流・放射 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- ファビコン -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <!-- 記事コンテンツ -->
+    <main class="article-container">
+        <article>
+            <div class="article-header header-heat">
+                <span class="article-id">Exp.10</span>
+                <span class="category-tag">Heat Transfer</span>
+                <h1 class="article-main-title">熱伝導・対流・放射：<br>加熱機器の物理特性と「火入れ」の最適解</h1>
+                <p class="lead">
+                    フライパン、オーブン、炭火。これらは単なる熱源ではない。<br>
+                    それぞれが異なる物理法則でエネルギーを食材に叩き込んでいる。<br>
+                    「伝熱工学」を理解し、食材に合わせた最適なデバイスを選択する。
+                </p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：フーリエの法則と料理</h2>
+                <p>
+                    人類が火を発見して以来、料理の本質は変わっていない。
+                    それは「熱源から食材へエネルギーを移動させること」だ。
+                    この移動速度は、温度差と物質の特性によって決まる（フーリエの法則）。
+                    しかし、その「移動手段」には明確な3つのルートが存在する。
+                </p>
+            </section>
+
+            <section>
+                <h2>2.0 基礎原理：伝熱の3形態 (The Three Modes)</h2>
+                <p>
+                    厨房で起こる加熱現象は、必ず以下の3つの組み合わせである。
+                </p>
+
+                <!-- 熱伝達メカニズム図解 -->
+                <div class="reaction-diagram-box heat-diagram">
+                    <div class="heat-mode">
+                        <div class="mode-icon conduction-icon"></div>
+                        <h3>1. 伝導 (Conduction)</h3>
+                        <p>接触による直接移動。<br>例：フライパン、鉄板</p>
+                    </div>
+                    <div class="heat-mode">
+                        <div class="mode-icon convection-icon">
+                            <div class="arrow-wave"></div>
+                            <div class="arrow-wave delay"></div>
+                        </div>
+                        <h3>2. 対流 (Convection)</h3>
+                        <p>流体（空気・水）による移動。<br>例：茹でる、コンベクションオーブン</p>
+                    </div>
+                    <div class="heat-mode">
+                        <div class="mode-icon radiation-icon">
+                            <div class="ray r1"></div>
+                            <div class="ray r2"></div>
+                            <div class="ray r3"></div>
+                        </div>
+                        <h3>3. 放射 (Radiation)</h3>
+                        <p>電磁波（赤外線）による移動。<br>例：炭火、サラマンダー</p>
+                    </div>
+                </div>
+
+                <div class="callout">
+                    <strong>The Boundary Layer Problem:</strong><br>
+                    対流加熱において最大の敵となるのが、食材表面に張り付く「動かない空気の膜（境界層）」だ。<br>
+                    これが断熱材となり、熱の侵入を阻む。コンベクションオーブンのファンは、風でこの境界層を物理的に破壊し、加熱効率を上げるための装置である。
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 データ：材質と熱伝導率 ($k$)</h2>
+                <p>
+                    「伝導」を支配するのは、鍋の材質だ。
+                    熱伝導率（W/m·K）が高いほど、熱源の変化に敏捷に反応する。低いほど、熱を蓄える（蓄熱性が高い）。
+                </p>
+
+                <!-- 熱伝導率チャート -->
+                <div class="visualization-container">
+                    <h3>Thermal Conductivity of Cookware Materials</h3>
+                    <div id="conductivity-chart">
+                        <div class="bar-group">
+                            <span class="material-name">Copper (銅)</span>
+                            <div class="bar copper" style="width: 95%;">390 W/m·K</div>
+                        </div>
+                        <div class="bar-group">
+                            <span class="material-name">Aluminum (アルミ)</span>
+                            <div class="bar aluminum" style="width: 60%;">237 W/m·K</div>
+                        </div>
+                        <div class="bar-group">
+                            <span class="material-name">Iron (鉄/鋳鉄)</span>
+                            <div class="bar iron" style="width: 20%;">80 W/m·K</div>
+                        </div>
+                        <div class="bar-group">
+                            <span class="material-name">Stainless Steel</span>
+                            <div class="bar stainless" style="width: 5%;">15 W/m·K</div>
+                        </div>
+                    </div>
+                    <p class="caption">※銅は圧倒的に反応が早いため、繊細なソース作りやシュクル（飴細工）に向く。ステンレスは熱を伝えにくいため、鍋底にアルミや銅を挟んで補強されることが多い。</p>
+                </div>
+                
+                <p>
+                    <strong>放射率 (Emissivity):</strong> 
+                    見落とされがちだが、黒い物体（鋳鉄）は銀色の物体（ステンレス）よりも熱放射率が高い。
+                    黒い鉄のフライパンは、伝導だけでなく「放射」によっても肉を加熱しているため、焼き色がつきやすいのだ。
+                </p>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：熱の操縦法</h2>
+                <p>
+                    物理特性を理解した上で、現場でどう振る舞うべきか。
+                </p>
+
+                <h3>Protocol A: ライデンフロスト効果による予熱確認</h3>
+                <p>
+                    鉄のフライパンが十分に温まったか（食材がくっつかない温度か）をどう判断するか。
+                </p>
+                <ul>
+                    <li><strong>Action:</strong> 水を数滴落とす。
+                        <ul>
+                            <li><strong>「ジューッ」と蒸発:</strong> まだ低い（150℃以下）。食材はくっつく。</li>
+                            <li><strong>水滴が玉になって走り回る:</strong> 適温（190℃〜200℃）。<strong>ライデンフロスト現象</strong>により、蒸気の膜が鍋肌と水滴の間に入り込み、摩擦ゼロの状態になっている。この時、食材を入れると瞬時に表面が乾燥し、くっつかない（Non-stick）。</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Protocol B: コンベクションファンのON/OFF</h3>
+                <p>
+                    オーブンのファンは常に回すべきではない。
+                </p>
+                <ul>
+                    <li><strong>Fan ON (境界層破壊):</strong> ローストチキンやパイなど、表面をパリッと乾燥させ、焼き色を早くつけたい時。</li>
+                    <li><strong>Fan OFF (静止空気):</strong> スフレ、チーズケーキ、プリンなど。風による乾燥を防ぎ、しっとりと火を入れたい時、あるいは膨らむ生地が風圧で変形するのを防ぐ時。</li>
+                </ul>
+
+                <h3>Protocol C: 炭火の距離感 (Inverse Square Law)</h3>
+                <p>
+                    放射熱の強さは「距離の2乗に反比例」して減衰する（逆2乗の法則）。
+                </p>
+                <ul>
+                    <li><strong>Theory:</strong> 網を炭から2倍の距離に離すと、熱量は半分ではなく「1/4」になる。</li>
+                    <li><strong>Action:</strong> 焼き台の高さ調整は、リニアな微調整ではない。劇的な火力調整だ。強火の遠火（Strong heat from far away）は、表面を焦がさずに内部へ赤外線を届けるための物理的最適解である。</li>
+                </ul>
+            </section>
+
+            <div class="references">
+                <h3>References</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner. pp.780-791 (Cooking Methods).</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. Vol.2 (Techniques and Equipment).</li>
+                    <li>[3] Incropera, F. P., et al. (2007). <em>Fundamentals of Heat and Mass Transfer</em>. Wiley.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>
