@@ -345,14 +345,14 @@ const articles = [
         chart_html: `
             <div class="visualization-container">
                 <h3>Heating Speed: Pure Water vs Salt Water</h3>
-                <div style="height:200px; border-left:2px solid #555; border-bottom:2px solid #555; position:relative; overflow: hidden; margin-top: 20px;">
+                <div style="height:240px; border-left:2px solid #555; border-bottom:2px solid #555; position:relative; overflow: hidden; margin-top: 20px;">
                     <!-- Salt Water (Faster/Surface) -->
-                    <div style="position:absolute; bottom:0; left:0; width:100%; height:100%; border-top:2px dashed #E57373; transform: skewY(-20deg); transform-origin:bottom left;"></div>
+                    <div style="position:absolute; bottom:0; left:0; width:150%; height:100%; border-top:3px dashed #E57373; transform: skewY(-15deg); transform-origin:bottom left; pointer-events:none;"></div>
                     <!-- Pure Water -->
-                    <div style="position:absolute; bottom:0; left:0; width:100%; height:100%; border-top:2px solid #4FC3F7; transform: skewY(-10deg); transform-origin:bottom left;"></div>
-                    <div style="position:absolute; right:10px; top:20px; color:#E57373;">Salt Water</div>
-                    <div style="position:absolute; right:10px; top:60px; color:#4FC3F7;">Pure Water</div>
-                    <div style="position:absolute; bottom:-20px; left:50%;">Time</div>
+                    <div style="position:absolute; bottom:0; left:0; width:150%; height:100%; border-top:3px solid #4FC3F7; transform: skewY(-8deg); transform-origin:bottom left; pointer-events:none;"></div>
+                    <div style="position:absolute; right:10px; top:40px; color:#E57373; font-weight:bold;">Salt Water</div>
+                    <div style="position:absolute; right:10px; top:80px; color:#4FC3F7; font-weight:bold;">Pure Water</div>
+                    <div style="position:absolute; bottom:-25px; left:50%;">Time</div>
                 </div>
             </div>
         `,
