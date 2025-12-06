@@ -332,30 +332,30 @@ const articles = [
         h2_2: "2.0 加熱モデル：双極子回転",
         p_2: "マイクロ波（2.45GHz）は、水分子のプラスとマイナスの極を激しく反転させる。<br>水分子同士が摩擦を起こし、熱エネルギーが発生する。したがって、水分を含まない皿や乾燥した食品は温まらない。",
         diagram_html: `
-                                                                                                                            <div class="diagram-placeholder">
-                                                                                                                                <div class="diagram-title">[Microwave Dipole Rotation]</div>
-                                                                                                                                <div>Microwave Field (+ / -) switches billions of times/sec</div>
-                                                                                                                                <div>Water Molecules (H2O) rotate to align</div>
-                                                                                                                                <div>Friction -> HEAT</div>
-                                                                                                                            </div>
-                                                                                                                            `,
+            <div class="diagram-placeholder">
+                <div class="diagram-title">[Microwave Dipole Rotation]</div>
+                <div>Microwave Field (+ / -) switches billions of times/sec</div>
+                <div>Water Molecules (H2O) rotate to align</div>
+                <div>Friction -> HEAT</div>
+            </div>
+        `,
         h2_3: "3.0 制御理論：浸透深度と定在波",
         p_3: "「内側から温まる」と言われるが、マイクロ波にも「浸透できる深さ」の限界がある。<br>また、庫内で電波が強め合う場所と弱め合う場所（定在波）ができ、これも加熱ムラの原因となる。",
         chart_title: "Heating Curve vs Salt",
         chart_html: `
-                                                                                                                                <div class="visualization-container">
-                                                                                                                                    <h3>Heating Speed: Pure Water vs Salt Water</h3>
-                                                                                                                                    <div style="height:200px; border-left:2px solid #555; border-bottom:2px solid #555; position:relative;">
-                                                                                                                                        <!-- Salt Water (Faster/Surface) -->
-                                                                                                                                        <div style="position:absolute; bottom:0; left:0; width:100%; height:100%; border-top:2px dashed #E57373; transform: skewY(-40deg); transform-origin:bottom left;"></div>
-                                                                                                                                        <!-- Pure Water -->
-                                                                                                                                        <div style="position:absolute; bottom:0; left:0; width:100%; height:100%; border-top:2px solid #4FC3F7; transform: skewY(-20deg); transform-origin:bottom left;"></div>
-                                                                                                                                        <div style="position:absolute; right:10px; top:20px; color:#E57373;">Salt Water</div>
-                                                                                                                                        <div style="position:absolute; right:10px; top:60px; color:#4FC3F7;">Pure Water</div>
-                                                                                                                                        <div style="position:absolute; bottom:-20px; left:50%;">Time</div>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                                `,
+            <div class="visualization-container">
+                <h3>Heating Speed: Pure Water vs Salt Water</h3>
+                <div style="height:200px; border-left:2px solid #555; border-bottom:2px solid #555; position:relative;">
+                    <!-- Salt Water (Faster/Surface) -->
+                    <div style="position:absolute; bottom:0; left:0; width:100%; height:100%; border-top:2px dashed #E57373; transform: skewY(-40deg); transform-origin:bottom left;"></div>
+                    <!-- Pure Water -->
+                    <div style="position:absolute; bottom:0; left:0; width:100%; height:100%; border-top:2px solid #4FC3F7; transform: skewY(-20deg); transform-origin:bottom left;"></div>
+                    <div style="position:absolute; right:10px; top:20px; color:#E57373;">Salt Water</div>
+                    <div style="position:absolute; right:10px; top:60px; color:#4FC3F7;">Pure Water</div>
+                    <div style="position:absolute; bottom:-20px; left:50%;">Time</div>
+                </div>
+            </div>
+        `,
         protocols: [
             ["Protocol A: 塩分とスピード", "塩はイオンを含み電波を吸収しやすいため、塩気のある部分は異常に早く熱くなる。温め直しで「外は熱々、中は冷たい」現象の一因。"],
             ["Protocol B: 爆発防止", "卵やタラコなど膜に包まれた食材は、内部で発生した水蒸気の逃げ場がなくなり爆発する。必ず穴を開ける。"],
