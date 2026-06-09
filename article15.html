@@ -1,121 +1,112 @@
 <!DOCTYPE html>
-                                                                                                                                <html lang="ja">
-                                                                                                                                    <head>
-                                                                                                                                        <meta charset="UTF-8">
-                                                                                                                                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                                                                                                                                <title>真空調理 (Sous-vide) の熱力学： 空気断熱の排除と精密温度管理 - LOGIC & LADLE</title>
-                                                                                                                                                <link rel="stylesheet" href="style.css">
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>真空調理 (Sous-vide) の熱力学： 空気断熱の排除と精密温度管理 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
 
-                                                                                                                                                    <link rel="preconnect" href="https://fonts.googleapis.com">
-                                                                                                                                                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                                                                                                                                                            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <main class="article-container">
+        <article>
+            <div class="article-header header-sousvide">
+                <span class="article-id">Exp.15</span>
+                <span class="category-tag">Heat Transfer / Sous-vide</span>
+                <h1 class="article-main-title">真空調理 (Sous-vide) の熱力学：<br>空気断熱の排除と精密温度管理</h1>
+                <p class="lead">0.1℃単位の温度制御が可能にする、かつてない食感。<br>「焼く」「煮る」とは根本的に異なる、熱伝達の物理学。<br>なぜ袋に入れるのか？なぜ時間がかかるのか？その理由を解き明かす。</p>
+            </div>
 
-                                                                                                                                                                <link rel="icon" href="favicon.svg" type="image/svg+xml">
-                                                                                                                                                                </head>
-                                                                                                                                                                <body>
-                                                                                                                                                                    <header>
-                                                                                                                                                                        <div class="logo-area">
-                                                                                                                                                                            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
-                                                                                                                                                                            <p class="site-desc">Experimental Food Science Lab.</p>
-                                                                                                                                                                        </div>
-                                                                                                                                                                        <nav class="site-nav">
-                                                                                                                                                                            <a href="index.html">TOP</a>
-                                                                                                                                                                            <a href="#">About</a>
-                                                                                                                                                                        </nav>
-                                                                                                                                                                    </header>
+            <section>
+                <h2>1.0 序論：空気は最悪の熱伝導体</h2>
+                <p>従来のオーブン調理の弱点は「空気」だ。空気は熱を伝えるのが非常に下手（断熱材）である。<br>真空包装することで食材と熱源（お湯）の間の空気を排除し、効率的かつ均一な熱伝導を実現するのが真空調理の真髄だ。</p>
+            </section>
 
-                                                                                                                                                                    <main class="article-container">
-                                                                                                                                                                        <article>
-                                                                                                                                                                            <div class="article-header header-sousvide">
-                                                                                                                                                                                <span class="article-id">Exp.15</span>
-                                                                                                                                                                                <span class="category-tag">Heat Transfer / Sous-vide</span>
-                                                                                                                                                                                <h1 class="article-main-title">真空調理 (Sous-vide) の熱力学：<br>空気断熱の排除と精密温度管理</h1>
-                                                                                                                                                                                <p class="lead">
-                                                                                                                                                                                    0.1℃単位の温度制御が可能にする、かつてない食感。<br>「焼く」「煮る」とは根本的に異なる、熱伝達の物理学。<br>なぜ袋に入れるのか？なぜ時間がかかるのか？その理由を解き明かす。
-                                                                                                                                                                                </p>
-                                                                                                                                                                            </div>
+            <section>
+                <h2>2.0 加熱モデル：均一加熱と殺菌</h2>
+                <p>タンパク質変性温度（例えば60℃）を狙い撃ちにし、それ以上の温度を与えない。<br>「オーバークック（焼きすぎ）」が物理的に起こり得ないシステムである。<br>ただし、低い温度で調理するため、時間をかけて低温殺菌（パストライゼーション）する必要がある。</p>
+                
+                <div class="compare-grid">
+                    <div class="compare-card">
+                        <div class="cc-title">Water 💧</div>
+                        <div class="cc-body">高い熱伝導率。効率的に、かつ均一に熱が伝わる。</div>
+                    </div><div class="compare-card">
+                        <div class="cc-title">Air 🌫</div>
+                        <div class="cc-body">低い熱伝導率。実は優れた「断熱材」。</div>
+                    </div><div class="compare-card">
+                        <div class="cc-title">Vacuum ⊘</div>
+                        <div class="cc-body">空気を除去し、お湯から食材へ直接伝熱。</div>
+                    </div>
+                </div>
+            </section>
 
-                                                                                                                                                                            <section>
-                                                                                                                                                                                <h2>1.0 序論：空気は最悪の熱伝導体</h2>
-                                                                                                                                                                                <p>
-                                                                                                                                                                                    従来のオーブン調理の弱点は「空気」だ。空気は熱を伝えるのが非常に下手（断熱材）である。<br>真空包装することで食材と熱源（お湯）の間の空気を排除し、効率的かつ均一な熱伝導を実現するのが真空調理の真髄だ。
-                                                                                                                                                                                </p>
-                                                                                                                                                                            </section>
+            <section>
+                <h2>3.0 制御理論：温度と時間の関係（D値）</h2>
+                <p>殺菌は「温度」だけでなく「時間」との掛け算で決まる。<br>63℃で30分加熱するのと、75℃で1分加熱するのは、殺菌効果としては同等になり得る（D値の概念）。</p>
+                
+                <div class="visualization-container">
+                    <h3>Pasteurization Time vs Temp</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Pasteurization Time vs Temp">
+                        <defs><linearGradient id="g-a15-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a15" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 22.0 C 99.2 46.4, 234.7 129.5, 325.0 168.2 C 415.3 206.8, 550.8 239.6, 596.0 253.8 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a15-0)" stroke="none"/><path class="curve" d="M 54.0 22.0 C 99.2 46.4, 234.7 129.5, 325.0 168.2 C 415.3 206.8, 550.8 239.6, 596.0 253.8" stroke="#D4AF37" filter="url(#glow-a15)"/>
+                        
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">55°C</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">75°C</text>
+                        <text class="axis-label" x="46" y="26.0" text-anchor="end">長時間</text><text class="axis-label" x="46" y="257.8" text-anchor="end">短時間</text>
+                        
+                    </svg>
+                    <p class="caption">※温度が高いほど、必要な加熱（殺菌）時間は短くなる。</p>
+                </div>
+            </section>
 
-                                                                                                                                                                            <section>
-                                                                                                                                                                                <h2>2.0 加熱モデル：均一加熱と殺菌</h2>
-                                                                                                                                                                                <p>
-                                                                                                                                                                                    タンパク質変性温度（例えば60℃）を狙い撃ちにし、それ以上の温度を与えない。<br>「オーバークック（焼きすぎ）」が物理的に起こり得ないシステムである。<br>ただし、低い温度で調理するため、時間をかけて低温殺菌（パストライゼーション）する必要がある。
-                                                                                                                                                                                </p>
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 58℃・63℃・68℃の法則</h3>
+                            <p>58℃（ミディアムレア）、63℃（コラーゲン変性開始）、68℃（分水嶺）。この3つの温度帯を使い分ける。</p>
+                            <h3>Protocol B: 2段階加熱</h3>
+                            <p>例えば野菜なら85℃でペクチンを壊し、肉なら58℃でキープする。食材によって最適な温度帯が全く異なるため、同時調理は難しい。</p>
+                            <h3>Protocol C: 危険温度帯の回避</h3>
+                            <p>30℃〜50℃は菌が最も繁殖する温度。この帯域をいかに素早く通過させるかが衛生管理の鍵。</p>
+            </section>
 
-                                                                                                                                                                                
-                            <div class="diagram-placeholder">
-                                <div class="diagram-title">[Heat Transfer Efficiency]</div>
-                                <div>Water: High Conductivity (Efficient)</div>
-                                <div>Air: Low Conductivity (Insulator)</div>
-                                <div>Vacuum: Removing Air -> Direct Heat Transfer</div>
-                            </div>
-                            
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
 
-                                                                                                                                                                            </section>
-
-                                                                                                                                                                            <section>
-                                                                                                                                                                                <h2>3.0 制御理論：温度と時間の関係（D値）</h2>
-                                                                                                                                                                                <p>
-                                                                                                                                                                                    殺菌は「温度」だけでなく「時間」との掛け算で決まる。<br>63℃で30分加熱するのと、75℃で1分加熱するのは、殺菌効果としては同等になり得る（D値の概念）。
-                                                                                                                                                                                </p>
-
-                                                                                                                                                                                
-                                <div class="visualization-container">
-                                    <h3>Pasteurization Time vs Temp</h3>
-                                    <div style="height:200px; border-left:2px solid #555; border-bottom:2px solid #555; position:relative;">
-                                        <div style="position:absolute; top:0; left:10%; width:80%; height:90%; border-left:3px solid var(--color-accent); border-bottom:3px solid transparent; border-radius: 0 0 0 100%;"></div>
-                                        <div style="position:absolute; bottom:-20px; left:0;">55°C</div>
-                                        <div style="position:absolute; bottom:-20px; right:0;">75°C</div>
-                                        <div style="position:absolute; left:-40px; top:0;">Long Time</div>
-                                        <div style="position:absolute; left:-40px; bottom:0;">Short Time</div>
-                                    </div>
-                                </div>
-                                
-
-                                                                                                                                                                            </section>
-
-                                                                                                                                                                            <section>
-                                                                                                                                                                                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
-                                                                                                                                                                                
-                                                                                                                                                                                <h3>Protocol A: 58℃・63℃・68℃の法則</h3>
-                                                                                                                                                                                <p>
-                                                                                                                                                                                    58℃（ミディアムレア）、63℃（コラーゲン変性開始）、68℃（分水嶺）。この3つの温度帯を使い分ける。
-                                                                                                                                                                                </p>
-                                                                                                                                                                                
-                                                                                                                                                                                <h3>Protocol B: 2段階加熱</h3>
-                                                                                                                                                                                <p>
-                                                                                                                                                                                    例えば野菜なら85℃でペクチンを壊し、肉なら58℃でキープする。食材によって最適な温度帯が全く異なるため、同時調理は難しい。
-                                                                                                                                                                                </p>
-                                                                                                                                                                                
-                                                                                                                                                                                <h3>Protocol C: 危険温度帯の回避</h3>
-                                                                                                                                                                                <p>
-                                                                                                                                                                                    30℃〜50℃は菌が最も繁殖する温度。この帯域をいかに素早く通過させるかが衛生管理の鍵。
-                                                                                                                                                                                </p>
-                                                                                                                                                                                
-                                                                                                                                                                            </section>
-
-                                                                                                                                                                            <div class="references">
-                                                                                                                                                                                <h3>References & Further Reading</h3>
-                                                                                                                                                                                <ul>
-                                                                                                                                                                                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
-                                                                                                                                                                                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
-                                                                                                                                                                                </ul>
-                                                                                                                                                                            </div>
-                                                                                                                                                                        </article>
-                                                                                                                                                                    </main>
-
-                                                                                                                                                                    <footer>
-                                                                                                                                                                        <div class="footer-content">
-                                                                                                                                                                            <div class="footer-logo">LOGIC & LADLE</div>
-                                                                                                                                                                            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
-                                                                                                                                                                        </div>
-                                                                                                                                                                    </footer>
-                                                                                                                                                                </body>
-                                                                                                                                                            </html>
-                                                                                                                                                            
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

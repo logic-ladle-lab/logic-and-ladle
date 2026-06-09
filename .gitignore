@@ -3,4 +3,5 @@ instagram/.env
 instagram/.cache/
 instagram/browser/.profile/
 instagram/browser/*.png
+.review/
 .agent/

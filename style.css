@@ -928,13 +928,7 @@ footer {
 /* --- 記事ヘッダー背景設定 (Article 02) --- */
 
 /* 記事ごとに背景を変えるための個別設定 */
-body:has(.article-id:contains('Exp.02')) .article-header {
-    /* CSSの:has擬似クラスはまだ全ブラウザ対応ではないため、
-       確実な方法として、HTML側にクラスを追加する方法を推奨しますが、
-       今回は簡易的に .article-header に直接書くか、
-       ページ固有のスタイルブロックを使う方法があります。
-    */
-}
+/* 記事ごとの背景は header-* クラス（例: .header-emulsion）で個別指定しています。 */
 
 /* 最も確実な方法：article02.html の .article-header にクラスを追加 */
 /* article02.html を開き、<div class="article-header"> を
@@ -1227,12 +1221,8 @@ body:has(.article-id:contains('Exp.02')) .article-header {
     box-shadow: 0 -5px 15px rgba(212, 175, 55, 0.3);
 }
 
-/* ※CSSだけで正確な逆S字を描くのは難しいため、
-       ここでは簡易的に「右肩下がりの赤いライン」として表現しています。
-       より正確にはSVG推奨ですが、トンマナとしてはこれで機能します */
-border-top: 3px solid #E74C3C;
-box-shadow: 0 -5px 15px rgba(231, 76, 60, 0.3);
-}
+/* ※逆S字カーブは現在インラインSVG（.svg-chart）で描画しています。
+       旧CSSトリックで残っていた不正な宣言ブロックは削除しました。 */
 
 /* 記事ヘッダー背景（個別設定） */
 /* 必要であれば生成した画像を myoglobin-bg.png として保存し、ここを有効化してください */
@@ -3457,4 +3447,270 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 .header-micro .lead {
     color: #F2F2F2;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* =====================================================================
+   REUSABLE VISUAL COMPONENTS (v2) — SVG charts, flow diagrams, compare
+   Used by articles 12-20. Robust, contained, and on-brand.
+   ===================================================================== */
+
+/* --- Inline SVG line chart (replaces fragile CSS-skew charts) --- */
+.chart-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+}
+
+.chart-svg .axis {
+    stroke: #555;
+    stroke-width: 1.5;
+}
+
+.chart-svg .grid {
+    stroke: rgba(255, 255, 255, 0.06);
+    stroke-width: 1;
+}
+
+.chart-svg .curve {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.chart-svg .axis-label {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    fill: #888;
+}
+
+.chart-svg .point-label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    fill: var(--color-text);
+}
+
+/* --- Flow diagram: styled nodes + arrows (replaces ASCII text boxes) --- */
+.flow-diagram {
+    margin: 40px 0;
+    padding: 32px 24px;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    background:
+        radial-gradient(120% 120% at 50% 0%, rgba(212, 175, 55, 0.04), transparent 60%),
+        rgba(255, 255, 255, 0.015);
+}
+
+.flow-title {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    text-align: center;
+    margin-bottom: 26px;
+    opacity: 0.9;
+}
+
+.flow-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 12px;
+}
+
+.flow-row + .flow-row {
+    margin-top: 16px;
+}
+
+.flow-node {
+    flex: 0 1 auto;
+    min-width: 96px;
+    max-width: 220px;
+    padding: 14px 16px;
+    border: 1px solid var(--color-line);
+    border-radius: 6px;
+    background: var(--color-surface);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flow-node .node-main {
+    font-family: var(--font-mono);
+    font-size: 0.92rem;
+    color: var(--color-text);
+    letter-spacing: 0.02em;
+}
+
+.flow-node .node-sub {
+    font-size: 0.72rem;
+    color: var(--color-sub);
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+/* highlighted endpoint / peak / result */
+.flow-node.is-accent {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.25);
+    background: rgba(212, 175, 55, 0.06);
+}
+
+.flow-node.is-accent .node-main {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.flow-arrow span {
+    display: inline-block;
+}
+
+/* --- Compare grid: side-by-side concept cards --- */
+.compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin: 40px 0;
+}
+
+.compare-card {
+    border: 1px solid var(--color-line);
+    border-top: 3px solid var(--color-accent);
+    border-radius: 6px;
+    padding: 22px 20px;
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.compare-card .cc-title {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+}
+
+.compare-card .cc-body {
+    font-size: 0.85rem;
+    color: #cfcfcf;
+    line-height: 1.7;
+}
+
+/* --- Mobile polish --- */
+@media (max-width: 768px) {
+    .article-container {
+        padding: 40px 18px 100px;
+    }
+
+    .article-main-title {
+        font-size: 1.6rem;
+        line-height: 1.45;
+    }
+
+    article h2 {
+        font-size: 1.3rem;
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    .flow-arrow span {
+        transform: rotate(90deg);
+    }
+}
+
+/* --- Index: collapsible "Upcoming experiments" section --- */
+.upcoming-wrap {
+    grid-column: 1 / -1;
+    background: var(--color-bg);
+}
+
+.upcoming-toggle {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--color-sub);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 26px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s, background 0.3s;
+}
+
+.upcoming-toggle:hover {
+    color: var(--color-accent);
+    background: rgba(212, 175, 55, 0.04);
+}
+
+.upcoming-toggle .ut-label {
+    color: var(--color-text);
+}
+
+.upcoming-toggle:hover .ut-label {
+    color: var(--color-accent);
+}
+
+.upcoming-toggle .ut-caret {
+    margin-left: 10px;
+    color: var(--color-accent);
+}
+
+.upcoming-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1px;
+    background: var(--color-line);
+    border-top: 1px solid var(--color-line);
+}
+
+/* [hidden] must beat the display:grid above, or the list never collapses */
+.upcoming-list[hidden] {
+    display: none;
+}
+
+.upcoming-chip {
+    background: var(--color-bg);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 24px;
+    font-family: var(--font-mono);
+    opacity: 0.65;
+}
+
+.upcoming-chip .uc-id {
+    color: var(--color-accent);
+    font-size: 0.72rem;
+    flex-shrink: 0;
+    min-width: 52px;
+}
+
+.upcoming-chip .uc-title {
+    color: var(--color-sub);
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    flex: 1;
+    line-height: 1.4;
+}
+
+.upcoming-chip .uc-lock {
+    font-size: 0.7rem;
+    opacity: 0.5;
 }

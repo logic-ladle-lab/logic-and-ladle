@@ -1,123 +1,99 @@
 <!DOCTYPE html>
-                                                                                                                                <html lang="ja">
-                                                                                                                                    <head>
-                                                                                                                                        <meta charset="UTF-8">
-                                                                                                                                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                                                                                                                                <title>アントシアニンのpH変色： 赤キャベツとナスの色を操るイオン化学 - LOGIC & LADLE</title>
-                                                                                                                                                <link rel="stylesheet" href="style.css">
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アントシアニンのpH変色： 赤キャベツとナスの色を操るイオン化学 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
 
-                                                                                                                                                    <link rel="preconnect" href="https://fonts.googleapis.com">
-                                                                                                                                                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                                                                                                                                                            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <main class="article-container">
+        <article>
+            <div class="article-header header-antho">
+                <span class="article-id">Exp.19</span>
+                <span class="category-tag">Vegetable / Pigment</span>
+                <h1 class="article-main-title">アントシアニンのpH変色：<br>赤キャベツとナスの色を操るイオン化学</h1>
+                <p class="lead">紫色は、自然界で最も不安定で美しい色の一つ。<br>酸で赤に、アルカリで青に。<br>pH指示薬として振る舞う色素をコントロールし、皿の上に魔法をかける。</p>
+            </div>
 
-                                                                                                                                                                <link rel="icon" href="favicon.svg" type="image/svg+xml">
-                                                                                                                                                                </head>
-                                                                                                                                                                <body>
-                                                                                                                                                                    <header>
-                                                                                                                                                                        <div class="logo-area">
-                                                                                                                                                                            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
-                                                                                                                                                                            <p class="site-desc">Experimental Food Science Lab.</p>
-                                                                                                                                                                        </div>
-                                                                                                                                                                        <nav class="site-nav">
-                                                                                                                                                                            <a href="index.html">TOP</a>
-                                                                                                                                                                            <a href="#">About</a>
-                                                                                                                                                                        </nav>
-                                                                                                                                                                    </header>
+            <section>
+                <h2>1.0 序論：カメレオン色素</h2>
+                <p>紫キャベツ、ナス、ブルーベリーなどに含まれる「アントシアニン」は、pHによって分子構造を変え、色を劇的に変化させる。<br>料理人はこの性質を利用して、意図した色を作り出せる。</p>
+            </section>
 
-                                                                                                                                                                    <main class="article-container">
-                                                                                                                                                                        <article>
-                                                                                                                                                                            <div class="article-header header-antho">
-                                                                                                                                                                                <span class="article-id">Exp.19</span>
-                                                                                                                                                                                <span class="category-tag">Vegetable / Pigment</span>
-                                                                                                                                                                                <h1 class="article-main-title">アントシアニンのpH変色：<br>赤キャベツとナスの色を操るイオン化学</h1>
-                                                                                                                                                                                <p class="lead">
-                                                                                                                                                                                    紫色は、自然界で最も不安定で美しい色の一つ。<br>酸で赤に、アルカリで青に。<br>pH指示薬として振る舞う色素をコントロールし、皿の上に魔法をかける。
-                                                                                                                                                                                </p>
-                                                                                                                                                                            </div>
+            <section>
+                <h2>2.0 変色モデル：構造変化</h2>
+                <p>酸性側では「フラビリウムイオン」となり鮮やかな赤色を呈する。<br>中性〜アルカリ性に向かうにつれ、紫〜青〜緑と変化していく。<br>ナスの漬物にミョウバン（アルミニウム）や鉄釘を入れるのは、金属イオンと結合させて青紫色（錯体）を安定させるためだ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Anthocyanin Color Scale</div>
+                    <div style="height:28px; border-radius:6px; background:linear-gradient(to right, #d7263d, #8e44ad, #2e6fdb, #2ecc71); margin:4px 0 12px;"></div>
+                    <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.72rem; color:var(--color-sub);">
+                        <span>pH 2 (赤)</span><span>pH 7 (紫)</span><span>pH 11 (青〜緑)</span>
+                    </div>
+                </div>
+            </section>
 
-                                                                                                                                                                            <section>
-                                                                                                                                                                                <h2>1.0 序論：カメレオン色素</h2>
-                                                                                                                                                                                <p>
-                                                                                                                                                                                    紫キャベツ、ナス、ブルーベリーなどに含まれる「アントシアニン」は、pHによって分子構造を変え、色を劇的に変化させる。<br>料理人はこの性質を利用して、意図した色を作り出せる。
-                                                                                                                                                                                </p>
-                                                                                                                                                                            </section>
+            <section>
+                <h2>3.0 制御理論：酸の添加</h2>
+                <p>赤キャベツのマリネ（ザワークラウト）が鮮やかなピンク色なのは、酢や乳酸によって酸性になっているからだ。<br>逆に、変色させたくない場合はpHを中性に保つ工夫が必要になる。</p>
+                
+                <div class="visualization-container">
+                    <h3>Color Stability with Metal Ions</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Color Stability with Metal Ions">
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <rect x="54.0" y="173.2" width="251.0" height="100.8" rx="4" fill="#888" fill-opacity="0.85"/>
+      <text class="axis-label" x="179.5" y="298" text-anchor="middle">金属なし</text>
+      <text class="point-label" x="179.5" y="163.2" text-anchor="middle" fill="#888">退色</text><rect x="345.0" y="59.8" width="251.0" height="214.2" rx="4" fill="#D4AF37" fill-opacity="0.85"/>
+      <text class="axis-label" x="470.5" y="298" text-anchor="middle">Al / Fe あり</text>
+      <text class="point-label" x="470.5" y="49.8" text-anchor="middle" fill="#D4AF37">安定</text>
+                    </svg>
+                    <p class="caption">※ミョウバンや鉄イオンと錯体を作ると、青紫色が安定する。</p>
+                </div>
+            </section>
 
-                                                                                                                                                                            <section>
-                                                                                                                                                                                <h2>2.0 変色モデル：構造変化</h2>
-                                                                                                                                                                                <p>
-                                                                                                                                                                                    酸性側では「フラビリウムイオン」となり鮮やかな赤色を呈する。<br>中性〜アルカリ性に向かうにつれ、紫〜青〜緑と変化していく。<br>ナスの漬物にミョウバン（アルミニウム）や鉄釘を入れるのは、金属イオンと結合させて青紫色（錯体）を安定させるためだ。
-                                                                                                                                                                                </p>
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: マリネの鮮赤化</h3>
+                            <p>赤キャベツやラディッシュは、酢を加えることで鮮やかなルビー色になる。加熱してもこの色は比較的安定する。</p>
+                            <h3>Protocol B: ナスの色止め</h3>
+                            <p>油でコーティングして水（と酸素）との接触を断つか、鉄・ミョウバンと共に漬け込むことで、あの美しい紺色を維持できる。</p>
+                            <h3>Protocol C: 驚きの青い焼きそば</h3>
+                            <p>中華麺（かん水＝アルカリ性）と紫キャベツを炒めると、麺が緑〜青色になる（理科実験として有名）。レモンをかけるとピンクに戻る。</p>
+            </section>
 
-                                                                                                                                                                                
-                                                                                                        <div class="diagram-placeholder">
-                                                                                                            <div class="diagram-title">[Anthocyanin Color Scale]</div>
-                                                                                                            <div style="background:linear-gradient(to right, red, purple, blue, green); width:100%; height:20px; margin-top:10px;"></div>
-                                                                                                            <div style="display:flex; justify-content:space-between; font-size:0.8rem;">
-                                                                                                                <span>pH 2 (Red)</span>
-                                                                                                                <span>pH 7 (Purple)</span>
-                                                                                                                <span>pH 11 (Blue/Green)</span>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
 
-                                                                                                                                                                            </section>
-
-                                                                                                                                                                            <section>
-                                                                                                                                                                                <h2>3.0 制御理論：酸の添加</h2>
-                                                                                                                                                                                <p>
-                                                                                                                                                                                    赤キャベツのマリネ（ザワークラウト）が鮮やかなピンク色なのは、酢や乳酸によって酸性になっているからだ。<br>逆に、変色させたくない場合はpHを中性に保つ工夫が必要になる。
-                                                                                                                                                                                </p>
-
-                                                                                                                                                                                
-                                                                                                            <div class="visualization-container">
-                                                                                                                <h3>Color Stability with Metal Ions</h3>
-                                                                                                                <div style="height:200px; border-left:2px solid #555; border-bottom:2px solid #555; position:relative;">
-                                                                                                                    <div style="position:absolute; bottom:20px; left:10%; width:20%; height:40%; background:#888;">No Metal</div>
-                                                                                                                    <div style="position:absolute; bottom:20px; left:50%; width:20%; height:80%; background:var(--color-accent);">With Al/Fe</div>
-                                                                                                                    <div style="position:absolute; bottom:10px; left:10%;">Fades</div>
-                                                                                                                    <div style="position:absolute; bottom:10px; left:50%;">Stable</div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            
-
-                                                                                                                                                                            </section>
-
-                                                                                                                                                                            <section>
-                                                                                                                                                                                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
-                                                                                                                                                                                
-                                                                                                                                                                                <h3>Protocol A: マリネの鮮赤化</h3>
-                                                                                                                                                                                <p>
-                                                                                                                                                                                    赤キャベツやラディッシュは、酢を加えることで鮮やかなルビー色になる。加熱してもこの色は比較的安定する。
-                                                                                                                                                                                </p>
-                                                                                                                                                                                
-                                                                                                                                                                                <h3>Protocol B: ナスの色止め</h3>
-                                                                                                                                                                                <p>
-                                                                                                                                                                                    油でコーティングして水（と酸素）との接触を断つか、鉄・ミョウバンと共に漬け込むことで、あの美しい紺色を維持できる。
-                                                                                                                                                                                </p>
-                                                                                                                                                                                
-                                                                                                                                                                                <h3>Protocol C: 驚きの青い焼きそば</h3>
-                                                                                                                                                                                <p>
-                                                                                                                                                                                    中華麺（かん水＝アルカリ性）と紫キャベツを炒めると、麺が緑〜青色になる（理科実験として有名）。レモンをかけるとピンクに戻る。
-                                                                                                                                                                                </p>
-                                                                                                                                                                                
-                                                                                                                                                                            </section>
-
-                                                                                                                                                                            <div class="references">
-                                                                                                                                                                                <h3>References & Further Reading</h3>
-                                                                                                                                                                                <ul>
-                                                                                                                                                                                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
-                                                                                                                                                                                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
-                                                                                                                                                                                </ul>
-                                                                                                                                                                            </div>
-                                                                                                                                                                        </article>
-                                                                                                                                                                    </main>
-
-                                                                                                                                                                    <footer>
-                                                                                                                                                                        <div class="footer-content">
-                                                                                                                                                                            <div class="footer-logo">LOGIC & LADLE</div>
-                                                                                                                                                                            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
-                                                                                                                                                                        </div>
-                                                                                                                                                                    </footer>
-                                                                                                                                                                </body>
-                                                                                                                                                            </html>
-                                                                                                                                                            
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -111,22 +111,18 @@ function renderArticles(filter = 'ALL') {
     if (!gridContainer) return;
     gridContainer.innerHTML = '';
     const filteredData = filter === 'ALL' ? articles : articles.filter(item => item.category === filter);
-    let delayIndex = 0;
 
-    filteredData.forEach(item => {
+    // 公開済み（リンクあり）と準備中（Coming Soon）に分ける
+    const published = filteredData.filter(item => item.link !== '#');
+    const upcoming = filteredData.filter(item => item.link === '#');
+
+    // --- 公開済み記事：通常のカード表示 ---
+    published.forEach((item, i) => {
         const card = document.createElement('a');
         card.href = item.link;
         card.className = 'article-card';
-
-        if (item.link === "#") {
-            card.classList.add('disabled');
-            card.style.cursor = "default";
-            card.removeAttribute('href');
-        }
-
-        card.style.animation = `fadeIn 0.5s ease forwards ${delayIndex * 0.03}s`;
+        card.style.animation = `fadeIn 0.5s ease forwards ${i * 0.03}s`;
         card.style.opacity = '0';
-
         card.innerHTML = `
             <div class="card-header">
                 <span class="card-id">${item.id}</span>
@@ -135,12 +131,42 @@ function renderArticles(filter = 'ALL') {
             <h3 class="card-title">${item.title}</h3>
             <div class="card-footer">
                 <span class="card-date">${item.date}</span>
-                <span class="card-arrow">${item.link !== '#' ? '→' : '🔒'}</span>
+                <span class="card-arrow">→</span>
             </div>
         `;
         gridContainer.appendChild(card);
-        delayIndex++;
     });
+
+    // --- 準備中：折りたたみ式のコンパクトな一覧（クリックで開閉） ---
+    if (upcoming.length) {
+        const wrap = document.createElement('div');
+        wrap.className = 'upcoming-wrap';
+        wrap.innerHTML = `
+            <button class="upcoming-toggle" aria-expanded="false">
+                <span class="ut-label">UPCOMING EXPERIMENTS</span>
+                <span class="ut-meta">${upcoming.length} 件・準備中　<span class="ut-caret">▼</span></span>
+            </button>
+            <div class="upcoming-list" hidden>
+                ${upcoming.map(u => `
+                    <div class="upcoming-chip">
+                        <span class="uc-id">${u.id}</span>
+                        <span class="uc-title">${u.title}</span>
+                        <span class="uc-lock">🔒</span>
+                    </div>`).join('')}
+            </div>
+        `;
+        gridContainer.appendChild(wrap);
+
+        const btn = wrap.querySelector('.upcoming-toggle');
+        const list = wrap.querySelector('.upcoming-list');
+        const caret = wrap.querySelector('.ut-caret');
+        btn.addEventListener('click', () => {
+            const willOpen = list.hasAttribute('hidden');
+            if (willOpen) list.removeAttribute('hidden'); else list.setAttribute('hidden', '');
+            btn.setAttribute('aria-expanded', String(willOpen));
+            caret.textContent = willOpen ? '▲' : '▼';
+        });
+    }
 }
 
 if (filterButtons) {
