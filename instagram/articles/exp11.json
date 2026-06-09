@@ -1,0 +1,29 @@
+{
+  "id": "11",
+  "folder": "【Exp.11】酵素的褐変の抑制",
+  "cover": {
+    "title": "酵素的褐変の抑制",
+    "subtitle": "切ったリンゴ・アボカドが\n黒くなるのを防ぐ科学",
+    "bgPrompt": "A dark, moody, cinematic studio food photograph. A freshly sliced green avocado half and a sliced fresh apple resting on a dark slate surface, vibrant natural color, glistening fresh flesh, dramatic low side lighting, deep shadows, shallow depth of field, photorealistic, high detail. The composition keeps the upper third darker and relatively empty for a text overlay. Absolutely no text, no letters, no words, no logo, no watermark. Square 1:1 composition."
+  },
+  "points": [
+    {
+      "n": 1,
+      "heading": "犯人は酵素「PPO」",
+      "body": "黒さの正体はメラニン。\n細胞が傷つくとフェノール＋酸素＋PPO（酵素）が\n反応して生まれる。\n＝この3つのどれか1つを断てば止まる。",
+      "bgPrompt": "Extreme macro photograph of the cut surface of an apple slowly turning brown, oxidizing flesh with subtle color gradient from pale cream to amber-brown, water droplets, dark moody background, dramatic side lighting, photorealistic, shallow depth of field. Upper area darker and clean for text overlay. No text, no letters, no logo, no watermark. Square 1:1 composition."
+    },
+    {
+      "n": 2,
+      "heading": "酸は最強の停止スイッチ",
+      "body": "レモン汁や酢でpHを3以下に下げると、\n酵素はタンパク質ごと変性して機能停止。\nアボカドには劇的に効く（酸味との相性も◎）。",
+      "bgPrompt": "A dark, moody, cinematic food photograph of fresh lemon juice being squeezed over a halved green avocado, bright juice droplets caught in dramatic light, splash motion, dark slate background, deep shadows, photorealistic, high detail, shallow depth of field. Upper portion darker and empty for text overlay. No text, no letters, no logo, no watermark. Square 1:1 composition."
+    },
+    {
+      "n": 3,
+      "heading": "プロはビタミンCを使う",
+      "body": "アスコルビン酸は「還元剤」。\n酸化を巻き戻し、酸素まで消費する。\n味をほぼ変えないプロフェッショナルの解。",
+      "bgPrompt": "A dark, moody, cinematic still life: a small mound of fine white ascorbic acid (vitamin C) powder on a dark slate surface beside a halved fresh fruit, clinical yet elegant laboratory-kitchen aesthetic, dramatic focused lighting, deep shadows, photorealistic, high detail, shallow depth of field. Upper area darker and clean for text overlay. No text, no letters, no logo, no watermark. Square 1:1 composition."
+    }
+  ]
+}

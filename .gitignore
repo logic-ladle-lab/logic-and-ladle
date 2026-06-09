@@ -1,0 +1,6 @@
+node_modules/
+instagram/.env
+instagram/.cache/
+instagram/browser/.profile/
+instagram/browser/*.png
+.agent/
