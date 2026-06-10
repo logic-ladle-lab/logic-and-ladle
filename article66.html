@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水を縛る甘味の科学 糖が操る浸透圧と腐敗の境界 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.66</span>
+                <span class="category-tag">INGREDIENT</span>
+                <h1 class="article-main-title">水を縛る甘味の科学<br>糖が操る浸透圧と腐敗の境界</h1>
+                <p class="lead">ジャムが常温で腐らないのは、甘いからではない。<br>糖は水分を「奪う」のではなく「縛る」。<br>その束縛力こそ、保水と防腐を同時に司る。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：なぜ砂糖漬けは腐らないのか</h2>
+                <p>高糖度のジャムや砂糖漬けの果実が常温で長期保存できる理由を「甘さ」に求めるのは誤りだ。鍵は、糖が水分子を強く拘束する性質にある。<br>糖の水酸基は水と無数の水素結合を形成し、自由水を束縛する。微生物が利用できる水＝自由水が枯渇すれば、菌は繁殖できない。<br>同じ力が、肉や焼き菓子では水分を逃がさず「しっとり」を生む。保水と防腐は、同一の物理現象の裏表である。</p>
+            </section>
+
+            <section>
+                <h2>2.0 浸透圧モデル：自由水と結合水の綱引き</h2>
+                <p>系内の水は、移動可能な「自由水」と、糖や塩に拘束された「結合水」に分かれる。微生物が利用できるのは自由水だけだ。<br>高濃度の糖環境では、浸透圧によって菌体内の水が外へ引き出される。原形質分離を起こした細胞は代謝を停止し、増殖できない。<br>この自由水の割合を示す指標が水分活性（Aw）だ。糖を加えるほどAwは下がり、防腐の閾値へ近づく。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Osmotic Preservation Pathway</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">糖を添加</div>
+          <div class="node-sub">水酸基が水素結合を形成</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">自由水を拘束</div>
+          <div class="node-sub">結合水へ変換しAw低下</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">浸透圧が上昇</div>
+          <div class="node-sub">系内外の濃度差が拡大</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">菌体から脱水</div>
+          <div class="node-sub">原形質分離・代謝停止</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">防腐と保水を達成</div>
+          <div class="node-sub">利用可能な水を封鎖</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：水分活性をどこまで下げるか</h2>
+                <p>防腐の境界は水分活性で定義される。一般細菌はAw 0.90、酵母は0.88、カビは0.80を下回ると増殖が著しく抑制される。<br>糖濃度を上げるほどAwは下がるが、効率は一定ではない。低濃度域では緩やかに、高濃度域で急峻に低下する。<br>ジャムが糖度65%前後を狙うのはこのためだ。Awを0.85以下へ押し込み、カビ以外をほぼ封じる。残るは表面の好乾性カビへの蓋＝物理的封止だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Sugar Concentration vs Water Activity</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Sugar Concentration vs Water Activity">
+                        <defs><linearGradient id="g-a66-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a66" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 34.6 C 81.1 36.7, 166.9 41.7, 216.6 47.2 C 266.3 52.7, 311.5 59.0, 352.1 67.4 C 392.8 75.8, 419.9 84.2, 460.5 97.6 C 501.1 111.0, 573.4 139.6, 596.0 148.0 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a66-0)" stroke="none"/><path class="curve" d="M 54.0 34.6 C 81.1 36.7, 166.9 41.7, 216.6 47.2 C 266.3 52.7, 311.5 59.0, 352.1 67.4 C 392.8 75.8, 419.9 84.2, 460.5 97.6 C 501.1 111.0, 573.4 139.6, 596.0 148.0" stroke="#D4AF37" filter="url(#glow-a66)"/>
+                        
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">0%</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">40%</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">80%</text>
+                        <text class="axis-label" x="46" y="38.6" text-anchor="end">Aw 1.0</text><text class="axis-label" x="46" y="71.4" text-anchor="end">0.85</text><text class="axis-label" x="46" y="152.0" text-anchor="end">0.6</text>
+                        
+                    </svg>
+                    <p class="caption">※糖濃度の上昇に伴い水分活性は加速度的に低下し、防腐域（Aw 0.85以下）へ到達する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 高糖度ジャムの封止</h3>
+                            <p>糖度を65%前後まで煮詰めてAwを0.85以下に落とす。熱いうちに瓶詰めし脱気することで、唯一残る好乾性カビの侵入を物理的に断つ。</p>
+                            <h3>Protocol B: 焼き菓子の保水</h3>
+                            <p>配合糖の一部を転化糖や蜂蜜に置換する。単糖は二糖より水を強く拘束し、自由水を減らして焼成後の経時的な乾燥としわ化を遅らせる。</p>
+                            <h3>Protocol C: 砂糖を使った脱水下処理</h3>
+                            <p>果実や魚に糖を振り浸透圧で表面の自由水を引き出す。余分な水を除いてから加熱・乾燥に移ることで、水っぽさを断ち凝縮した食味を得る。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

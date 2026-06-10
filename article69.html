@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体温で溶ける網、夏に耐える格子。 アガー・寒天・ゼラチン三体問題 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.69</span>
+                <span class="category-tag">PHYSICS</span>
+                <h1 class="article-main-title">体温で溶ける網、夏に耐える格子。<br>アガー・寒天・ゼラチン三体問題</h1>
+                <p class="lead">同じ「固める」でも、網目の素材が違えば仕事が変わる。<br>体温で溶けるのか、夏でも崩れないのか。<br>三つのゲル化剤は、別々の物理法則で動いている。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：なぜ夏のゼリーは崩れ、羊羹は崩れないのか</h2>
+                <p>炎天下の屋台で、ゼリーは溶けて流れ、羊羹は形を保つ。同じ「固体」に見えても、内部の網目を作る素材が決定的に違う。<br>ゼラチンはタンパク質、寒天とアガーは多糖類だ。この出自の差が、融点・食感・酸への耐性のすべてを支配する。<br>「固める」という単一の現象は、実は三つの異なる物理で起きている。</p>
+            </section>
+
+            <section>
+                <h2>2.0 ネットワークモデル：三つの網目の作られ方</h2>
+                <p>ゲルとは、液体を三次元の網目に閉じ込めた状態だ。問題はその網目を何が編むかにある。<br>ゼラチンはコラーゲンの三重らせんが冷却でほどけ、再び部分的に絡み合って弾力ある網を作る。寒天はアガロースの二重らせんが束になり、剛直で脆い格子を組む。<br>アガーはカラギーナン等を配合し、両者の中間を人工的に設計する。素材が違えば、ほどける温度も切れる原因も変わる。</p>
+                
+                <div class="compare-grid">
+                    <div class="compare-card">
+                        <div class="cc-title">ゼラチン（動物性タンパク質）</div>
+                        <div class="cc-body">コラーゲン由来。三重らせんが冷却で部分再結合し網目を作る。融点25-35℃で体温融解。弾力・粘り・透明感に優れ、口溶けは最良。熱可逆。</div>
+                    </div><div class="compare-card">
+                        <div class="cc-title">寒天（紅藻・アガロース）</div>
+                        <div class="cc-body">アガロース二重らせんが束化し剛直な網目を形成。凝固35-45℃、融解85℃以上のヒステリシスが大きい。硬く脆く歯切れがよい。離水しやすい。</div>
+                    </div><div class="compare-card">
+                        <div class="cc-title">アガー（カラギーナン等の複合）</div>
+                        <div class="cc-body">カラギーナンやローカストビーンガム等の配合。凝固30-40℃、融解60-65℃。透明で適度な弾力。寒天とゼラチンの中間特性を狙う設計材料。</div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：温度ヒステリシスを設計に使う</h2>
+                <p>鍵は「固まる温度」と「溶ける温度」のズレ、すなわちヒステリシスだ。ゼラチンは両者が近く25-35℃、だから体温で溶ける口溶けが生まれる。<br>寒天は凝固40℃・融解85℃と大きく離れ、一度固めれば常温で揺るがない。アガーはその中間60℃台に融点を置く。<br>口の中で溶かしたいのか、夏に耐えさせたいのか。目的の温度を先に決め、それに合う融点の素材を選ぶ。これが制御の出発点だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Gel Strength vs Temperature</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Gel Strength vs Temperature">
+                        <defs><linearGradient id="g-a69-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a69" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 34.6 C 76.6 35.9, 148.8 38.0, 189.5 42.2 C 230.2 46.4, 266.3 29.6, 297.9 59.8 C 329.5 90.0, 347.6 190.0, 379.2 223.6 C 410.8 257.2, 451.5 253.8, 487.6 261.4 C 523.7 269.0, 577.9 267.7, 596.0 269.0 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a69-0)" stroke="none"/><path class="curve" d="M 54.0 34.6 C 76.6 35.9, 148.8 38.0, 189.5 42.2 C 230.2 46.4, 266.3 29.6, 297.9 59.8 C 329.5 90.0, 347.6 190.0, 379.2 223.6 C 410.8 257.2, 451.5 253.8, 487.6 261.4 C 523.7 269.0, 577.9 267.7, 596.0 269.0" stroke="#D4AF37" filter="url(#glow-a69)"/>
+                        <circle cx="325.0" cy="135.4" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="325.0" y="123.4" text-anchor="middle" fill="#D4AF37">ゼラチンの融解開始点</text>
+                        <text class="axis-label" x="108.2" y="298" text-anchor="middle">20℃</text><text class="axis-label" x="297.9" y="298" text-anchor="middle">35℃ 体温</text><text class="axis-label" x="433.4" y="298" text-anchor="middle">60℃</text><text class="axis-label" x="568.9" y="298" text-anchor="middle">85℃</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">液状</text><text class="axis-label" x="46" y="51.2" text-anchor="end">固体</text>
+                        
+                    </svg>
+                    <p class="caption">※ゼラチンは体温で溶ける曲線、寒天は85℃まで形を保ち口溶けの設計が逆転する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 口溶けを取るならゼラチン、形状保持なら寒天</h3>
+                            <p>融点が体温下のゼラチンは舌の上で溶ける官能設計に使う。融点85℃の寒天は常温陳列・夏場の型崩れ防止に使う。両者は熱挙動が逆であり、用途で機械的に選び分ける。</p>
+                            <h3>Protocol B: 酸とタンパク質分解酵素を管理する</h3>
+                            <p>ゼラチンは強酸や生のパイナップル・キウイのプロテアーゼで網目が切れ固まらない。果実は加熱して酵素を失活させてから加える。寒天・アガーは多糖類のため酵素の影響を受けにくい。</p>
+                            <h3>Protocol C: 凝固温度差を逆算して作業温度を決める</h3>
+                            <p>寒天は沸騰させて完全溶解し40℃前後で固まり始めるため手早く流す。ゼラチンは60℃以上で変性するので湯煎は50℃以下に保つ。アガーは砂糖と先に乾式混合してダマを防ぐ。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

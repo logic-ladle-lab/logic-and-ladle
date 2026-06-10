@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泡は記憶する。 メレンゲ三態の物理学 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.63</span>
+                <span class="category-tag">INGREDIENT</span>
+                <h1 class="article-main-title">泡は記憶する。<br>メレンゲ三態の物理学</h1>
+                <p class="lead">同じ卵白と砂糖が、温度の手順だけで別物になる。<br>気泡の壁を作るのは、ほどけたタンパク質だ。<br>仏・伊・瑞——三つの泡は、安定性で語れ。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：同じ材料、異なる泡</h2>
+                <p>卵白と砂糖。材料はたった二つだ。だが混ぜる順序と熱の与え方で、フレンチ、イタリアン、スイスという三態に分岐する。<br>泡立て直後はどれも白く艶やかに見える。違いが現れるのは、絞り、焼き、時間が経過したときだ。<br>泡は作り方を記憶している。問うべきは「どう泡立てたか」ではなく「気泡の壁がどれだけ固定されたか」である。</p>
+            </section>
+
+            <section>
+                <h2>2.0 気泡安定化モデル：壁を固めるのは熱と糖</h2>
+                <p>泡立ては卵白タンパク質、特にオボアルブミンを変性させ、空気と水の界面に膜を張る行為だ。ほどけた疎水基が気泡の壁を覆い、内部の空気を抱え込む。<br>フレンチは生のまま糖を溶かし込むため膜は柔らかく、糖は粘度で気泡を支えるに留まる。イタリアンは熱したシロップが注入と同時にタンパク質を部分的に凝固させ、膜を熱で固定する。スイスは湯煎で全体を温めながら泡立て、糖を完全溶解させつつ膜を均質に安定させる。<br>熱が入るほど、気泡の壁は流動から固体へ近づく。</p>
+                
+                <div class="compare-grid">
+                    <div class="compare-card">
+                        <div class="cc-title">French (Cold)</div>
+                        <div class="cc-body">生卵白に砂糖を加え泡立てる。膜は柔らかく糖の粘度で支える。軽量・繊細だが離水しやすい。焼成前提。</div>
+                    </div><div class="compare-card">
+                        <div class="cc-title">Italian (Hot Syrup)</div>
+                        <div class="cc-body">118℃前後の熱シロップを注入。熱でタンパク質膜を凝固・固定。最も安定し保形性とツヤに優れる。</div>
+                    </div><div class="compare-card">
+                        <div class="cc-title">Swiss (Warm Bath)</div>
+                        <div class="cc-body">湯煎で温めつつ泡立て、糖を完全溶解。膜を均質に安定化。緻密で滑らか、中間の安定性。</div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：用途は安定性で決まる</h2>
+                <p>三態の差は「安定性」という一軸に集約できる。フレンチは軽く繊細だが離水しやすく、焼成前提の用途——スフレやマカロン生地に向く。<br>イタリアンは最も安定し、ツヤと保形性に優れる。バタークリームやムース、焼かないデザートの骨格に最適だ。スイスはその中間で、緻密で滑らか。デコレーションや堅めの焼き菓子に効く。<br>泡を選ぶとは、求める保形時間を選ぶことだ。生で使うなら熱を入れろ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Foam Stability by Type</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Foam Stability by Type">
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <rect x="54.0" y="173.2" width="154.0" height="100.8" rx="4" fill="#D4AF37" fill-opacity="0.85"/>
+      <text class="axis-label" x="131.0" y="298" text-anchor="middle">French</text>
+      <text class="point-label" x="131.0" y="163.2" text-anchor="middle" fill="#D4AF37">軽量・離水しやすい</text><rect x="248.0" y="97.6" width="154.0" height="176.4" rx="4" fill="#9a9a9a" fill-opacity="0.85"/>
+      <text class="axis-label" x="325.0" y="298" text-anchor="middle">Swiss</text>
+      <text class="point-label" x="325.0" y="87.6" text-anchor="middle" fill="#9a9a9a">緻密・中間安定</text><rect x="442.0" y="34.6" width="154.0" height="239.4" rx="4" fill="#4FC3F7" fill-opacity="0.85"/>
+      <text class="axis-label" x="519.0" y="298" text-anchor="middle">Italian</text>
+      <text class="point-label" x="519.0" y="24.6" text-anchor="middle" fill="#4FC3F7">熱固定・最安定</text>
+                    </svg>
+                    <p class="caption">※棒は気泡膜の保形安定性の相対比較。数値は定性的傾向を示す。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: フレンチの離水を防ぐ</h3>
+                            <p>砂糖は数回に分けて加え、各回でしっかり溶かし込む。泡立て過ぎは膜を破壊し離水を招くため、ツノが軽くお辞儀する程度で止め、即座に焼成へ回す。</p>
+                            <h3>Protocol B: イタリアンのシロップ温度</h3>
+                            <p>シロップは117〜120℃を厳守する。低すぎると固定不足で緩み、高すぎると注入時に卵白が部分的に煮える。細い糸状に、ボウルの側面を避けて注ぐ。</p>
+                            <h3>Protocol C: スイスの湯煎管理</h3>
+                            <p>卵白と砂糖を50〜60℃まで温め、砂糖を完全に溶かす。指で触れてザラつきが消えたら湯煎を外し、冷めるまで泡立てて膜を締める。温度超過はタンパク質の早期凝固を招く。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

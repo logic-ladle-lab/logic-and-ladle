@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>細胞を壊さない凍結術 最大氷結晶生成帯を駆け抜けろ - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.50</span>
+                <span class="category-tag">TECHNIQUE</span>
+                <h1 class="article-main-title">細胞を壊さない凍結術<br>最大氷結晶生成帯を駆け抜けろ</h1>
+                <p class="lead">凍らせ方で、食材の運命は決まる。<br>水は膨張し、細胞壁を内側から破る。<br>勝負は-1℃から-5℃の数分間だ。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：解凍後に流れ出る「うまみの水」の正体</h2>
+                <p>冷凍した肉や魚を解凍すると、赤い液体が流れ出る。これはドリップと呼ばれ、たんぱく質やアミノ酸を含んだうまみの流出だ。<br>その原因は、凍結中に生じた氷結晶が細胞膜や繊維を物理的に破壊したことにある。<br>つまりドリップの量は、どう凍らせたかの結果記録に他ならない。</p>
+            </section>
+
+            <section>
+                <h2>2.0 氷結晶モデル：水が凍る速さが、結晶の大きさを決める</h2>
+                <p>食材中の水は0℃で一斉に凍るのではなく、-1℃から-5℃の帯で約8割が氷へと変わる。これが最大氷結晶生成帯だ。<br>この帯をゆっくり通過すると、氷の核は少数のまま巨大に成長し、細胞を内側から押し破る。<br>逆に短時間で通過すれば、無数の微細な結晶が散在し、細胞構造はほぼ保たれる。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Ice Crystal Formation Mechanism</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">冷却開始</div>
+          <div class="node-sub">0℃へ向け熱を奪う</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">過冷却・核生成</div>
+          <div class="node-sub">-1℃付近で結晶核が発生</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">最大氷結晶生成帯</div>
+          <div class="node-sub">-1〜-5℃で水の約8割が凍る</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">結晶成長 or 微細化</div>
+          <div class="node-sub">滞留時間が結晶径を決定</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">細胞構造の保持/破壊</div>
+          <div class="node-sub">解凍時のドリップ量に直結</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：勝負どころは-5℃までの通過時間</h2>
+                <p>急速冷凍の本質は、最大氷結晶生成帯を最短で抜けることに尽きる。<br>家庭の冷凍庫でも、接触熱伝導と温度差を稼げば通過時間は大きく縮められる。<br>厚みを薄く、面を密着させ、庫内を冷やしきる。この三点が氷結晶を微細に留める。</p>
+                
+                <div class="visualization-container">
+                    <h3>Cooling Curve vs. Ice Crystal Size</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Cooling Curve vs. Ice Crystal Size">
+                        <defs><linearGradient id="g-a50-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a50" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 47.2 C 76.6 61.9, 144.3 118.6, 189.5 135.4 C 234.7 152.2, 279.8 132.5, 325.0 148.0 C 370.2 163.5, 415.3 211.0, 460.5 228.6 C 505.7 246.3, 573.4 249.6, 596.0 253.8 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a50-0)" stroke="none"/><path class="curve" d="M 54.0 47.2 C 76.6 61.9, 144.3 118.6, 189.5 135.4 C 234.7 152.2, 279.8 132.5, 325.0 148.0 C 370.2 163.5, 415.3 211.0, 460.5 228.6 C 505.7 246.3, 573.4 249.6, 596.0 253.8" stroke="#D4AF37" filter="url(#glow-a50)"/>
+                        <circle cx="325.0" cy="148.0" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="325.0" y="136.0" text-anchor="middle" fill="#D4AF37">最大氷結晶生成帯（通過時間が結晶径を決める）</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">0℃</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">-5℃ 帯</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">-18℃</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">微細</text><text class="axis-label" x="46" y="51.2" text-anchor="end">粗大</text>
+                        
+                    </svg>
+                    <p class="caption">※-1℃〜-5℃の帯を通過する時間が短いほど、生成される氷結晶は微細になる。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 薄く広げて接触面を稼ぐ</h3>
+                            <p>食材は厚みを抑え、金属トレイやアルミ板に密着させる。熱伝導の良い面と接触させることで-5℃までの通過時間を短縮し、氷結晶を微細化する。</p>
+                            <h3>Protocol B: 庫内を最低温まで予冷する</h3>
+                            <p>投入前に冷凍庫を最大冷却モードにし、庫内温度を十分に下げておく。温度差を最大化することで最大氷結晶生成帯の滞留時間を縮める。</p>
+                            <h3>Protocol C: 少量ずつ凍結し負荷を分散</h3>
+                            <p>一度に大量投入すると庫内温度が上昇し通過時間が延びる。小分けにして凍結負荷を分散させ、各個体の急速凍結を保証する。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

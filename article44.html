@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>輝く熱の物理学 炭火焼きと遠赤外線の科学 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.44</span>
+                <span class="category-tag">TECHNIQUE</span>
+                <h1 class="article-main-title">輝く熱の物理学<br>炭火焼きと遠赤外線の科学</h1>
+                <p class="lead">炭は燃えているのではない、輝いているのだ<br>遠赤外線は空気を介さず食材を直接叩く<br>表面で止まる熱が、香ばしさの源泉になる</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：炭火が「違う」と感じる理由</h2>
+                <p>ガスの直火で焼いた肉と、炭火で焼いた肉。同じ温度計の数字でも、仕上がりは明らかに異なる。<br>この差の正体は、熱の運ばれ方にある。ガスは高温の燃焼ガス、すなわち対流が主役だ。<br>対して炭火の主役は、赤熱した固体表面から放たれる放射熱——遠赤外線である。</p>
+            </section>
+
+            <section>
+                <h2>2.0 放射伝熱モデル：空気を飛び越える熱</h2>
+                <p>赤熱した炭は、ほぼ黒体に近い高い放射率で赤外線を放つ。これは空気を温めず、光のように直進して食材表面へ届く。<br>到達した遠赤外線は食材内部まで透過せず、表層の水分子と分子振動に即座に吸収され、µm単位の薄い層で熱に変わる。<br>つまり炭火は「表面を集中的に、内部を緩やかに」加熱する。この非対称性が、香ばしい外殻とジューシーな内部を両立させる。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Charcoal Radiant Heat Pathway</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">炭の燃焼</div>
+          <div class="node-sub">800〜1000℃の固体表面</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">黒体放射</div>
+          <div class="node-sub">高放射率ε≈0.9の赤外線</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">表面吸収</div>
+          <div class="node-sub">食材水分・分子が即座に吸収</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">表層加熱</div>
+          <div class="node-sub"> µm単位で熱に変換</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">内部熱伝導</div>
+          <div class="node-sub">勾配に従い緩やかに浸透</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：距離と熾火で出力を操る</h2>
+                <p>遠赤外線の出力は、炭の表面温度と食材までの距離で決まる。距離を倍にすれば放射熱は約4分の1に落ちる。<br>火力を変えたければ炭を足すより網を上げ下げする方が応答が速く、可逆的だ。<br>そして炎ではなく熾火を使うこと。すすと対流を排し、純度の高い放射場をつくることが、炭火の性能を引き出す鍵になる。</p>
+                
+                <div class="visualization-container">
+                    <h3>Penetration Depth vs Wavelength</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Penetration Depth vs Wavelength">
+                        <defs><linearGradient id="g-a44-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a44" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 59.8 C 76.6 70.3, 144.3 101.8, 189.5 122.8 C 234.7 143.8, 284.4 169.0, 325.0 185.8 C 365.6 202.6, 388.2 213.9, 433.4 223.6 C 478.6 233.3, 568.9 240.4, 596.0 243.8 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a44-0)" stroke="none"/><path class="curve" d="M 54.0 59.8 C 76.6 70.3, 144.3 101.8, 189.5 122.8 C 234.7 143.8, 284.4 169.0, 325.0 185.8 C 365.6 202.6, 388.2 213.9, 433.4 223.6 C 478.6 233.3, 568.9 240.4, 596.0 243.8" stroke="#D4AF37" filter="url(#glow-a44)"/>
+                        <circle cx="54.0" cy="59.8" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="54.0" y="47.8" text-anchor="middle" fill="#D4AF37">近赤外は数mm透過</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">近赤外</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">中赤外</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">遠赤外</text>
+                        <text class="axis-label" x="46" y="240.2" text-anchor="end">浅</text><text class="axis-label" x="46" y="63.8" text-anchor="end">深</text>
+                        
+                    </svg>
+                    <p class="caption">※遠赤外線（3〜1000µm）は表面吸収率が高く、食材内部へは熱伝導で伝わる。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 熾火を待つ</h3>
+                            <p>炎が消え、白い灰をまとった熾火（おきび）を待つ。炎は対流とすすを生むが、赤熱した炭の表面こそが放射率の高い理想的な遠赤外線源となる。炎が立つうちは焼き始めない。</p>
+                            <h3>Protocol B: 距離で出力を制御</h3>
+                            <p>放射熱量は距離の二乗に反比例する。火力調整は炭量より網の高さで行うのが速い。厚い肉は遠ざけて低出力で芯まで、薄い魚は近づけて短時間で表面を仕上げる。</p>
+                            <h3>Protocol C: 表面を乾かす</h3>
+                            <p>遠赤外線は表層の水分に吸収され、まず水を蒸発させる。事前に表面の水気を拭えば、無駄な蒸発潜熱を省き、温度上昇とメイラード反応への到達を早められる。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exp.47 チョコレートの多形 ──結晶を選んで固める技術 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.47</span>
+                <span class="category-tag">INGREDIENT</span>
+                <h1 class="article-main-title">Exp.47 チョコレートの多形<br>──結晶を選んで固める技術</h1>
+                <p class="lead">同じカカオバターが、6つの顔を持つ。<br>パキッと割れるか、白く曇るか。<br>その分岐点は、たった数℃の温度操作にある。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：なぜチョコは「テンパリング」するのか</h2>
+                <p>溶かして固めただけのチョコレートは、表面が白く曇り、口溶けが鈍く、指で触れるとすぐに溶ける。<br>原因は脂肪結晶の「多形（polymorphism）」だ。カカオバターは同じ分子でありながら、固まり方によって複数の異なる結晶構造をとる。<br>テンパリングとは、その中から理想的な結晶だけを選んで成長させる、温度による選別作業に他ならない。</p>
+            </section>
+
+            <section>
+                <h2>2.0 多形モデル：6つの結晶形と融点の階段</h2>
+                <p>カカオバターの結晶はI型からVI型まで6つの多形をもち、番号が上がるほど分子の充填が密で、融点が高く安定になる。<br>低融点の不安定形（I〜IV型）は冷やせば速くできるが、もろく口溶けが悪い。最安定のVI型は融点が高すぎて口の中で溶け残る。<br>狙うべきはV型（融点およそ33〜34℃）。体温直下で一気に融け、光沢と硬いスナップを生む唯一の結晶だ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Cocoa Butter Polymorph Selection</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">完全融解</div>
+          <div class="node-sub">45〜50℃ 全結晶を消去</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">冷却・核形成</div>
+          <div class="node-sub">27〜28℃ 多数の種結晶が析出</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">再加熱・選別</div>
+          <div class="node-sub">31〜32℃ 不安定形のみ融解</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">V型核の残存</div>
+          <div class="node-sub">融点33〜34℃の安定核だけ生存</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">固化・成長</div>
+          <div class="node-sub">V型を鋳型に均一結晶化</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：温度曲線で結晶を絞り込む</h2>
+                <p>全結晶を一度溶かし切る（約45〜50℃）→冷却して種結晶を析出させる（約27〜28℃）→わずかに再加熱して不安定形だけを融かし戻す（約31〜32℃）。<br>この三段階で、V型の核だけを残して他を消去する。再加熱温度を上げすぎればV型まで融け、テンパリングは振り出しに戻る。<br>温度計は推測を許さない。曲線の頂点を1℃外せば、結晶は意図しない形へ流れる。</p>
+                
+                <div class="visualization-container">
+                    <h3>Snap & Gloss vs. Set Temperature</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Snap & Gloss vs. Set Temperature">
+                        <defs><linearGradient id="g-a47-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a47" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 223.6 C 76.6 213.1, 144.3 192.1, 189.5 160.6 C 234.7 129.1, 279.8 36.7, 325.0 34.6 C 370.2 32.5, 415.3 118.6, 460.5 148.0 C 505.7 177.4, 573.4 200.5, 596.0 211.0 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a47-0)" stroke="none"/><path class="curve" d="M 54.0 223.6 C 76.6 213.1, 144.3 192.1, 189.5 160.6 C 234.7 129.1, 279.8 36.7, 325.0 34.6 C 370.2 32.5, 415.3 118.6, 460.5 148.0 C 505.7 177.4, 573.4 200.5, 596.0 211.0" stroke="#D4AF37" filter="url(#glow-a47)"/>
+                        <circle cx="325.0" cy="34.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="325.0" y="22.6" text-anchor="middle" fill="#D4AF37">V型生成の最適域</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">27℃</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">31.5℃</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">35℃</text>
+                        <text class="axis-label" x="46" y="227.6" text-anchor="end">低</text><text class="axis-label" x="46" y="38.6" text-anchor="end">高</text>
+                        
+                    </svg>
+                    <p class="caption">※再加熱温度が最適域を外れると、不安定形の残存またはV型の消失で品質が急落する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 種結晶法（シード法）</h3>
+                            <p>完全融解した45〜50℃のチョコに、テンパリング済みチョコ片を全体の約3割加える。既存のV型結晶を種として供給し、冷却だけでV型核を増殖させる。最も再現性が高い。</p>
+                            <h3>Protocol B: 接種なしの三段温度制御</h3>
+                            <p>45〜50℃→27〜28℃→31〜32℃の温度曲線を温度計で厳守する。各段で十分に撹拌し、温度ムラを消すこと。再加熱は1℃刻みで慎重に行う。</p>
+                            <h3>Protocol C: 急冷を避けた固化管理</h3>
+                            <p>型に流したら冷蔵庫ではなく18〜20℃の室温付近で固める。急冷すると低融点の不安定形が割り込み、後日V型へ転移する際にブルーム（白濁）を招く。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>壊れる直前が最も強い メレンゲと泡の安定性物理 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.34</span>
+                <span class="category-tag">PHYSICS</span>
+                <h1 class="article-main-title">壊れる直前が最も強い<br>メレンゲと泡の安定性物理</h1>
+                <p class="lead">泡とは、水の薄膜が空気を閉じ込めた一瞬の構造体だ。<br>その寿命を決めるのは、界面に張られたタンパク質の膜の強度。<br>崩壊は始まる前に決まっている。設計するのは厨房の仕事だ。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：なぜ泡は消えるのか</h2>
+                <p>卵白を泡立てれば白く膨らむ。だがボウルを放置すれば、底に透明な液が滲み、艶は失われていく。<br>泡の崩壊は劣化ではなく、熱力学的な必然だ。気液界面は莫大な表面エネルギーを抱え、系は常にそれを最小化しようとする。<br>我々が「安定なメレンゲ」と呼ぶものは、この崩壊をいかに遅らせるかという速度論の問題に過ぎない。</p>
+            </section>
+
+            <section>
+                <h2>2.0 界面膜モデル：泡を支える分子の壁</h2>
+                <p>撹拌は空気を細かく分割し、無数の気泡を水相に導入する。このとき卵白のタンパク質、とりわけオボアルブミンが気液界面で変性し、折り畳まれた構造を解いて展開する。<br>疎水基は空気側へ、親水基は水側へ配向し、隣接分子と架橋して連続した粘弾性ネットワークを形成する。<br>この膜こそが気泡の壁だ。膜が弾性を持つほど、排液と不均化に抗い、泡は長く生き延びる。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Foam Stabilization Mechanism</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">機械的剪断</div>
+          <div class="node-sub">撹拌で空気を分割し気泡を導入</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">タンパク質の変性</div>
+          <div class="node-sub">オボアルブミンが界面で展開</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">界面膜の形成</div>
+          <div class="node-sub">疎水基が空気側、親水基が水側へ配向</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">粘弾性ネットワーク</div>
+          <div class="node-sub">分子間で架橋し膜が弾性を獲得</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">排液・崩壊の抑制</div>
+          <div class="node-sub">ドレナージと不均化を遅延させる</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：崩壊と弾性の均衡点</h2>
+                <p>泡の安定性は泡立ての段階に対して山型を描く。ソフトでは膜が未発達で脆く、スティフ手前で弾性と保水が最大の均衡に達する。<br>だが頂点を越えれば破綻が始まる。過剰な撹拌はタンパク質を凝集させ、膜は弾性を失って水を吐き出し、ボソボソと分離する。<br>狙うべきは崩壊の直前。最も強い泡は、壊れる一歩手前に存在する。</p>
+                
+                <div class="visualization-container">
+                    <h3>Foam Stability vs. Whipping Stage</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Foam Stability vs. Whipping Stage">
+                        <defs><linearGradient id="g-a34-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a34" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 248.8 C 76.6 234.1, 144.3 192.1, 189.5 160.6 C 234.7 129.1, 284.4 80.8, 325.0 59.8 C 365.6 38.8, 401.8 28.3, 433.4 34.6 C 465.0 40.9, 487.6 68.2, 514.7 97.6 C 541.8 127.0, 582.5 192.1, 596.0 211.0 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a34-0)" stroke="none"/><path class="curve" d="M 54.0 248.8 C 76.6 234.1, 144.3 192.1, 189.5 160.6 C 234.7 129.1, 284.4 80.8, 325.0 59.8 C 365.6 38.8, 401.8 28.3, 433.4 34.6 C 465.0 40.9, 487.6 68.2, 514.7 97.6 C 541.8 127.0, 582.5 192.1, 596.0 211.0" stroke="#D4AF37" filter="url(#glow-a34)"/>
+                        <circle cx="433.4" cy="34.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="433.4" y="22.6" text-anchor="middle" fill="#D4AF37">安定の頂点：弾性と保水の均衡</text>
+                        <text class="axis-label" x="108.2" y="298" text-anchor="middle">ソフト</text><text class="axis-label" x="352.1" y="298" text-anchor="middle">ミディアム</text><text class="axis-label" x="476.8" y="298" text-anchor="middle">スティフ</text><text class="axis-label" x="568.9" y="298" text-anchor="middle">過剰</text>
+                        <text class="axis-label" x="46" y="227.6" text-anchor="end">低</text><text class="axis-label" x="46" y="51.2" text-anchor="end">高</text>
+                        
+                    </svg>
+                    <p class="caption">※泡立ては最適点を超えると界面の弾性が失われ、急速に崩壊へ向かう。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 脂質の完全排除</h3>
+                            <p>ボウルと泡立て器を酢で拭き、卵黄を一滴も混入させない。脂質は界面膜を破壊する消泡剤であり、わずかな付着が泡立ちを完全に阻害する。</p>
+                            <h3>Protocol B: 砂糖の遅延投入</h3>
+                            <p>ソフトピークに達してから砂糖を数回に分けて加える。早すぎる投入は変性を妨げ気泡形成を遅らせるが、適時の投入は粘度を上げ排液を抑えて安定化させる。</p>
+                            <h3>Protocol C: 酸による等電点制御</h3>
+                            <p>クリームタルタルや少量の酸を加えてpHを下げる。タンパク質の電荷反発を弱め界面での架橋を促し、過剰撹拌に対する許容幅を広げる。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

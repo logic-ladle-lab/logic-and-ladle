@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>燻製の化学： フェノール類はどこへ吸着するか - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.24</span>
+                <span class="category-tag">SENSORY</span>
+                <h1 class="article-main-title">燻製の化学：<br>フェノール類はどこへ吸着するか</h1>
+                <p class="lead">煙は気体ではない。微粒子と蒸気の混合物だ。<br>香りの正体は、木が熱で壊れて生まれるフェノール類。<br>それは食材の「濡れた脂の膜」に捕らえられる。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：煙が「香り」に変わる瞬間</h2>
+                <p>燻製した肉や魚を口にしたとき、感じるあの独特の香ばしさ。その正体はグアイアコールやシリンゴールに代表されるフェノール類だ。<br>これらは木材中のリグニンが400℃前後で熱分解（熱分解＝物質が熱で壊れること）して生まれる。煙とは気体ではなく、こうした蒸気と微小な液滴・粒子が漂うエアロゾルである。<br>香りを得るとは、空中を漂うフェノール分子を食材表面に「捕まえて定着させる」プロセスにほかならない。</p>
+            </section>
+
+            <section>
+                <h2>2.0 吸着モデル：フェノールが食材に捕らえられる連鎖</h2>
+                <p>燃焼帯でリグニンが分解し、フェノール類が蒸気として立ち上がる。これが煙の香気成分の源だ。<br>立ち上ったフェノール分子は疎水性（疎水性＝油になじむ性質）が高く、食材表面の水膜にはじかれる一方、脂質の膜には強く引き寄せられる。<br>そして表面に凝縮・吸着し、時間とともに内部へ拡散していく。鍵は「濡れた脂の膜」の存在だ。乾いた表面ではフェノールは定着しにくい。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Phenol Adsorption Pathway</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">リグニン熱分解</div>
+          <div class="node-sub">木材が400℃前後で壊れる</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">フェノール蒸気生成</div>
+          <div class="node-sub">グアイアコール・シリンゴール</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">表面の脂膜へ凝縮</div>
+          <div class="node-sub">疎水性が引き寄せる</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">吸着・定着</div>
+          <div class="node-sub">濡れた脂の膜が捕える</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">内部へ拡散</div>
+          <div class="node-sub">時間とともに浸透</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：温度と表面状態を操る</h2>
+                <p>吸着量は煙の温度に強く依存する。低温では分子運動が鈍く定着が遅い一方、高温では脂が溶け落ち煙の通り道が変わる。<br>実測すると、フェノールの定着効率は中温域でピークを描く。冷燻でも温燻でもなく、その中間に最適点がある。<br>表面を適度に湿らせ、薄い脂膜を残し、煙の温度を中温に保つ。これが香りを最大化する三条件だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Phenol Uptake vs Smoke Temperature</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Phenol Uptake vs Smoke Temperature">
+                        <defs><linearGradient id="g-a24-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a24" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 236.2 C 76.6 223.6, 144.3 192.9, 189.5 160.6 C 234.7 128.3, 279.8 48.5, 325.0 42.2 C 370.2 35.9, 415.3 96.8, 460.5 122.8 C 505.7 148.8, 573.4 185.8, 596.0 198.4 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a24-0)" stroke="none"/><path class="curve" d="M 54.0 236.2 C 76.6 223.6, 144.3 192.9, 189.5 160.6 C 234.7 128.3, 279.8 48.5, 325.0 42.2 C 370.2 35.9, 415.3 96.8, 460.5 122.8 C 505.7 148.8, 573.4 185.8, 596.0 198.4" stroke="#D4AF37" filter="url(#glow-a24)"/>
+                        <circle cx="325.0" cy="42.2" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="325.0" y="30.2" text-anchor="middle" fill="#D4AF37">中温域で定着効率が最大</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">冷燻</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">温燻</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">熱燻</text>
+                        <text class="axis-label" x="46" y="240.2" text-anchor="end">低</text><text class="axis-label" x="46" y="46.2" text-anchor="end">高</text>
+                        
+                    </svg>
+                    <p class="caption">※フェノールの定着効率は中温域でピークを描き、高温では脂が溶け落ちて低下する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 表面を湿らせて脂膜を残す</h3>
+                            <p>燻製前に食材を乾かしすぎない。表面に薄い水分と脂の膜を残すことで、疎水性のフェノール分子が定着する足場をつくる。乾いた表面は煙をはじく。</p>
+                            <h3>Protocol B: 煙の温度を中温に保つ</h3>
+                            <p>冷燻でも熱燻でもなく、その中間の温度帯を狙う。分子運動が十分で、かつ脂が溶け落ちない範囲が、フェノール定着効率の最適点となる。</p>
+                            <h3>Protocol C: 良質な煙だけを当てる</h3>
+                            <p>不完全燃焼の白く濃い煙は雑味と煤を運ぶ。チップを適温で燃やし、薄く青い煙を継続させることで、香気フェノールを選択的に吸着させる。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>糊化の臨界点 水溶き片栗粉はなぜダマになるか - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.57</span>
+                <span class="category-tag">PHYSICS</span>
+                <h1 class="article-main-title">糊化の臨界点<br>水溶き片栗粉はなぜダマになるか</h1>
+                <p class="lead">沸騰した鍋に注いだ一瞬、透明な塊が固まる。<br>ダマの正体は、温度差が生んだ皮膜だ。<br>粘度は連続ではなく、ある一線で跳ね上がる。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：とろみは「溶けた」のではなく「膨らんだ」</h2>
+                <p>水に片栗粉を溶いても、それは溶解ではない。デンプン粒子は冷水中に分散して沈むだけで、放置すれば底に沈殿する。<br>加熱して初めて粒子が水を吸い、膨潤し、糊化（ゲル化）してとろみが生まれる。<br>つまり「水溶き」は溶かす作業ではなく、粒子を均一に分散させる準備工程に過ぎない。</p>
+            </section>
+
+            <section>
+                <h2>2.0 糊化モデル：膨潤と皮膜形成の競合</h2>
+                <p>片栗粉の主成分はアミロペクチンに富むジャガイモデンプンで、約60〜65℃から急速に吸水・膨潤を始める。<br>個々の粒子がゆっくり水を吸えば全体が滑らかにとろむが、表面だけが先に高温に触れると外層が瞬時に糊化して水を通さない皮膜を作る。<br>皮膜の内側には乾いた粉が閉じ込められ、これがダマの核となる。ダマとは「外は糊化、中は生」の不均一構造である。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Gelatinization vs. Skin Formation</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">冷水に分散</div>
+          <div class="node-sub">粒子は溶けず懸濁・沈殿</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">加熱開始</div>
+          <div class="node-sub">60〜65℃で吸水・膨潤</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">局所的高温</div>
+          <div class="node-sub">表面層が瞬時に糊化</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">不透水皮膜の形成</div>
+          <div class="node-sub">内部に生粉を封入</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">ダマの固定化</div>
+          <div class="node-sub">外は糊・中は乾粉の不均一塊</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：温度勾配を殺し、剪断で支配する</h2>
+                <p>ダマを防ぐ鍵は、粒子間の温度差をなくすことだ。一度火を止めて全体の温度を均一に下げ、撹拌しながら注げば、皮膜が局所形成される前に分散が完了する。<br>粘度は糊化開始温度で急峻に立ち上がるため、注いだ後の加熱しすぎは粘度を頭打ちさせ、過剰な剪断はゲル構造を破壊して水っぽく戻す。<br>糊化のピークを捉え、そこで火を引くのが制御の要諦だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Viscosity vs. Temperature</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Viscosity vs. Temperature">
+                        <defs><linearGradient id="g-a57-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a57" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 261.4 C 90.1 260.1, 221.1 264.3, 270.8 253.8 C 320.5 243.3, 325.0 230.7, 352.1 198.4 C 379.2 166.1, 406.3 87.1, 433.4 59.8 C 460.5 32.5, 487.6 32.5, 514.7 34.6 C 541.8 36.7, 582.5 66.1, 596.0 72.4 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a57-0)" stroke="none"/><path class="curve" d="M 54.0 261.4 C 90.1 260.1, 221.1 264.3, 270.8 253.8 C 320.5 243.3, 325.0 230.7, 352.1 198.4 C 379.2 166.1, 406.3 87.1, 433.4 59.8 C 460.5 32.5, 487.6 32.5, 514.7 34.6 C 541.8 36.7, 582.5 66.1, 596.0 72.4" stroke="#D4AF37" filter="url(#glow-a57)"/>
+                        <circle cx="498.4" cy="34.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="498.4" y="22.6" text-anchor="middle" fill="#D4AF37">糊化ピーク粘度</text>
+                        <text class="axis-label" x="108.2" y="298" text-anchor="middle">40℃</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">60℃</text><text class="axis-label" x="460.5" y="298" text-anchor="middle">80℃</text><text class="axis-label" x="568.9" y="298" text-anchor="middle">95℃</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">低</text><text class="axis-label" x="46" y="51.2" text-anchor="end">高</text>
+                        
+                    </svg>
+                    <p class="caption">※糊化開始温度を境に粘度は急上昇し、ピーク後は加熱・剪断で低下する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 火を止めてから注ぐ</h3>
+                            <p>沸騰を一旦止め、対流を鎮めてから水溶き片栗粉を回し入れる。局所的な高温接触を避け、皮膜形成前に粒子を全体へ分散させる。</p>
+                            <h3>Protocol B: 注ぎながら撹拌する</h3>
+                            <p>片手で細く注ぎ、もう一方で絶えず撹拌して粒子を一粒ずつ独立させる。粒子同士が凝集する前に均一な温度場へ送り込むのが狙いだ。</p>
+                            <h3>Protocol C: 直前に溶き直す</h3>
+                            <p>水溶き片栗粉は静置すると沈殿し濃度が偏る。投入の直前に必ず撹拌し、粉と水の比を均一に戻してから加える。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

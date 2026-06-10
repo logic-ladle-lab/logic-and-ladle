@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熱ショックという名の暴力 ガラスはなぜ割れるのか - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.94</span>
+                <span class="category-tag">TECHNIQUE</span>
+                <h1 class="article-main-title">熱ショックという名の暴力<br>ガラスはなぜ割れるのか</h1>
+                <p class="lead">耐熱ガラスは「熱に強い」のではない。<br>割れるのは熱ではなく、温度の「差」だ。<br>ガラスを守るのは、ゆっくりという作法である。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：熱い鍋を濡れ布巾に置いた瞬間</h2>
+                <p>オーブンから出したばかりのガラス皿を、濡れた台に置く。次の瞬間、乾いた破裂音とともに皿は割れる。<br>犯人は高温そのものではない。ガラスの内側と外側で生じた「温度差」だ。<br>急冷された表面は縮もうとし、まだ熱い内部はそれを許さない。この綱引きが、ガラスを内側から引き裂く。</p>
+            </section>
+
+            <section>
+                <h2>2.0 熱応力モデル：膨張差が生む内部の引っ張り</h2>
+                <p>ガラスは温度が上がると膨張し、下がると収縮する。<br>表面だけが急冷されると、表面は縮もうとするが内部はまだ膨張したまま動かない。結果、表面には強い「引っ張り応力」が発生する。<br>ガラスは圧縮には強いが、引っ張りには驚くほど脆い。微細な傷を起点に亀裂は一気に伝播する。<br>耐熱ガラス（ホウケイ酸ガラス）が強いのは、熱膨張係数が普通のソーダ石灰ガラスの約3分の1だからだ。膨張が小さければ、温度差が生む応力も小さい。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Thermal Shock Fracture Chain</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">急激な温度変化</div>
+          <div class="node-sub">片面のみ急冷/急加熱</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">表面と内部に温度差</div>
+          <div class="node-sub">熱伝導が追いつかない</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">膨張・収縮の不一致</div>
+          <div class="node-sub">表面は縮み内部は膨張</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">表面に引っ張り応力</div>
+          <div class="node-sub">ガラスが最も弱い方向</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">微細な傷から亀裂伝播</div>
+          <div class="node-sub">破断</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：温度勾配をなだらかにする</h2>
+                <p>破壊を防ぐ原理は単純だ。表面と内部の温度差を、ガラスが耐えられる範囲に収めること。<br>温度変化を緩やかにすれば、熱は内部まで伝わる時間を得て、勾配は平坦になる。<br>急冷も急加熱も避ける。常温に戻してから洗う、予熱した庫内で徐々に温める。手間ではなく、これがガラスの作法だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Thermal Stress vs Temperature Difference</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Thermal Stress vs Temperature Difference">
+                        <defs><linearGradient id="g-a94-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a94" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 261.4 C 76.6 255.1, 144.3 240.4, 189.5 223.6 C 234.7 206.8, 284.4 181.6, 325.0 160.6 C 365.6 139.6, 388.2 119.4, 433.4 97.6 C 478.6 75.8, 568.9 40.9, 596.0 29.6 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a94-0)" stroke="none"/><path class="curve" d="M 54.0 261.4 C 76.6 255.1, 144.3 240.4, 189.5 223.6 C 234.7 206.8, 284.4 181.6, 325.0 160.6 C 365.6 139.6, 388.2 119.4, 433.4 97.6 C 478.6 75.8, 568.9 40.9, 596.0 29.6" stroke="#D4AF37" filter="url(#glow-a94)"/>
+                        
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">ΔT小</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">中</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">ΔT大</text>
+                        <text class="axis-label" x="46" y="278.0" text-anchor="end">低</text><text class="axis-label" x="46" y="26.0" text-anchor="end">破断</text>
+                        
+                    </svg>
+                    <p class="caption">※温度差が大きいほど表面の引っ張り応力は急増し、ある閾値を超えると破断に至る。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 常温復帰の徹底</h3>
+                            <p>加熱直後のガラス器具は、濡れた台や冷水に触れさせない。乾いた木製ボードやコルク上で常温まで戻してから洗浄する。表面と内部の温度差をゼロに近づけることが、最も確実な防御だ。</p>
+                            <h3>Protocol B: 予熱による徐加熱</h3>
+                            <p>冷えたガラス皿をいきなり高温庫に入れない。庫内とともに緩やかに昇温させるか、室温に戻してから加熱する。急加熱もまた、内部より先に表面を膨張させ応力を生む。</p>
+                            <h3>Protocol C: 素材と傷の管理</h3>
+                            <p>直火・急冷を伴う用途にはホウケイ酸ガラスを選ぶ。熱膨張係数が小さく応力が生じにくい。また縁の欠けや擦り傷は亀裂の起点となるため、傷んだ器具は熱衝撃用途から外す。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

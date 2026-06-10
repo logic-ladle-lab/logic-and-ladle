@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>緑を閉じ込める技術 ハーブオイルの色素抽出管理 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.64</span>
+                <span class="category-tag">SENSORY</span>
+                <h1 class="article-main-title">緑を閉じ込める技術<br>ハーブオイルの色素抽出管理</h1>
+                <p class="lead">鮮やかな緑は、香りではなく光学の産物だ。<br>クロロフィルは熱と酸に脆く、容易に褐色へ転ぶ。<br>抽出と失活の境界線を、温度で制御する。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：なぜハーブオイルは褐色に濁るのか</h2>
+                <p>バジルやパセリをオイルに沈めると、最初は鮮烈な緑が立つ。だが数時間後、その緑はくすんだオリーブ色へ沈む。<br>原因は色素クロロフィルの不安定さにある。葉を傷つけた瞬間、細胞内の酵素と酸が放たれ、緑の分解が始まる。<br>美しい緑は「抽出できたか」ではなく「壊さずに移せたか」で決まる。</p>
+            </section>
+
+            <section>
+                <h2>2.0 クロロフィル変性モデル：緑から褐色への分岐</h2>
+                <p>クロロフィルの緑色は、分子中心に配位したマグネシウムイオンが担う。<br>酸性条件ではこのMgが水素イオンに置換され、褐色のフェオフィチンへ転換する。葉を潰した際に滲む有機酸と、内在するクロロフィラーゼ酵素が、この反応を加速する。<br>高温は色素をオイルへ移しやすくする一方、酵素反応と酸性置換の両方を促す諸刃だ。鍵は、酵素を一気に失活させてから色素を移すことにある。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Chlorophyll Degradation Pathway</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">新鮮なクロロフィル</div>
+          <div class="node-sub">Mg配位・鮮緑</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">細胞破壊</div>
+          <div class="node-sub">酵素と有機酸の放出</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">酵素失活（ブランチング）</div>
+          <div class="node-sub">クロロフィラーゼを停止</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">中温オイル抽出</div>
+          <div class="node-sub">60〜70℃・短時間</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">鮮緑のオイル保持</div>
+          <div class="node-sub">褐変フェオフィチン化を回避</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：ブランチングと急冷による緑の固定</h2>
+                <p>短時間の高温（ブランチング）でクロロフィラーゼを失活させれば、緑分解の主経路は断たれる。<br>湯通しは数十秒で十分、長引けば組織から酸が溶け出し逆効果となる。直後の氷水急冷が、熱による余分な変性を止める。<br>オイル抽出自体は60〜70℃の中温で短時間。高温長時間ほど褐変が進むため、抽出温度と時間の積を最小化することが、鮮緑を保つ制御の核心だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Greenness vs Extraction Temperature</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Greenness vs Extraction Temperature">
+                        <defs><linearGradient id="g-a64-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a64" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 185.8 C 76.6 169.0, 148.8 108.9, 189.5 85.0 C 230.2 61.1, 261.8 40.1, 297.9 42.2 C 334.0 44.3, 370.2 73.7, 406.3 97.6 C 442.4 121.5, 483.1 161.4, 514.7 185.8 C 546.3 210.2, 582.5 234.1, 596.0 243.8 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a64-0)" stroke="none"/><path class="curve" d="M 54.0 185.8 C 76.6 169.0, 148.8 108.9, 189.5 85.0 C 230.2 61.1, 261.8 40.1, 297.9 42.2 C 334.0 44.3, 370.2 73.7, 406.3 97.6 C 442.4 121.5, 483.1 161.4, 514.7 185.8 C 546.3 210.2, 582.5 234.1, 596.0 243.8" stroke="#D4AF37" filter="url(#glow-a64)"/>
+                        <circle cx="297.9" cy="42.2" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="297.9" y="30.2" text-anchor="middle" fill="#D4AF37">抽出効率と色保持の最適点</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">40℃</text><text class="axis-label" x="297.9" y="298" text-anchor="middle">65℃</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">100℃</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">褐</text><text class="axis-label" x="46" y="51.2" text-anchor="end">鮮緑</text>
+                        
+                    </svg>
+                    <p class="caption">※低温では抽出不足、高温では褐変が進み、中温域で緑の保持が最大化する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 瞬間ブランチング</h3>
+                            <p>ハーブを沸騰湯に数十秒だけ通し、クロロフィラーゼを失活させる。長湯は酸溶出を招くため厳禁。</p>
+                            <h3>Protocol B: 氷水急冷</h3>
+                            <p>湯通し直後に氷水へ落とし、余熱による変性を即座に止める。水気は完全に拭き取る。</p>
+                            <h3>Protocol C: 中温短時間抽出</h3>
+                            <p>60〜70℃のオイルで撹拌しながら短時間抽出し、即座に濾過・冷却。温度と時間の積を最小に保つ。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

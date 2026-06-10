@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オランデーズソースの温度限界： レシチンが油を抱く、その臨界点 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.83</span>
+                <span class="category-tag">PHYSICS</span>
+                <h1 class="article-main-title">オランデーズソースの温度限界：<br>レシチンが油を抱く、その臨界点</h1>
+                <p class="lead">バターと卵黄が織りなす、最も繊細な乳化。<br>その滑らかさは、わずか数度の温度幅にしか存在しない。<br>凝固と分離の狭間で、卵黄は油を抱き続ける。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：スクランブルエッグになる一歩手前</h2>
+                <p>オランデーズソースの調理は、常に二つの失敗と隣り合わせだ。<br>温度が低すぎればバターは溶けず、乳化は始まらない。高すぎれば卵黄が固まり、滑らかなソースは一瞬でスクランブルエッグへと変質する。<br>このソースが「最も難しい」とされる理由は、許される温度帯が驚くほど狭いことにある。</p>
+            </section>
+
+            <section>
+                <h2>2.0 レシチンモデル：卵黄はなぜ油を抱けるのか</h2>
+                <p>卵黄は約半分が水分、残りが脂質とタンパク質、そして強力な乳化剤レシチンで構成される。<br>レシチンの親水基は水を、疎水基は溶かしたバターの油滴を掴み、無数の微細な油滴を水中に分散させる。これがソースの艶と粘度の正体だ。<br>だが、この界面の膜はタンパク質でできている。温度が上がればタンパク質は変性し、膜は破れ、油は再び解き放たれる。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Lecithin Emulsion Failure Chain</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">卵黄＋水分＋酸</div>
+          <div class="node-sub">レシチンと水分の土台を作る</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">湯煎で加温（55-65℃）</div>
+          <div class="node-sub">タンパク質を変性させない温度帯</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">溶かしバターを少量ずつ</div>
+          <div class="node-sub">油滴をレシチン膜が包み微細化</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">安定したO/W乳化</div>
+          <div class="node-sub">艶と粘度を持つソース完成</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">65℃超で膜が破れる</div>
+          <div class="node-sub">タンパク質凝固→油の分離</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：凝固点という名の天井</h2>
+                <p>卵黄タンパク質は65℃付近から本格的に凝固を始める。<br>つまりオランデーズの調理可能温度は、バターが液体を保つ下限と、卵黄が固まる上限に挟まれた55〜65℃の狭い回廊にある。<br>湯煎の温度をこの帯域に厳密に閉じ込め、バターを少しずつ流し込むこと。それが分離と凝固の両方を回避する唯一の道だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Temperature vs Emulsion Stability</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Temperature vs Emulsion Stability">
+                        <defs><linearGradient id="g-a83-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a83" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 236.2 C 76.6 219.4, 144.3 167.7, 189.5 135.4 C 234.7 103.1, 284.4 56.0, 325.0 42.2 C 365.6 28.3, 401.8 30.4, 433.4 52.2 C 465.0 74.1, 487.6 139.6, 514.7 173.2 C 541.8 206.8, 582.5 240.4, 596.0 253.8 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a83-0)" stroke="none"/><path class="curve" d="M 54.0 236.2 C 76.6 219.4, 144.3 167.7, 189.5 135.4 C 234.7 103.1, 284.4 56.0, 325.0 42.2 C 365.6 28.3, 401.8 30.4, 433.4 52.2 C 465.0 74.1, 487.6 139.6, 514.7 173.2 C 541.8 206.8, 582.5 240.4, 596.0 253.8" stroke="#D4AF37" filter="url(#glow-a83)"/>
+                        <circle cx="325.0" cy="42.2" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="325.0" y="30.2" text-anchor="middle" fill="#D4AF37">至適帯 55-65℃</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">45℃</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">60℃</text><text class="axis-label" x="514.7" y="298" text-anchor="middle">65℃</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">75℃</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">分離</text><text class="axis-label" x="46" y="51.2" text-anchor="end">安定</text>
+                        
+                    </svg>
+                    <p class="caption">※低温では乳化せず、65℃を超えると卵黄凝固で急落する山型の安定性曲線。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 湯煎の温度管理</h3>
+                            <p>ボウルが直接湯に触れない間接加熱で、卵黄を55〜65℃に保つ。鍋肌の熱で局所的に固まらぬよう、絶えず泡立て器を動かし続ける。底に膜が張り始めたら過熱の合図だ。</p>
+                            <h3>Protocol B: 水分の初期添加</h3>
+                            <p>卵黄に酢または水を先に加え、レシチンが働く水のベースを確保する。水分が不足するとW/O型へ転相しやすく、バターを受け入れる余地が消える。</p>
+                            <h3>Protocol C: 分離時の氷水リカバリー</h3>
+                            <p>凝固しかけたら火から外し、冷たい水を数滴加えて温度を急降下させる。別の卵黄に分離したソースを少量ずつ流し込み、乳化を再構築する呼び水の手法も有効だ。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

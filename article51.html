@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>糖の臨界点。 キャラメリゼの温度帯と分解 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.51</span>
+                <span class="category-tag">REACTION</span>
+                <h1 class="article-main-title">糖の臨界点。<br>キャラメリゼの温度帯と分解</h1>
+                <p class="lead">糖は溶けるのではない。壊れて、生まれ変わる。<br>160℃から180℃、その狭い窓に風味の全てがある。<br>一秒の遅れが、香ばしさを苦味へと変える。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：透明な糖が褐色になるまで</h2>
+                <p>白い砂糖を熱すると、まず透明な液体になる。これは融解であり、まだ化学変化ではない。<br>ショ糖の融点は約160℃。この温度を超えた瞬間から、糖は単なる甘味料ではなくなる。<br>分子が分解と再結合を始め、無色の甘味が琥珀色の苦香へと姿を変えていく。これがキャラメリゼだ。</p>
+            </section>
+
+            <section>
+                <h2>2.0 熱分解モデル：糖が壊れて香りになる</h2>
+                <p>ショ糖はまずグルコースとフルクトースへ分解（転化）する。<br>続いて脱水反応が起こり、HMF（ヒドロキシメチルフルフラール）などの中間体が生成される。<br>これらがさらに重合・断片化し、揮発性の芳香化合物と褐色色素（カラメラン類）を生む。メイラード反応と異なり、ここにアミノ酸は関与しない。糖だけの自己分解だ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Sucrose Pyrolysis Pathway</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">ショ糖の融解</div>
+          <div class="node-sub">約160℃で透明な液体に</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">転化</div>
+          <div class="node-sub">グルコース＋フルクトースへ分解</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">脱水・中間体生成</div>
+          <div class="node-sub">HMFなどが生じる</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">重合・断片化</div>
+          <div class="node-sub">芳香化合物の発生</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">褐色色素の形成</div>
+          <div class="node-sub">カラメラン類が琥珀色を生む</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：160℃から180℃の窓</h2>
+                <p>風味は温度帯で決まる。160℃前後はナッツ様の軽い香り、170℃でバランスの取れた琥珀色、180℃を超えると一気に焦げ苦さが支配する。<br>180℃を越えれば炭化が始まり、苦味成分が急増する。<br>糖は熱の蓄積が早い。火を止めても余熱で進むため、目標より一段手前で止めるのが鉄則だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Flavor vs Temperature</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Flavor vs Temperature">
+                        <defs><linearGradient id="g-a51-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a51" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 261.4 C 76.6 250.9, 139.8 234.1, 189.5 198.4 C 239.2 162.7, 306.9 74.5, 352.1 47.2 C 397.3 19.9, 419.9 5.2, 460.5 34.6 C 501.1 64.0, 573.4 192.1, 596.0 223.6 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a51-0)" stroke="none"/><path class="curve" d="M 54.0 261.4 C 76.6 250.9, 139.8 234.1, 189.5 198.4 C 239.2 162.7, 306.9 74.5, 352.1 47.2 C 397.3 19.9, 419.9 5.2, 460.5 34.6 C 501.1 64.0, 573.4 192.1, 596.0 223.6" stroke="#D4AF37" filter="url(#glow-a51)"/>
+                        <circle cx="406.3" cy="34.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="406.3" y="22.6" text-anchor="middle" fill="#D4AF37">170-180℃ 風味のピーク</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">160℃</text><text class="axis-label" x="352.1" y="298" text-anchor="middle">175℃</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">190℃</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">低</text><text class="axis-label" x="46" y="51.2" text-anchor="end">高</text>
+                        
+                    </svg>
+                    <p class="caption">※180℃を超えると芳香は急減し、苦味と炭化が支配する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: ドライ法で純度を読む</h3>
+                            <p>水を加えず糖を直接加熱する。色の変化だけが進行度の指標となるため、薄い黄から琥珀へ移る瞬間を目視で捉え、狙いの色の一段手前で火から外す。</p>
+                            <h3>Protocol B: ウェット法で均一に攻める</h3>
+                            <p>少量の水を加えて溶かしてから煮詰める。水が沸騰する間は温度が安定し、結晶化を防ぎながら均一に加熱できる。水が飛び切った後に一気に着色が進むため、その瞬間から目を離さない。</p>
+                            <h3>Protocol C: 余熱を計算に入れて止める</h3>
+                            <p>糖は鍋に蓄えた熱で着色が進む。目標色より明らかに手前で火を止め、鍋底を水に当てるか温めた液体を加えて反応を即座に凍結させる。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

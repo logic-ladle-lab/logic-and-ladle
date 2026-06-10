@@ -3421,6 +3421,22 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
+/* Generic header (no per-article photo) — used by Exp.21+ */
+.header-generic {
+    background:
+        radial-gradient(130% 150% at 0% 0%, rgba(212, 175, 55, 0.10), transparent 55%),
+        linear-gradient(160deg, #1c1c1f 0%, #0f0f10 70%);
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: 1px solid var(--color-line);
+    z-index: 1;
+}
+
+.header-generic .article-main-title,
+.header-generic .lead {
+    color: #F2F2F2;
+}
+
 /* Exp.20 Microwave (Technique) */
 .header-micro {
     background-image: url('micro-bg.png');

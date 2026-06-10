@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土の記憶を洗い流す ジオスミンと根菜の泥臭さ - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.82</span>
+                <span class="category-tag">SENSORY</span>
+                <h1 class="article-main-title">土の記憶を洗い流す<br>ジオスミンと根菜の泥臭さ</h1>
+                <p class="lead">ビーツやゴボウの「土っぽさ」。<br>その正体は微生物が残した一分子だ。<br>鼻はそれを十億分の一で嗅ぎ当てる。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：土の匂いの正体</h2>
+                <p>雨上がりの土の香り。あれと同じ分子が、根菜の泥臭さの主犯である。<br>正体はジオスミン。放線菌など土壌微生物が生成する揮発性のアルコールで、根菜は生育環境からこれを吸収・蓄積する。<br>ヒトの嗅覚はこの分子に異常なほど鋭く、水中数ナノグラム/L、概ね十億分の一の濃度でも検知する。<br>洗っても消えないのは、汚れではなく組織内部に取り込まれた成分だからだ。</p>
+            </section>
+
+            <section>
+                <h2>2.0 分配モデル：揮発と分解の二経路</h2>
+                <p>ジオスミンは脂溶性かつ揮発性で、水には溶けにくい。ゆえに「水で洗い流す」発想は効きにくい。<br>有効なのは二つの経路だ。第一は加熱による揮発除去。第二は酸性条件下での分解で、酸はジオスミンの構造を不安定化し別の化合物へ転換させる。<br>つまり匂いを「動かす」か「壊す」か。調理操作はこのどちらかに帰着する。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Geosmin Removal Pathways</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">土壌微生物</div>
+          <div class="node-sub">放線菌がジオスミンを生成</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">根菜が吸収</div>
+          <div class="node-sub">組織内部へ脂溶性分子が蓄積</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">経路①加熱</div>
+          <div class="node-sub">揮発させて系外へ追い出す</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">経路②酸処理</div>
+          <div class="node-sub">低pHで構造を不安定化・分解</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">泥臭さ低減</div>
+          <div class="node-sub">クリーンな風味へ</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：酸とpHの最適点</h2>
+                <p>分解速度はpHに依存する。中性付近では安定なジオスミンも、pHを下げるほど分解が加速する。<br>酢やレモンを早い段階で加えること、すなわち低pH環境を先につくることが泥臭さ低減への近道だ。<br>ただし酸は野菜の色や食感も左右する。風味設計と質感保持のバランス点を狙うのが制御の本質である。</p>
+                
+                <div class="visualization-container">
+                    <h3>Geosmin Stability vs pH</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Geosmin Stability vs pH">
+                        <defs><linearGradient id="g-a82-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a82" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 34.6 C 81.1 40.9, 171.4 55.6, 216.6 72.4 C 261.8 89.2, 284.4 112.3, 325.0 135.4 C 365.6 158.5, 415.3 192.1, 460.5 211.0 C 505.7 229.9, 573.4 242.5, 596.0 248.8 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a82-0)" stroke="none"/><path class="curve" d="M 54.0 34.6 C 81.1 40.9, 171.4 55.6, 216.6 72.4 C 261.8 89.2, 284.4 112.3, 325.0 135.4 C 365.6 158.5, 415.3 192.1, 460.5 211.0 C 505.7 229.9, 573.4 242.5, 596.0 248.8" stroke="#D4AF37" filter="url(#glow-a82)"/>
+                        
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">pH2 酸性</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">pH5</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">pH8 中性〜</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">分解</text><text class="axis-label" x="46" y="38.6" text-anchor="end">残存</text>
+                        
+                    </svg>
+                    <p class="caption">※pHを下げるほどジオスミンは不安定化し残存量は減少する（定性的傾向）。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 先行酸浴</h3>
+                            <p>下処理段階で酢水やレモン水に浸す。加熱前に低pH環境をつくり、分解の起点を早める。ビーツやゴボウに有効。</p>
+                            <h3>Protocol B: 蓋なし加熱で揮発</h3>
+                            <p>煮込みは序盤を蓋なしで。ジオスミンを蒸気とともに揮発させ、系外へ逃がす。閉じ込めないことが要点。</p>
+                            <h3>Protocol C: 酸味の輪郭づけ</h3>
+                            <p>仕上げにビネガーや柑橘で酸を補強。残った泥臭さを分解しつつ、味の輪郭を立てて知覚的にマスクする。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

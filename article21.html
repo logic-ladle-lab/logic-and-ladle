@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滲み出る肉汁の正体 保水性(WHC)を支配するpHのレバー - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.21</span>
+                <span class="category-tag">PHYSICS</span>
+                <h1 class="article-main-title">滲み出る肉汁の正体<br>保水性(WHC)を支配するpHのレバー</h1>
+                <p class="lead">焼いた肉から滲み出る肉汁は、失敗ではなく化学の必然だ。<br>水を握る力は、タンパク質の「電荷」が決めている。<br>pHという見えざるレバーが、ジューシーさを支配する。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：肉汁という名の敗北</h2>
+                <p>フライパンの上で肉が縮み、白濁した水分が押し出される。あれは旨味の流出であり、ジューシーさの喪失だ。<br>肉の70%以上は水だが、その水がどれだけ筋肉内に留まるかは固定値ではない。<br>鍵を握るのは温度だけではない。タンパク質が帯びる電荷、すなわちpHこそが水を握る力を決めている。</p>
+            </section>
+
+            <section>
+                <h2>2.0 静電反発モデル：電荷が水を抱く</h2>
+                <p>筋肉の保水性は、筋原線維タンパク質(主にミオシン・アクチン)の正味電荷で決まる。<br>pHが等電点(pI 5.0-5.5)に近づくと正電荷と負電荷が拮抗し、フィラメント間の静電反発が消える。格子は収縮し、水を保持する毛細管空間が潰れる。<br>逆に等電点から離れれば同電荷が増え、反発でフィラメント格子が膨潤する。広がった空隙が水を物理的に抱え込む。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Charge-Repulsion Mechanism</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">pHを等電点から離す</div>
+          <div class="node-sub">酸または塩基側へ</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">筋原線維タンパクが帯電</div>
+          <div class="node-sub">正味電荷が増大</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">フィラメント間に静電反発</div>
+          <div class="node-sub">同電荷どうしが押し合う</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">格子が膨潤し空隙拡大</div>
+          <div class="node-sub">毛細管空間が広がる</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">水を保持(WHC上昇)</div>
+          <div class="node-sub">ジューシーさの正体</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：U字の谷を読む</h2>
+                <p>WHCをpHに対してプロットすると、等電点を底とする明瞭なU字曲線が現れる。<br>調理者の戦略は単純だ。等電点という保水性の谷を、酸側ではなく塩基側へ越えること。塩や重曹で見かけのpHを6.5以上へ押し上げれば、格子は開き水を抱く。<br>このレバーを意識的に操作することが、加熱による収縮を最小化し、肉汁を皿ではなく繊維の内側に留める唯一の理論だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Water-Holding Capacity vs pH</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Water-Holding Capacity vs pH">
+                        <defs><linearGradient id="g-a21-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a21" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 34.6 C 72.1 51.4, 128.1 99.7, 162.4 135.4 C 196.7 171.1, 232.9 233.3, 260.0 248.8 C 287.1 264.3, 294.3 247.5, 325.0 228.6 C 355.7 209.7, 399.1 166.5, 444.2 135.4 C 489.4 104.3, 570.7 57.7, 596.0 42.2 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a21-0)" stroke="none"/><path class="curve" d="M 54.0 34.6 C 72.1 51.4, 128.1 99.7, 162.4 135.4 C 196.7 171.1, 232.9 233.3, 260.0 248.8 C 287.1 264.3, 294.3 247.5, 325.0 228.6 C 355.7 209.7, 399.1 166.5, 444.2 135.4 C 489.4 104.3, 570.7 57.7, 596.0 42.2" stroke="#D4AF37" filter="url(#glow-a21)"/>
+                        <circle cx="260.0" cy="248.8" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="260.0" y="236.8" text-anchor="middle" fill="#D4AF37">等電点：保水性の谷</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">pH 4.5</text><text class="axis-label" x="260.0" y="298" text-anchor="middle">pI 5.0-5.5</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">pH 6.5+</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">低</text><text class="axis-label" x="46" y="51.2" text-anchor="end">高</text>
+                        
+                    </svg>
+                    <p class="caption">※等電点(pI 5.0-5.5)で正味電荷がゼロとなり、保水性は最小値を取るU字を描く。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 等電点を避ける塩締め</h3>
+                            <p>食塩を肉重量の1.0-1.5%まぶし、低温で数時間置く。塩化物イオンが筋原線維に吸着して負電荷を付与し、見かけのpHを等電点から遠ざける。フィラメント格子が膨潤し、加熱後も水を逃さない。下味と保水を同時に達成する基本手技だ。</p>
+                            <h3>Protocol B: アルカリ側へ振るブライン</h3>
+                            <p>重曹を微量(肉重量の0.3-0.5%)溶いた水に浸し、表層pHを6.5以上へ押し上げる。等電点から塩基側へ離れることで正味負電荷が増し、反発で格子が開く。中華の「ベルベッティング」が薄切り肉を柔らかく保つ原理はこれだ。入れ過ぎは石鹸臭を招くため微量厳守。</p>
+                            <h3>Protocol C: 熟成後の調理タイミング</h3>
+                            <p>屠殺直後の高pH(>6.0)では水を抱くが、解硫を経て熟成中にpHは5.4前後の等電点へ低下し保水性は底を打つ。乳酸蓄積のピークを過ぎ、酵素分解でタンパク構造が緩む時期を待って焼く。pHの谷を理解すれば、熟成肉のドリップ管理が読める。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食感の音響学： 「パリッ」は耳で味わう - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.52</span>
+                <span class="category-tag">SENSORY</span>
+                <h1 class="article-main-title">食感の音響学：<br>「パリッ」は耳で味わう</h1>
+                <p class="lead">クラッカーの「パリッ」は、舌より先に耳へ届く。<br>食感とは、口の中で鳴る音の記録だ。<br>静かな破断に、人は鮮度を感じない。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：音が消えた瞬間、湿気を疑う</h2>
+                <p>ポテトチップスが湿気ると、味は変わらないのに不味く感じる。<br>失われたのは風味ではなく、噛んだ瞬間の高い破断音だ。<br>クリスプ感・パリパリ感は、舌触りである以前に、骨伝導と空気伝導で脳に届く音響信号である。<br>食感の半分は、耳で味わっている。</p>
+            </section>
+
+            <section>
+                <h2>2.0 破断モデル：脆性破壊と音の発生</h2>
+                <p>乾いた多孔質の食材は、噛む力に対してしならず、一点に応力を蓄えて一気に砕ける。<br>この急激な脆性破壊が、空気を震わせ高周波の破断音を生む。<br>水分を含むと細胞壁が可塑化し、力を逃がしながらゆっくり潰れる延性破壊へ変わる。<br>音が鳴るか沈黙するかは、構造が脆いか粘るかで決まる。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Crispness Sound Generation</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">乾いた多孔質構造</div>
+          <div class="node-sub">細胞壁が硬く、しならない</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">咬合応力の集中</div>
+          <div class="node-sub">力を一点に蓄積</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">脆性破壊（一気に砕ける）</div>
+          <div class="node-sub">急激な亀裂進展</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">高周波の破断音</div>
+          <div class="node-sub">空気伝導＋骨伝導</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">脳が「新鮮」と判断</div>
+          <div class="node-sub">音圧が鮮度の合図</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：水分活性と音圧のトレードオフ</h2>
+                <p>破断音の鋭さは、食材の水分量に強く依存する。<br>水分活性が一定値を超えると、高周波成分が急速に減衰し、クリスプ感は崩壊する。<br>狙うのは、乾きすぎて硬く割れず、湿りすぎて沈黙しない、音が最も立つ一点だ。<br>揚げ物の衣も焼き菓子も、この音圧の臨界点を保つ設計に他ならない。</p>
+                
+                <div class="visualization-container">
+                    <h3>Water Activity vs Crispness Sound</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Water Activity vs Crispness Sound">
+                        <defs><linearGradient id="g-a52-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a52" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 81.1 77.4 C 99.2 75.8, 153.4 64.0, 189.5 67.4 C 225.6 70.7, 261.8 80.0, 297.9 97.6 C 334.0 115.2, 370.2 150.1, 406.3 173.2 C 442.4 196.3, 483.1 221.9, 514.7 236.2 C 546.3 250.5, 582.5 255.1, 596.0 258.9 L 596.0 274.0 L 81.1 274.0 Z" fill="url(#g-a52-0)" stroke="none"/><path class="curve" d="M 81.1 77.4 C 99.2 75.8, 153.4 64.0, 189.5 67.4 C 225.6 70.7, 261.8 80.0, 297.9 97.6 C 334.0 115.2, 370.2 150.1, 406.3 173.2 C 442.4 196.3, 483.1 221.9, 514.7 236.2 C 546.3 250.5, 582.5 255.1, 596.0 258.9" stroke="#D4AF37" filter="url(#glow-a52)"/>
+                        <circle cx="189.5" cy="67.4" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="189.5" y="55.4" text-anchor="middle" fill="#D4AF37">音圧ピーク</text>
+                        <text class="axis-label" x="81.1" y="298" text-anchor="middle">乾燥</text><text class="axis-label" x="216.6" y="298" text-anchor="middle">至適</text><text class="axis-label" x="433.4" y="298" text-anchor="middle">吸湿</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">湿潤</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">沈黙</text><text class="axis-label" x="46" y="76.4" text-anchor="end">最大</text>
+                        
+                    </svg>
+                    <p class="caption">※水分活性が臨界点を越えると高周波の破断音は急減し、クリスプ感が崩壊する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 二度揚げによる脱水固定</h3>
+                            <p>低温で内部の水分を抜き、高温で表面を脆性化させる。多孔質の薄い殻を作り、噛んだ瞬間に高周波が立つ構造を固定する。</p>
+                            <h3>Protocol B: 提供直前の温度回復</h3>
+                            <p>湿気た揚げ物やパンは、短時間の再加熱で水分を再分布・蒸散させる。可塑化した衣を再び脆くし、沈黙した破断音を取り戻す。</p>
+                            <h3>Protocol C: 密閉と乾燥剤による音の保存</h3>
+                            <p>焼き上げ後は速やかに密閉し、乾燥剤で水分活性を臨界点以下に保つ。風味ではなく音圧を守ることが、クリスプ感の保存である。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熱の慣性を設計する 余熱調理(Carry-over)の熱計算 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.33</span>
+                <span class="category-tag">PHYSICS</span>
+                <h1 class="article-main-title">熱の慣性を設計する<br>余熱調理(Carry-over)の熱計算</h1>
+                <p class="lead">火を止めた。だが調理は終わっていない。<br>肉の中心はまだ昇り続けている。<br>余熱とは、止められない熱の慣性だ。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：火を止めても止まらない上昇</h2>
+                <p>オーブンから出したローストの中心温度を測ると、数分後にむしろ上がっている。<br>これは錯覚ではなく、表面に蓄えられた熱が内部へ流れ込み続けるためだ。<br>加熱という行為は熱源を切った瞬間に終わるが、調理という現象はそこから数分続く。</p>
+            </section>
+
+            <section>
+                <h2>2.0 熱伝導モデル：勾配が生む熱の慣性</h2>
+                <p>調理中、食材内部には表面が高く中心が低い急峻な温度勾配が形成される。<br>熱は常に高温から低温へ流れるため、外部熱源を断っても表面の蓄熱が中心へ伝導し続ける。<br>結果として中心温度は目標を数℃超えてピークに達し、勾配が消えるまで平衡へ向かう。<br>これが余熱調理（Carry-over）の正体であり、止められない熱の慣性だ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Carry-over Heat Flux</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">表面に蓄積した高温層</div>
+          <div class="node-sub">200℃超のシアゾーン／オーブン熱</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">温度勾配による熱伝導</div>
+          <div class="node-sub">高温→低温へ熱が流れ続ける</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">加熱停止後も流入は継続</div>
+          <div class="node-sub">外部熱源は切れても内部移動は止まらない</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">中心温度の上昇（オーバーシュート）</div>
+          <div class="node-sub">ピークまで数℃上振れする</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">全体が平衡へ収束</div>
+          <div class="node-sub">勾配が消え温度が均一化</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：オーバーシュートを設計に組み込む</h2>
+                <p>余熱は誤差ではなく、計算に入れるべき変数だ。<br>上昇幅は表面と中心の温度差、食材の厚みと質量に比例して大きくなる。<br>厚い塊ほど早く引いて長く休ませ、薄い切り身は短く扱う。<br>ピークを狙って加熱を止めれば、余熱は敵ではなく最後の加熱工程になる。</p>
+                
+                <div class="visualization-container">
+                    <h3>Carry-over Temperature Curve</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Carry-over Temperature Curve">
+                        <defs><linearGradient id="g-a33-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a33" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 135.4 C 72.1 130.8, 121.8 119.9, 162.4 107.7 C 203.1 95.5, 252.7 74.5, 297.9 62.3 C 343.1 50.1, 397.3 38.4, 433.4 34.6 C 469.5 30.8, 487.6 36.7, 514.7 39.6 C 541.8 42.6, 582.5 50.1, 596.0 52.2 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a33-0)" stroke="none"/><path class="curve" d="M 54.0 135.4 C 72.1 130.8, 121.8 119.9, 162.4 107.7 C 203.1 95.5, 252.7 74.5, 297.9 62.3 C 343.1 50.1, 397.3 38.4, 433.4 34.6 C 469.5 30.8, 487.6 36.7, 514.7 39.6 C 541.8 42.6, 582.5 50.1, 596.0 52.2" stroke="#D4AF37" filter="url(#glow-a33)"/>
+                        <circle cx="433.4" cy="34.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="433.4" y="22.6" text-anchor="middle" fill="#D4AF37">中心温度ピーク（オーバーシュート）</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">加熱停止</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">+3分</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">+10分</text>
+                        <text class="axis-label" x="46" y="139.4" text-anchor="end">55℃</text><text class="axis-label" x="46" y="56.2" text-anchor="end">63℃</text><text class="axis-label" x="46" y="38.6" text-anchor="end">65℃</text>
+                        
+                    </svg>
+                    <p class="caption">※加熱停止後も中心温度は上昇し続け、数分後のピークを経てから緩やかに下降する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 目標温度の手前で引く</h3>
+                            <p>厚いステーキやローストは、狙う中心温度より3〜5℃低い段階で加熱を止める。余熱のオーバーシュート分を見込んで早めに抜くことで、過加熱を防ぐ。</p>
+                            <h3>Protocol B: 質量と厚みで待ち時間を決める</h3>
+                            <p>厚く重い塊ほど熱の慣性が大きく、上昇幅も持続時間も増す。薄い切り身は1〜2分、大型ローストは15分以上、休ませる時間を質量に比例させて設計する。</p>
+                            <h3>Protocol C: 中心温度を測り続ける</h3>
+                            <p>プローブを中心に刺したまま休ませ、上昇が止まりピークに達した瞬間を確認する。下降に転じる前に提供することで、最良の中心温度を再現できる。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

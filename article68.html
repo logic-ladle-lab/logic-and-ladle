@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>焦げの設計図 野菜ローストにおける糖化とメイラードの分岐 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.68</span>
+                <span class="category-tag">INGREDIENT</span>
+                <h1 class="article-main-title">焦げの設計図<br>野菜ローストにおける糖化とメイラードの分岐</h1>
+                <p class="lead">甘く焦げた人参の正体は、二つの反応の競合だ。<br>糖はそのまま茶色くなるのではない。<br>水分・温度・時間が、味の地図を描き変える。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：なぜ野菜は「甘く」なるのか</h2>
+                <p>ローストした人参や玉ねぎが生より甘いのは、加熱が糖を「作る」からだ。<br>細胞内のデンプンやスクロースは、酵素と熱によって分解され、より甘く感じるグルコース・フルクトースへと姿を変える。<br>そして表面で水分が抜けた瞬間、糖は褐変という次の段階へ進む。<br>甘さと香ばしさは地続きの現象だが、その正体は別物だ。</p>
+            </section>
+
+            <section>
+                <h2>2.0 二経路モデル：糖化・カラメル化・メイラード</h2>
+                <p>野菜の褐変は二つの経路に分かれる。<br>純粋な糖が高温で分解・重合するカラメル化は、約160℃以上を要し、ほろ苦さを生む。<br>一方メイラード反応は、糖と野菜中のアミノ酸が結びつく経路で、より低温から進行し、複雑な旨味と香気を生む。<br>野菜ローストの「美味い焦げ」は、この二経路の重なりの上に立つ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Vegetable Browning Pathways</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">糖の供給</div>
+          <div class="node-sub">デンプン・スクロースが分解しグルコース/フルクトースへ</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">表面の脱水</div>
+          <div class="node-sub">水分が抜け表面温度が100℃を突破</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">分岐点</div>
+          <div class="node-sub">温度とアミノ酸の有無で経路が決まる</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">メイラード反応</div>
+          <div class="node-sub">糖＋アミノ酸→香気・旨味・褐色</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">カラメル化</div>
+          <div class="node-sub">糖単独の重合→ほろ苦さ（高温域）</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：水分・温度・面積の三変数</h2>
+                <p>反応を制御する第一の鍵は水分だ。水がある限り表面温度は100℃で頭打ちになり、褐変は始まらない。<br>ゆえに野菜は密集させず、間隔を空けて水蒸気を逃がし、表面を乾かすことが先決となる。<br>切断面を大きく、平らに接地させれば、熱伝導と乾燥が進み褐変温度域へ素早く到達する。<br>温度を上げすぎればカラメル化が暴走し苦味へ傾く。甘味と香ばしさの最大化は、180〜200℃帯の滞空時間で決まる。</p>
+                
+                <div class="visualization-container">
+                    <h3>Browning vs. Surface Temperature</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Browning vs. Surface Temperature">
+                        <defs><linearGradient id="g-a68-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a68" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 261.4 C 76.6 260.6, 144.3 269.0, 189.5 256.4 C 234.7 243.8, 282.5 218.6, 325.0 185.8 C 367.5 153.0, 409.9 85.0, 444.2 59.8 C 478.6 34.6, 505.7 24.1, 531.0 34.6 C 556.3 45.1, 585.2 108.1, 596.0 122.8 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a68-0)" stroke="none"/><path class="curve" d="M 54.0 261.4 C 76.6 260.6, 144.3 269.0, 189.5 256.4 C 234.7 243.8, 282.5 218.6, 325.0 185.8 C 367.5 153.0, 409.9 85.0, 444.2 59.8 C 478.6 34.6, 505.7 24.1, 531.0 34.6 C 556.3 45.1, 585.2 108.1, 596.0 122.8" stroke="#D4AF37" filter="url(#glow-a68)"/>
+                        <circle cx="503.9" cy="39.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="503.9" y="27.6" text-anchor="middle" fill="#D4AF37">風味の最適域</text>
+                        <text class="axis-label" x="108.2" y="298" text-anchor="middle">100℃</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">140℃</text><text class="axis-label" x="476.8" y="298" text-anchor="middle">180℃</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">220℃</text>
+                        <text class="axis-label" x="46" y="227.6" text-anchor="end">甘味</text><text class="axis-label" x="46" y="63.8" text-anchor="end">香ばしさ</text><text class="axis-label" x="46" y="126.8" text-anchor="end">苦味へ</text>
+                        
+                    </svg>
+                    <p class="caption">※100℃以下では水分が反応を止め、220℃超ではカラメル化が苦味へ傾く。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 表面を乾かす</h3>
+                            <p>洗浄後の野菜はペーパーで水気を拭き取り、可能なら数分間風乾する。表面水が残る限り温度は100℃で停滞し、蒸し焼きになって褐変が始まらない。</p>
+                            <h3>Protocol B: 間隔を空けて並べる</h3>
+                            <p>天板上で野菜同士を密集させず、切断面を下にして隙間を作る。立ち上る水蒸気を逃がし、各片の表面を確実に乾燥域へ到達させる。</p>
+                            <h3>Protocol C: 180〜200℃で滞空させる</h3>
+                            <p>庫内を180〜200℃に保ち、甘味形成とメイラードが両立する温度帯に滞空させる。焦げを急ぐ高温短時間より、この帯で時間をかける方が香りと甘みが深まる。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

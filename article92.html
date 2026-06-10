@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>触れた瞬間、水になる。 キサンタンガムの擬塑性流動 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.92</span>
+                <span class="category-tag">PHYSICS</span>
+                <h1 class="article-main-title">触れた瞬間、水になる。<br>キサンタンガムの擬塑性流動</h1>
+                <p class="lead">静かなソースは、皿の上で固まったまま動かない。<br>だがスプーンが触れた瞬間、それは水のように流れ出す。<br>この「気まぐれ」こそ、設計された粘度である。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：止まるソース、流れるソース</h2>
+                <p>少量のキサンタンガムを加えたドレッシングは、瓶の中で分離せず、油滴を宙に留めたまま静止する。<br>しかし振り、注ぎ、舌で押し伸ばすと、嘘のようにサラサラと流れる。<br>静止時は固体的、せん断時は液体的。この二面性は粘度が「一定でない」ことを意味する。<br>ニュートン流体である水とは根本的に挙動が異なる、擬塑性（シアシニング）流体の世界だ。</p>
+            </section>
+
+            <section>
+                <h2>2.0 分子鎖モデル：絡まりとほどけ</h2>
+                <p>キサンタンガムは長い多糖の主鎖に側鎖が並ぶ、剛直で巨大な分子だ。<br>静止状態では、これらの分子鎖が水素結合で弱く絡み合い、三次元の網目を形成する。この網目が油滴や気泡を捕え、見かけ上の高粘度を生む。<br>せん断（かき混ぜ・注ぐ・噛む）を加えると、絡んだ鎖が流れの方向に整列し、網目がほどける。結果、粘度は急落する。<br>力を抜けば網目は速やかに再構築され、再び保形する。この可逆性が擬塑性流動の本質だ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Pseudoplastic Network Mechanism</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">分子鎖の絡み合い</div>
+          <div class="node-sub">静止時、水素結合で網目を形成</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">見かけの高粘度</div>
+          <div class="node-sub">油滴・気泡を捕捉し保形</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">せん断を付与</div>
+          <div class="node-sub">注ぐ・撹拌・咀嚼</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">鎖の整列・網目崩壊</div>
+          <div class="node-sub">粘度が急落し液体的に流動</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">力を抜くと再構築</div>
+          <div class="node-sub">網目が回復し再び保形（可逆）</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：せん断速度で粘度を設計する</h2>
+                <p>重要なのは、粘度がせん断速度の関数だと理解することだ。<br>低せん断域（静置・保形）では高粘度を、高せん断域（注ぐ・食べる）では低粘度を発揮する。だから「とろみは強いのに口当たりは重くない」という両立が可能になる。<br>添加量は質量比でごく僅か（おおむね0.1〜0.5%）。過剰は唾液中のせん断でもほどけきれず、糸を引く不快な食感を招く。<br>狙う食感に応じて、せん断曲線のどこを使うかを先に決める。</p>
+                
+                <div class="visualization-container">
+                    <h3>Shear Rate vs Viscosity</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Shear Rate vs Viscosity">
+                        <defs><linearGradient id="g-a92-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a92" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 34.6 C 72.1 40.1, 121.8 48.5, 162.4 67.4 C 203.1 86.3, 252.7 122.8, 297.9 148.0 C 343.1 173.2, 383.7 200.9, 433.4 218.6 C 483.1 236.2, 568.9 248.0, 596.0 253.8 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a92-0)" stroke="none"/><path class="curve" d="M 54.0 34.6 C 72.1 40.1, 121.8 48.5, 162.4 67.4 C 203.1 86.3, 252.7 122.8, 297.9 148.0 C 343.1 173.2, 383.7 200.9, 433.4 218.6 C 483.1 236.2, 568.9 248.0, 596.0 253.8" stroke="#D4AF37" filter="url(#glow-a92)"/>
+                        
+                        <text class="axis-label" x="81.1" y="298" text-anchor="middle">低せん断（静置）</text><text class="axis-label" x="568.9" y="298" text-anchor="middle">高せん断（注ぐ・咀嚼）</text>
+                        <text class="axis-label" x="46" y="51.2" text-anchor="end">高粘度</text><text class="axis-label" x="46" y="252.8" text-anchor="end">低粘度</text>
+                        
+                    </svg>
+                    <p class="caption">※せん断速度の上昇に伴い粘度は単調に低下する（シアシニング）。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 微量から積層する</h3>
+                            <p>添加量は全体質量の0.1〜0.5%を上限の目安とし、少量ずつ分割投入する。過剰は唾液せん断でもほどけず、糸引き・ぬめりの原因になる。</p>
+                            <h3>Protocol B: ダマを作らず分散させる</h3>
+                            <p>粉のまま水に投じると表面だけ吸水し凝集する。油・砂糖・他の粉とあらかじめ乾式で混ぜるか、高せん断のブレンダーで一気に分散させる。</p>
+                            <h3>Protocol C: 用途でせん断域を狙う</h3>
+                            <p>皿上の保形を重視するなら高添加で低せん断粘度を上げる。飲料やソースの滑らかさを重視するなら低添加に留め、高せん断域の軽さを活かす。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ガスはいつ生まれるか BPと重曹、二つの時間軸 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.61</span>
+                <span class="category-tag">REACTION</span>
+                <h1 class="article-main-title">ガスはいつ生まれるか<br>BPと重曹、二つの時間軸</h1>
+                <p class="lead">同じ膨張剤、まったく違う設計思想。<br>重曹は混ぜた瞬間から動き出す。<br>BPは熱を待ってから、二度膨らむ。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：生地が膨らむ「瞬間」は一つではない</h2>
+                <p>パンケーキの生地を放置すると、焼く前から表面に気泡が浮く。重曹（炭酸水素ナトリウム）を使った生地の典型的な光景だ。<br>一方、ベーキングパウダー（BP）の生地は、混ぜた直後は静かで、オーブンの中で初めて大きく持ち上がる。<br>両者の差はガスの「発生タイミング」にある。CO₂がいつ生まれるかが、最終的な気泡構造と高さを決定する。</p>
+            </section>
+
+            <section>
+                <h2>2.0 二相反応モデル：常温の反応と加熱の反応</h2>
+                <p>重曹は単独では熱分解（約60℃以上）でしかガスを出さないが、生地中の酸（ヨーグルト・蜂蜜・ココアなど）と接触すると常温で即座に反応しCO₂を放出する。<br>BPは重曹に酸性剤と緩衝剤を配合した複合体だ。速効性酸（酒石酸系）が混合時に、遅効性酸（リン酸系・ミョウバン系）が加熱時に反応する「二段階（ダブルアクティング）」設計を持つ。<br>つまり重曹は『混合トリガー』、BPは『混合＋加熱の二重トリガー』で動く。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Dual-Phase Gas Release</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">混合</div>
+          <div class="node-sub">水分が反応を起動</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">常温反応</div>
+          <div class="node-sub">重曹＋速効性酸 → CO₂即時発生</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">加熱（約60℃〜）</div>
+          <div class="node-sub">遅効性酸・熱分解が作動</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">第二次ガス発生</div>
+          <div class="node-sub">BPダブルアクション</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">気泡固定</div>
+          <div class="node-sub">タンパク質凝固・糊化で保持</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：放置時間とガス保持率</h2>
+                <p>重曹系は混合後の待機時間が長いほどガスが空気中へ逃げ、焼成時の膨張余力を失う。混ぜたら速やかに焼くのが鉄則だ。<br>BP系は速効分で初期気泡核を作り、加熱で遅効分が膨張させるため、多少の待機時間にも耐性がある。<br>狙う食感に応じて、混合直後の即時加熱（重曹）か、二段膨張の余裕（BP）かを選ぶ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Gas Retention vs Resting Time</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Gas Retention vs Resting Time">
+                        <defs><linearGradient id="g-a61-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a61" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 34.6 C 76.6 41.7, 144.3 62.7, 189.5 77.4 C 234.7 92.1, 279.8 107.7, 325.0 122.8 C 370.2 137.9, 415.3 154.7, 460.5 168.2 C 505.7 181.6, 573.4 197.6, 596.0 203.4 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a61-0)" stroke="none"/><path class="curve" d="M 54.0 34.6 C 76.6 41.7, 144.3 62.7, 189.5 77.4 C 234.7 92.1, 279.8 107.7, 325.0 122.8 C 370.2 137.9, 415.3 154.7, 460.5 168.2 C 505.7 181.6, 573.4 197.6, 596.0 203.4" stroke="#D4AF37" filter="url(#glow-a61)"/>
+                        
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">混合直後</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">中放置</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">長時間放置</text>
+                        <text class="axis-label" x="46" y="278.0" text-anchor="end">低</text><text class="axis-label" x="46" y="26.0" text-anchor="end">高</text>
+                        
+                    </svg>
+                    <p class="caption">※重曹系は放置時間に比例しガス保持率が低下する。BP遅効分はこの傾きを緩和する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 重曹は即焼成</h3>
+                            <p>酸性食材を含む重曹生地は、混合後ただちにオーブンへ。待機させると常温で発生したCO₂が散逸し、膨張余力が失われる。</p>
+                            <h3>Protocol B: BPで二段膨張を設計</h3>
+                            <p>高さと安定した気泡を狙うならダブルアクティングBP。速効分で気泡核を、加熱で遅効分を作動させ、待機時間にも強い構造を得る。</p>
+                            <h3>Protocol C: 酸の有無で選び分ける</h3>
+                            <p>生地に酸（ヨーグルト・ココア・蜂蜜）があれば重曹が活きる。中性〜酸の乏しい生地ではBPを用い、苦味やアルカリ臭の残留を防ぐ。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

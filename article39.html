@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塩が水を奪う物理学 浸透圧という見えない圧力 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.39</span>
+                <span class="category-tag">REACTION</span>
+                <h1 class="article-main-title">塩が水を奪う物理学<br>浸透圧という見えない圧力</h1>
+                <p class="lead">塩は素材を「殺菌」しない。水を奪うだけだ。<br>細胞膜は、濃度差の前で無力な半透膜にすぎない。<br>腐敗とは、結局のところ「自由水」をめぐる攻防である。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：ナメクジと塩の物理学</h2>
+                <p>塩をかけたキュウリから水が滲み出る。漬物が縮み、生ハムが締まる。これらはすべて同一の物理現象、浸透である。<br>塩は素材を化学的に溶かしているのではない。素材の内部から水を引きずり出しているだけだ。<br>細胞という小さな袋の膜は、水だけを通し溶質を通さない半透膜として振る舞う。この非対称性が、すべての出発点となる。</p>
+            </section>
+
+            <section>
+                <h2>2.0 浸透圧モデル：濃度差が生む駆動力</h2>
+                <p>半透膜を隔てて塩濃度に差があるとき、水は濃度を均そうとして低濃度側から高濃度側へ移動する。これを駆動するのが浸透圧だ。<br>外液の塩濃度が細胞内より高ければ、水は細胞から外へ流出し、細胞は脱水・収縮する。これが食材の「締まり」の正体である。<br>微生物も同じ運命を辿る。高浸透圧環境では菌体内の水が奪われ、増殖に必要な代謝が停止する。塩は菌を殺すのではなく、活動できなくするのだ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Osmotic Dehydration Mechanism</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">濃度勾配の形成</div>
+          <div class="node-sub">外液の塩濃度 > 細胞内濃度</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">半透膜での選択</div>
+          <div class="node-sub">水は透過・溶質は遮断</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">水の流出</div>
+          <div class="node-sub">低濃度側から高濃度側へ</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">細胞・菌体の脱水</div>
+          <div class="node-sub">収縮と原形質分離</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">代謝停止・防腐</div>
+          <div class="node-sub">自由水の枯渇で増殖不能</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：水分活性という指標</h2>
+                <p>防腐の鍵は塩の絶対量ではなく、水分活性（Aw）である。Awとは微生物が利用できる「自由水」の割合を示す指標だ。<br>食塩は水分子を強く束縛し、Awを引き下げる。多くの腐敗菌はAw0.91以下、一般細菌は0.90前後で増殖を止める。<br>ただし塩は諸刃の剣だ。低すぎれば防腐効果は得られず、高すぎれば食感も風味も損なわれる。狙うべきは、菌を止めつつ食を成立させる狭い領域である。</p>
+                
+                <div class="visualization-container">
+                    <h3>Microbial Growth vs Water Activity</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Microbial Growth vs Water Activity">
+                        <defs><linearGradient id="g-a39-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a39" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 81.1 34.6 C 103.7 38.8, 171.4 40.9, 216.6 59.8 C 261.8 78.7, 314.2 117.3, 352.1 148.0 C 390.0 178.7, 412.6 223.6, 444.2 243.8 C 475.9 263.9, 525.5 264.8, 541.8 269.0 L 541.8 274.0 L 81.1 274.0 Z" fill="url(#g-a39-0)" stroke="none"/><path class="curve" d="M 81.1 34.6 C 103.7 38.8, 171.4 40.9, 216.6 59.8 C 261.8 78.7, 314.2 117.3, 352.1 148.0 C 390.0 178.7, 412.6 223.6, 444.2 243.8 C 475.9 263.9, 525.5 264.8, 541.8 269.0" stroke="#D4AF37" filter="url(#glow-a39)"/>
+                        
+                        <text class="axis-label" x="81.1" y="298" text-anchor="middle">Aw 1.0</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">0.92</text><text class="axis-label" x="541.8" y="298" text-anchor="middle">0.80</text>
+                        <text class="axis-label" x="46" y="38.6" text-anchor="end">活発</text><text class="axis-label" x="46" y="152.0" text-anchor="end">抑制</text><text class="axis-label" x="46" y="265.4" text-anchor="end">停止</text>
+                        
+                    </svg>
+                    <p class="caption">※Awが0.91を下回る領域で多くの腐敗菌の増殖は急速に減衰する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 振り塩で表面を締める</h3>
+                            <p>魚や肉の表面に均一に塩を振り、15〜30分置く。表面付近の浸透圧で余分な水分とともに臭み成分を引き出し、拭き取る。塩は素材重量の1%前後を目安に。</p>
+                            <h3>Protocol B: 立て塩で均一に脱水</h3>
+                            <p>塩水（ブライン）に浸す方法。濃度を一定に保てるため、振り塩より均一かつ穏やかに脱水できる。野菜の下漬けや白身魚の締めに有効。</p>
+                            <h3>Protocol C: 高塩分での長期保存</h3>
+                            <p>塩蔵では素材重量の15〜20%以上の塩を用い、Awを0.90以下まで引き下げる。脱水で生じた塩水（呼び水）は適宜排出し、再汚染を防ぐ。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

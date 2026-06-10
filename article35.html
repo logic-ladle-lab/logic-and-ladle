@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刻んだ瞬間に立ち上る香り アリイナーゼという酵素装置 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.35</span>
+                <span class="category-tag">INGREDIENT</span>
+                <h1 class="article-main-title">刻んだ瞬間に立ち上る香り<br>アリイナーゼという酵素装置</h1>
+                <p class="lead">無傷のニンニクは、ほぼ無臭だ。<br>香りは「壊された」瞬間に生成される。<br>包丁は、酵素反応のスイッチである。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：香りは「貯蔵」ではなく「生成」される</h2>
+                <p>丸ごとのニンニクや玉ねぎを鼻に近づけても、強い香りはしない。香気成分は、最初から存在しているわけではないからだ。<br>細胞内には無臭の前駆体（アリイン、イソアリインなど）が蓄えられ、酵素は別の区画に隔離されている。<br>包丁が細胞壁を破った瞬間、両者が出会い、反応が始まる。香りとは、組織破壊への化学的応答なのだ。</p>
+            </section>
+
+            <section>
+                <h2>2.0 アリイナーゼ・モデル：前駆体と酵素の接触反応</h2>
+                <p>鍵を握る酵素がアリイナーゼだ。細胞が破壊されると、隔離されていた酵素が前駆体に作用する。<br>ニンニクではアリインが分解され、不安定なアリシンが生じる。これが加熱や時間経過で多様な含硫化合物へ変化していく。<br>玉ねぎではイソアリインから、涙を誘発する催涙因子（プロパンチアール-S-オキシド）が生成される。前駆体の違いが、香りの個性を決める。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Alliinase Reaction Cascade</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">無傷の細胞</div>
+          <div class="node-sub">前駆体と酵素は別区画に隔離・ほぼ無臭</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">組織破壊</div>
+          <div class="node-sub">包丁・咀嚼で細胞壁が崩れる</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">アリイナーゼ作用</div>
+          <div class="node-sub">前駆体（アリイン）に酵素が接触</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">アリシン生成</div>
+          <div class="node-sub">不安定な含硫中間体が発生</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">香気・催涙因子へ</div>
+          <div class="node-sub">加熱・時間で多様な揮発成分に変化</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：温度とpHで酵素を操る</h2>
+                <p>アリイナーゼはタンパク質であり、熱と酸に弱い。加熱で失活させれば、それ以上アリシンは生まれない。<br>つまり「いつ刻むか」が決定的だ。生のまま細かく刻んで放置すれば香りは最大化し、刻んですぐ加熱すれば穏やかになる。<br>玉ねぎを冷やしてから切ると催涙因子が減るのは、低温で酵素活性が鈍るためだ。温度は、香りの強度を握る制御変数である。</p>
+                
+                <div class="visualization-container">
+                    <h3>Aroma vs. Heating Timing</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Aroma vs. Heating Timing">
+                        <defs><linearGradient id="g-a35-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a35" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 236.2 C 76.6 206.8, 144.3 80.8, 189.5 59.8 C 234.7 38.8, 279.8 89.2, 325.0 110.2 C 370.2 131.2, 415.3 163.5, 460.5 185.8 C 505.7 208.1, 573.4 234.1, 596.0 243.8 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a35-0)" stroke="none"/><path class="curve" d="M 54.0 236.2 C 76.6 206.8, 144.3 80.8, 189.5 59.8 C 234.7 38.8, 279.8 89.2, 325.0 110.2 C 370.2 131.2, 415.3 163.5, 460.5 185.8 C 505.7 208.1, 573.4 234.1, 596.0 243.8" stroke="#D4AF37" filter="url(#glow-a35)"/>
+                        <circle cx="189.5" cy="59.8" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="189.5" y="47.8" text-anchor="middle" fill="#D4AF37">放置で香気成分が最大化</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">刻んだ直後</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">数分放置</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">即加熱</text>
+                        <text class="axis-label" x="46" y="227.6" text-anchor="end">弱</text><text class="axis-label" x="46" y="63.8" text-anchor="end">強</text>
+                        
+                    </svg>
+                    <p class="caption">※刻んでから加熱までの時間が、最終的な香りの強度を左右する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 香りを最大化する</h3>
+                            <p>生のニンニクをすりおろし、または細かく刻んで数分置く。酵素が前駆体を十分に変換してから使う。香りと辛味を最大に引き出せる。</p>
+                            <h3>Protocol B: 香りを穏やかにする</h3>
+                            <p>刻んだ直後に加熱、または丸ごと低温でじっくり火を入れる。酵素を早く失活させ、刺激臭を抑えてまろやかな甘みを残す。</p>
+                            <h3>Protocol C: 涙を止める</h3>
+                            <p>玉ねぎは切る前に冷蔵庫で冷やし、よく切れる包丁を使う。低温と細胞破壊の最小化で催涙因子の生成と揮発を抑える。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

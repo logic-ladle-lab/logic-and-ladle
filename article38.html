@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茶碗蒸しに「す」が立つ理由 気泡膨張とゲル化の臨界点 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.38</span>
+                <span class="category-tag">PHYSICS</span>
+                <h1 class="article-main-title">茶碗蒸しに「す」が立つ理由<br>気泡膨張とゲル化の臨界点</h1>
+                <p class="lead">なめらかな表面に、ぽつぽつと穴が開く。<br>犯人は熱でも卵でもなく、閉じ込められた気体だ。<br>「す」は温度の暴走が残す、消せない証拠である。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：「す」は失敗ではなく記録である</h2>
+                <p>蒸し上がった茶碗蒸しの表面や内部に走る、無数の小さな穴。これが「す（鬆）」だ。<br>多くの料理人はこれを「火が強すぎた」と片付けるが、本質はもっと精密だ。<br>「す」とは、卵液がゲル化する過程で気体が膨張し、固まったタンパク質の網に逃げ場を奪われた瞬間の記録である。<br>つまり穴の数は、加熱中に温度が何度暴走したかを示す履歴そのものだ。</p>
+            </section>
+
+            <section>
+                <h2>2.0 気泡膨張モデル：凝固とガス膨張の競争</h2>
+                <p>卵液は約65℃前後でタンパク質が網目状に結合し、流動性を失ってゲル化する。<br>一方、液中に溶存した空気や生成した水蒸気は、温度上昇に比例して体積を増す。<br>ゲルが固まる前なら気泡は浮上して逃げるが、固まった後では網に捕らわれ、膨張する力だけが穴を押し広げる。<br>「す」とは、凝固速度よりも気泡膨張速度が勝った領域に他ならない。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Su Formation Mechanism</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">溶存気体・水蒸気</div>
+          <div class="node-sub">卵液中に気体が存在</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">加熱・温度上昇</div>
+          <div class="node-sub">気体が体積を増す</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">タンパク質ゲル化</div>
+          <div class="node-sub">約65℃で網目が硬化</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">気泡が網に捕捉</div>
+          <div class="node-sub">逃げ場を失う</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">膨張が穴を形成＝「す」</div>
+          <div class="node-sub">凝固速度<膨張速度</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：85℃の壁を越えさせない</h2>
+                <p>鍵は加熱を「ゲル化に十分・沸騰には不足」の温度帯、おおむね85℃前後に留めることだ。<br>これを越えると内部の水が局所的に気化し、急膨張した蒸気が固まったゲルを内側から破壊する。<br>蒸気を立てすぎず、火を絞り、時間で火を通す。<br>温度の上限を制御できれば、「す」は原理的に発生しない。</p>
+                
+                <div class="visualization-container">
+                    <h3>Bubble Formation vs Temperature</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Bubble Formation vs Temperature">
+                        <defs><linearGradient id="g-a38-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a38" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 261.4 C 90.1 259.3, 212.1 255.9, 270.8 248.8 C 329.5 241.7, 370.2 239.6, 406.3 218.6 C 442.4 197.6, 456.0 153.5, 487.6 122.8 C 519.2 92.1, 577.9 49.3, 596.0 34.6 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a38-0)" stroke="none"/><path class="curve" d="M 54.0 261.4 C 90.1 259.3, 212.1 255.9, 270.8 248.8 C 329.5 241.7, 370.2 239.6, 406.3 218.6 C 442.4 197.6, 456.0 153.5, 487.6 122.8 C 519.2 92.1, 577.9 49.3, 596.0 34.6" stroke="#D4AF37" filter="url(#glow-a38)"/>
+                        <circle cx="406.3" cy="218.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="406.3" y="206.6" text-anchor="middle" fill="#D4AF37">凝固完了の閾値・ここを越えさせない</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">60℃</text><text class="axis-label" x="270.8" y="298" text-anchor="middle">75℃</text><text class="axis-label" x="406.3" y="298" text-anchor="middle">85℃</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">100℃</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">凝固</text><text class="axis-label" x="46" y="126.8" text-anchor="end">膨張</text><text class="axis-label" x="46" y="38.6" text-anchor="end">沸騰</text>
+                        
+                    </svg>
+                    <p class="caption">※85℃を境に気泡膨張と水分の気化が急増し、「す」のリスクが立ち上がる。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 火力を絞り蒸気を立てすぎない</h3>
+                            <p>強火で一気に蒸すと庫内温度が100℃に達し、卵液内部が局所沸騰する。蒸気がうっすら立つ弱火を保ち、上限を85℃前後に抑える。穴を作る蒸気そのものを発生させないのが最短だ。</p>
+                            <h3>Protocol B: 卵液を漉して気泡を除く</h3>
+                            <p>撹拌で混入した空気は「す」の種になる。卵液を一度ザルや布で漉し、表面に浮いた泡をすくい取る。膨張する対象を物理的に減らせば、リスクは加熱前に削れる。</p>
+                            <h3>Protocol C: 蓋をずらし庫内温度を逃がす</h3>
+                            <p>鍋蓋や容器の蓋を少しずらし、過剰な蒸気と熱を逃がす。庫内が飽和して温度が振り切れるのを防ぎ、緩やかな凝固を実現する。温度の安定こそ、なめらかな表面の前提条件だ。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

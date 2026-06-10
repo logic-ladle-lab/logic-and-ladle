@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酸が織る網目 ヨーグルトのレオロジーとpH - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.67</span>
+                <span class="category-tag">INGREDIENT</span>
+                <h1 class="article-main-title">酸が織る網目<br>ヨーグルトのレオロジーとpH</h1>
+                <p class="lead">スプーンを入れた瞬間に崩れる、その境界はpHが決める。<br>固まるのは「冷え」ではなく「酸」である。<br>4.6という一点を、舌は質感として読み取る。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：液体のミルクが、なぜ固体になるのか</h2>
+                <p>温めた牛乳に種菌を加え、保温して数時間。気づけばスプーンで切り出せる固体に変わっている。だが冷蔵庫で冷やしたわけでも、加熱で凝固させたわけでもない。<br>変化を駆動したのは温度ではなく、乳酸菌が産生する乳酸——つまりpHの低下である。<br>ヨーグルトの硬さ、なめらかさ、そして「離水」と呼ばれる水分の滲み。これらはすべて、酸がタンパク質に何をしたかの結果だ。</p>
+            </section>
+
+            <section>
+                <h2>2.0 等電点ゲルモデル：カゼインが網目を編むまで</h2>
+                <p>牛乳のタンパク質の約8割を占めるカゼインは、中性域では負に帯電し、互いに反発しながらミセルとして分散している。<br>乳酸菌が乳糖を分解して乳酸を生むと、pHは6.7から徐々に低下する。負電荷が中和されると静電反発が消え、ミセル同士が接近・凝集を始める。<br>等電点であるpH4.6付近で電荷はほぼゼロとなり、カゼインは三次元の網目を形成して水を抱き込む。これがヨーグルトの「ゲル」の正体だ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Acid-Induced Casein Gelation</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">乳酸菌が乳糖を分解</div>
+          <div class="node-sub">乳酸を産生しpHが低下</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">カゼインの負電荷が中和</div>
+          <div class="node-sub">静電反発が消失</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">ミセルが接近・凝集</div>
+          <div class="node-sub">疎水・カルシウム架橋が優勢に</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">pH4.6 等電点に到達</div>
+          <div class="node-sub">電荷ゼロ・凝集最大</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">三次元網目が水を保持</div>
+          <div class="node-sub">ゲル化＝ヨーグルト完成</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：pHでテクスチャーを設計する</h2>
+                <p>ゲルの性質はpHの「どこで止めるか」で決まる。4.6手前で発酵を止めればマイルドで柔らかく、4.2以下まで進めれば酸味が立ち、網目は収縮して離水しやすくなる。<br>過度な酸性化は網目を緻密に締め上げ、保持しきれない水分を吐き出させる。これが容器の縁に溜まる水だ。<br>狙うべきは硬さと保水のバランス点。発酵温度を下げて緩やかに進めるか、冷却で菌活性を止めることで、pHを意図した位置に固定する。</p>
+                
+                <div class="visualization-container">
+                    <h3>Firmness & Syneresis vs pH</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Firmness & Syneresis vs pH">
+                        <defs><linearGradient id="g-a67-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a67" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 261.4 C 81.1 255.1, 166.9 257.2, 216.6 223.6 C 266.3 190.0, 311.5 91.3, 352.1 59.8 C 392.8 28.3, 419.9 28.3, 460.5 34.6 C 501.1 40.9, 573.4 87.1, 596.0 97.6 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a67-0)" stroke="none"/><path class="curve" d="M 54.0 261.4 C 81.1 255.1, 166.9 257.2, 216.6 223.6 C 266.3 190.0, 311.5 91.3, 352.1 59.8 C 392.8 28.3, 419.9 28.3, 460.5 34.6 C 501.1 40.9, 573.4 87.1, 596.0 97.6" stroke="#D4AF37" filter="url(#glow-a67)"/>
+                        <circle cx="460.5" cy="34.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="460.5" y="22.6" text-anchor="middle" fill="#D4AF37">等電点：ゲル強度最大</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">pH6.7</text><text class="axis-label" x="352.1" y="298" text-anchor="middle">pH4.9</text><text class="axis-label" x="460.5" y="298" text-anchor="middle">pH4.6</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">pH4.2</text>
+                        <text class="axis-label" x="46" y="227.6" text-anchor="end">低</text><text class="axis-label" x="46" y="38.6" text-anchor="end">高</text>
+                        
+                    </svg>
+                    <p class="caption">※pH4.6で網目が最も発達し、それ以下では収縮して離水が増える。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 終点pHで質感を狙う</h3>
+                            <p>発酵をpH4.6で止めれば柔らかくマイルド、4.2まで進めれば酸味が立ち締まったゲルになる。pH試験紙か味で終点を判断し、冷却で固定する。</p>
+                            <h3>Protocol B: 低温発酵で網目を整える</h3>
+                            <p>42℃の高温短時間より、室温寄りの低温で緩やかに酸性化させると、網目が均一に編まれ離水が減りなめらかになる。時間はかかるが質感は安定する。</p>
+                            <h3>Protocol C: 加熱前処理で保水を上げる</h3>
+                            <p>発酵前に牛乳を85℃前後で十分に加熱すると乳清タンパクが変性しカゼイン網目に組み込まれる。保水力が増し、離水の少ない硬めのゲルになる。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

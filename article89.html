@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>収穫後も野菜は呼吸する ガス組成が決める鮮度の寿命 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.89</span>
+                <span class="category-tag">INGREDIENT</span>
+                <h1 class="article-main-title">収穫後も野菜は呼吸する<br>ガス組成が決める鮮度の寿命</h1>
+                <p class="lead">レタスは冷蔵庫の中でも酸素を吸い、二酸化炭素を吐いている。<br>収穫は終わりではなく、緩慢な自家消化の始まりだ。<br>呼吸を絞れば時間が止まる——それがガス置換保存の本質である。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：野菜は死なない、呼吸している</h2>
+                <p>収穫された野菜は生きた組織である。気孔と表面から酸素を取り込み、蓄えた糖を分解してエネルギーを得て、二酸化炭素と水と熱を放出する。<br>この呼吸が続く限り、糖は失われ、組織は柔らかくなり、老化が進む。冷蔵庫の野菜室が冷たいのは、味のためではなく呼吸を遅らせるためだ。<br>鮮度の寿命とは、内部に残された糖と水分が呼吸で燃え尽きるまでの時間に他ならない。</p>
+            </section>
+
+            <section>
+                <h2>2.0 呼吸代謝モデル：糖を燃やす速度を支配するもの</h2>
+                <p>呼吸速度は温度と酸素濃度に強く依存する。温度が10℃上がれば呼吸はおよそ2〜3倍に加速する（Q10効果）。<br>逆に酸素を薄め二酸化炭素を増やすと、好気呼吸の経路が抑制され、糖の消費が緩やかになる。ただし酸素を絞りすぎると無酸素呼吸に切り替わり、アセトアルデヒドやエタノールが生じて異臭と褐変を招く。<br>制御の要は、呼吸を止めることではなく、組織が窒息しない下限ギリギリまで絞ることにある。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Aerobic Respiration Pathway</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">酸素を吸収</div>
+          <div class="node-sub">気孔・表皮から取り込む</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">糖を分解</div>
+          <div class="node-sub">蓄えた糖・有機酸が基質</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">エネルギー放出</div>
+          <div class="node-sub">ATP・反応熱を生成</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">CO₂・水・熱を排出</div>
+          <div class="node-sub">老化を促進</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">組織の軟化・劣化</div>
+          <div class="node-sub">鮮度寿命の終端</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：ガス組成で寿命を設計する</h2>
+                <p>低酸素・高二酸化炭素環境（MA/CA貯蔵）は呼吸を最小化する標準解だ。多くの野菜で酸素2〜5%、二酸化炭素3〜10%付近に最適域がある。<br>横軸に酸素濃度をとると、呼吸速度は酸素を絞るほど低下するが、ある臨界点を割ると無酸素呼吸が立ち上がり再び品質が崩れる。<br>保存とはこのU字の谷底を狙う行為であり、袋・温度・初期ガス比の三点で谷の位置を合わせ込む。</p>
+                
+                <div class="visualization-container">
+                    <h3>Respiration vs O₂ Level</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Respiration vs O₂ Level">
+                        <defs><linearGradient id="g-a89-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a89" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 81.1 135.4 C 94.6 150.9, 135.3 217.3, 162.4 228.6 C 189.5 240.0, 207.6 221.1, 243.7 203.4 C 279.8 185.8, 334.0 146.7, 379.2 122.8 C 424.4 98.9, 492.1 70.3, 514.7 59.8 L 514.7 274.0 L 81.1 274.0 Z" fill="url(#g-a89-0)" stroke="none"/><path class="curve" d="M 81.1 135.4 C 94.6 150.9, 135.3 217.3, 162.4 228.6 C 189.5 240.0, 207.6 221.1, 243.7 203.4 C 279.8 185.8, 334.0 146.7, 379.2 122.8 C 424.4 98.9, 492.1 70.3, 514.7 59.8" stroke="#D4AF37" filter="url(#glow-a89)"/>
+                        <circle cx="205.8" cy="228.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="205.8" y="216.6" text-anchor="middle" fill="#D4AF37">鮮度寿命が最大化する谷底</text>
+                        <text class="axis-label" x="81.1" y="298" text-anchor="middle">無酸素</text><text class="axis-label" x="216.6" y="298" text-anchor="middle">最適域</text><text class="axis-label" x="514.7" y="298" text-anchor="middle">大気(21%)</text>
+                        <text class="axis-label" x="46" y="227.6" text-anchor="end">低</text><text class="axis-label" x="46" y="63.8" text-anchor="end">高</text>
+                        
+                    </svg>
+                    <p class="caption">※酸素を絞るほど呼吸は鈍るが、臨界点を割ると無酸素呼吸で品質が再び悪化する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 低温で呼吸の時計を止める</h3>
+                            <p>購入後は速やかに適温帯へ。葉物は0〜5℃で呼吸が大きく鈍る。ただしナス・トマト・キュウリなど低温障害を起こす果菜は7〜10℃に留め、冷やしすぎを避ける。</p>
+                            <h3>Protocol B: 密閉袋でガスを自己調整させる</h3>
+                            <p>野菜自身の呼吸を利用し、適度な通気性のポリ袋で包む。袋内の酸素が下がり二酸化炭素が上がることで呼吸が自然に抑制される。完全密閉は無酸素呼吸を招くため微小な通気を残す。</p>
+                            <h3>Protocol C: エチレン源から隔離する</h3>
+                            <p>リンゴ・完熟バナナはエチレンを放出し、葉物や未熟果の老化を加速する。エチレンに敏感な野菜は別区画で保存し、発生源を遠ざけて呼吸・成熟の連鎖を断つ。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辛味の科学： カプサイシンを「抽出」する - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.99</span>
+                <span class="category-tag">SENSORY</span>
+                <h1 class="article-main-title">辛味の科学：<br>カプサイシンを「抽出」する</h1>
+                <p class="lead">辛味は味覚ではない。痛覚だ。<br>水で消えないその灼熱には、理由がある。<br>溶けない相手を、いかに溶かすか。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：水では消えない火</h2>
+                <p>唐辛子を口にした後、水を飲んでも灼熱は引かない。むしろ広がる。<br>原因物質カプサイシンは、舌の温度受容体TRPV1を直接刺激する。これは熱や痛みを感知するセンサーであり、脳は「43℃以上の熱」と誤認する。<br>つまり辛味とは味ではなく、痛覚の錯覚だ。だからこそ、消火には味覚とは別の論理が要る。</p>
+            </section>
+
+            <section>
+                <h2>2.0 溶解モデル：極性が鍵を握る</h2>
+                <p>カプサイシンは長い炭化水素鎖を持つ脂溶性分子だ。水とは反発し、油やアルコールにはよく溶ける。<br>水を飲んでも辛味が流れないのはこのためだ。水は分子を運び去れず、ただ口腔に拡散させる。<br>牛乳が効くのは、乳脂肪が分子を包み、カゼインが受容体から引き剥がすからだ。抽出も同じ。溶媒の極性を相手に合わせることが全てだ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Capsaicin Extraction Pathway</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">唐辛子</div>
+          <div class="node-sub">細胞内に局在</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">脂溶性溶媒と接触</div>
+          <div class="node-sub">油・アルコール</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">極性の一致</div>
+          <div class="node-sub">水とは反発</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">油相へ移行</div>
+          <div class="node-sub">温度で加速</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">辛味の抽出完了</div>
+          <div class="node-sub">均一に分散</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：温度と時間で辛味を設計する</h2>
+                <p>抽出効率は温度に依存する。低温では分子の運動が鈍く、溶け出しが遅い。<br>油を約120〜150℃に保てば、カプサイシンは速やかに油相へ移行する。だが高温に過ぎれば香気成分が飛び、焦げの苦味が混じる。<br>辣油づくりとは、辛味のピークと香りの破壊点の間にある一点を狙う行為だ。温度を制する者が、辛味を制する。</p>
+                
+                <div class="visualization-container">
+                    <h3>Extraction Yield vs Temperature</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Extraction Yield vs Temperature">
+                        <defs><linearGradient id="g-a99-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a99" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 248.8 C 85.6 234.1, 185.0 195.0, 243.7 160.6 C 302.4 126.2, 363.8 56.0, 406.3 42.2 C 448.8 28.3, 466.8 59.8, 498.4 77.4 C 530.1 95.1, 579.7 136.2, 596.0 148.0 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a99-0)" stroke="none"/><path class="curve" d="M 54.0 248.8 C 85.6 234.1, 185.0 195.0, 243.7 160.6 C 302.4 126.2, 363.8 56.0, 406.3 42.2 C 448.8 28.3, 466.8 59.8, 498.4 77.4 C 530.1 95.1, 579.7 136.2, 596.0 148.0" stroke="#D4AF37" filter="url(#glow-a99)"/>
+                        <circle cx="406.3" cy="42.2" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="406.3" y="30.2" text-anchor="middle" fill="#D4AF37">辛味抽出のピーク</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">低温</text><text class="axis-label" x="406.3" y="298" text-anchor="middle">120-150℃</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">高温</text>
+                        <text class="axis-label" x="46" y="278.0" text-anchor="end">低</text><text class="axis-label" x="46" y="26.0" text-anchor="end">高</text>
+                        
+                    </svg>
+                    <p class="caption">※高温域では香気成分の揮発と焦げの苦味が品質を下げる。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 脂溶性溶媒で抽出する</h3>
+                            <p>水ではなく油やアルコールを溶媒に選ぶ。カプサイシンの脂溶性に極性を合わせることで、溶け出しの効率が桁違いに上がる。</p>
+                            <h3>Protocol B: 温度を120〜150℃に固定する</h3>
+                            <p>油を中温域に保ち、分子運動を活性化させつつ香気の破壊を避ける。温度計で管理し、煙が立つ手前で火を止める。</p>
+                            <h3>Protocol C: 消火は乳脂肪で行う</h3>
+                            <p>辛さを和らげるなら水ではなく牛乳やヨーグルト。乳脂肪とカゼインが分子を受容体から引き剥がし、灼熱を断ち切る。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

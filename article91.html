@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分離するチョコレート —乳化を破壊する一滴の水 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.91</span>
+                <span class="category-tag">PHYSICS</span>
+                <h1 class="article-main-title">分離するチョコレート<br>—乳化を破壊する一滴の水</h1>
+                <p class="lead">滑らかに溶けていたチョコが、突然ザラつき固まる。<br>犯人は熱でも、撹拌でもない。<br>ほんのわずかな「水」だ。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：滑らかさが一瞬で崩れる瞬間</h2>
+                <p>湯煎で溶かしたチョコレートに、蒸気の数滴が落ちる。すると艶やかな液体は突如として粘い塊へと変わり、二度と元には戻らない。<br>この「シーズィング（seizing）」と呼ばれる現象は、火加減の失敗ではない。チョコレートは本来きわめて少ない水分しか許容しない、繊細な分散系だからだ。<br>逆に、最初から十分な水を加えればガナッシュとして安定する。水は敵にも味方にもなる。</p>
+            </section>
+
+            <section>
+                <h2>2.0 分散モデル：糖を濡らす水のブリッジ</h2>
+                <p>チョコレートはカカオバター（脂）の連続相に、砂糖粒子とカカオ固形分が分散した油中固体の系だ。撹拌や乳化剤レシチンが粒子表面を覆い、滑らかさを保っている。<br>ここへ微量の水が入ると、親水性の砂糖粒子が水を取り合う。水分子が糖粒子間に橋（liquid bridge）を架け、粒子同士を凝集させてシロップ状の塊を作る。<br>この塊が脂相から分離し、全体がザラつき固まる。水は少量ほど危険であり、各粒子を濡らしきれず糊状の架橋だけが残るためだ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Chocolate Seizing Mechanism</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">微量の水滴が混入</div>
+          <div class="node-sub">蒸気・湿った器具から</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">親水性の砂糖粒子が水を吸着</div>
+          <div class="node-sub">脂相より水を優先</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">粒子間に液架橋が形成</div>
+          <div class="node-sub">liquid bridging</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">糖粒子が凝集・シロップ化</div>
+          <div class="node-sub">脂から分離</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">全体がザラつき固化（seizing）</div>
+          <div class="node-sub">不可逆的な分離</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：水を断つか、振り切るか</h2>
+                <p>対策は二つの方向しかない。第一は水を完全に遮断すること。器具を乾燥させ、湯煎の蒸気を避ける。<br>第二は、逆に水を大量に加えて全糖粒子を溶かし切り、安定なエマルションへ転じること。チョコ重量の概ね四分の一以上の液体が目安となる。<br>中途半端な水分量こそが分離を招く。グラフが示すように、危険域は「少量の水」に集中している。</p>
+                
+                <div class="visualization-container">
+                    <h3>Water Content vs. Fluidity</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Water Content vs. Fluidity">
+                        <defs><linearGradient id="g-a91-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a91" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 34.6 C 67.5 70.3, 108.2 212.3, 135.3 248.8 C 162.4 285.3, 175.9 268.5, 216.6 253.8 C 257.3 239.1, 316.0 195.0, 379.2 160.6 C 442.4 126.2, 559.9 66.1, 596.0 47.2 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a91-0)" stroke="none"/><path class="curve" d="M 54.0 34.6 C 67.5 70.3, 108.2 212.3, 135.3 248.8 C 162.4 285.3, 175.9 268.5, 216.6 253.8 C 257.3 239.1, 316.0 195.0, 379.2 160.6 C 442.4 126.2, 559.9 66.1, 596.0 47.2" stroke="#D4AF37" filter="url(#glow-a91)"/>
+                        <circle cx="173.2" cy="263.9" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="173.2" y="251.9" text-anchor="middle" fill="#D4AF37">分離の谷（危険域）</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">0%</text><text class="axis-label" x="189.5" y="298" text-anchor="middle">少量</text><text class="axis-label" x="379.2" y="298" text-anchor="middle">中量</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">多量</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">固化</text><text class="axis-label" x="46" y="51.2" text-anchor="end">流動</text>
+                        
+                    </svg>
+                    <p class="caption">※微量の水が最も危険で、無水か大量加水の両端でのみ滑らかさが保たれる。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 完全乾燥の徹底</h3>
+                            <p>ボウル・ヘラ・湯煎の器具をすべて完全に乾かす。湯煎は湯面とボウルの間に隙間を作り、蒸気の侵入を断つ。水を一滴も入れないことが無水管理の原則だ。</p>
+                            <h3>Protocol B: 意図的な大量加水</h3>
+                            <p>分離を恐れるなら逆に振り切る。チョコ重量の25%以上の温めた生クリームや湯を一気に加え、全糖粒子を溶かしてガナッシュ化する。中途半端な量は厳禁。</p>
+                            <h3>Protocol C: 分離後のレスキュー</h3>
+                            <p>既に固まった塊には、温かい液体を少量ずつ加えて撹拌し、強制的に乳化側へ移す。逆に脂（ココアバターや油）を足して脂相を回復させる手もある。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

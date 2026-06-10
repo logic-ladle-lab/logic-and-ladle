@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塩はなぜ溶けるのに時間がかかるのか 粒度と溶解速度の物理 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.78</span>
+                <span class="category-tag">PHYSICS</span>
+                <h1 class="article-main-title">塩はなぜ溶けるのに時間がかかるのか<br>粒度と溶解速度の物理</h1>
+                <p class="lead">同じ塩でも、溶ける速さはまるで違う。<br>味を決めるのは塩分量ではなく、溶けるタイミングだ。<br>粒の表面積こそが、塩味の物理を支配する。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：粗塩は『遅れて』効く</h2>
+                <p>仕上げに振った粗塩が、最初の一口では塩辛く、噛むほどに角が取れていく。<br>これは塩の量ではなく、溶解の時間差が生む現象だ。<br>溶け切らない粒が舌の上で結晶のまま残り、局所的に高濃度を作る。<br>塩味とは、溶けた瞬間に初めて生まれる味覚だと理解すべきだ。</p>
+            </section>
+
+            <section>
+                <h2>2.0 表面積モデル：溶解は『界面』でしか起きない</h2>
+                <p>塩が溶けるのは、結晶表面が水と接する界面でのみ進む。<br>溶解速度は接触表面積に比例し、粒が細かいほど総表面積は跳ね上がる。<br>同じ重量なら、粒径を半分にすれば表面積は倍、溶解は加速する。<br>粗塩がゆっくり効くのは、塊の内部が水に触れるまで溶けられないからだ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Dissolution at the Interface</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">結晶投入</div>
+          <div class="node-sub">塩の塊が水に接触</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">界面接触</div>
+          <div class="node-sub">表面のみ水と接する</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">表面積で速度決定</div>
+          <div class="node-sub">細粒ほど接触面が広い</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">イオン拡散</div>
+          <div class="node-sub">Na+・Cl-が水中へ溶出</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">塩味の発現</div>
+          <div class="node-sub">溶けた瞬間に味覚が立つ</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：粒度で『味の立ち上がり』を設計する</h2>
+                <p>微細な塩は即座に溶け、味の立ち上がりが速く、均一に決まる。<br>下味・湯・ソースなど『溶かして使う』場面では細粒が正解だ。<br>逆に、食感とコントラストを残したい仕上げには粗粒を選ぶ。<br>粒度は塩味の強さではなく、塩味が現れる速度を制御する変数だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Particle Size vs. Dissolution Rate</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Particle Size vs. Dissolution Rate">
+                        <defs><linearGradient id="g-a78-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a78" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 34.6 C 76.6 45.1, 144.3 75.3, 189.5 97.6 C 234.7 119.9, 279.8 148.0, 325.0 168.2 C 370.2 188.3, 415.3 205.1, 460.5 218.6 C 505.7 232.0, 573.4 243.8, 596.0 248.8 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a78-0)" stroke="none"/><path class="curve" d="M 54.0 34.6 C 76.6 45.1, 144.3 75.3, 189.5 97.6 C 234.7 119.9, 279.8 148.0, 325.0 168.2 C 370.2 188.3, 415.3 205.1, 460.5 218.6 C 505.7 232.0, 573.4 243.8, 596.0 248.8" stroke="#D4AF37" filter="url(#glow-a78)"/>
+                        
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">微細</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">中粒</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">粗粒</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">遅い</text><text class="axis-label" x="46" y="38.6" text-anchor="end">速い</text>
+                        
+                    </svg>
+                    <p class="caption">※粒径が大きくなるほど総表面積が減り、溶解速度は急激に低下する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 溶かす塩は細粒で</h3>
+                            <p>下味・ブライン・スープには細粒塩を。即座に溶け、味が均一に決まる。粗塩を使うなら少量の湯で先に溶解させてから加える。</p>
+                            <h3>Protocol B: 仕上げは粗粒で『時間差』を作る</h3>
+                            <p>完成料理の表面には粗塩を。溶け残った結晶が局所的な塩味のコントラストと食感を生み、一口ごとの印象を立体化する。</p>
+                            <h3>Protocol C: 水分と温度で溶解を補正する</h3>
+                            <p>溶解は水温が高いほど速い。低温・低水分の食材に粗塩は溶け残る。温度が低い場面ほど粒度を細かく選び、味のブレを抑える。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

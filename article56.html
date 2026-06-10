@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沈黙の油膜 コンフィの保存性と熱伝達 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.56</span>
+                <span class="category-tag">TECHNIQUE</span>
+                <h1 class="article-main-title">沈黙の油膜<br>コンフィの保存性と熱伝達</h1>
+                <p class="lead">油は水より穏やかに、確実に熱を運ぶ。<br>保存性は温度ではなく、封じ込めが決める。<br>コンフィとは、熱と酸素の二重制御だ。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：なぜ油で煮ると日持ちするのか</h2>
+                <p>鴨のコンフィは、冷蔵で数週間もつ。だが同じ鴨を水で茹でれば、翌日には傷み始める。<br>違いは加熱温度ではない。素材を覆う油膜が、酸素と再汚染を物理的に断つことにある。<br>コンフィは「煮る」のではなく、「封じる」技術だ。熱はそのための手段にすぎない。</p>
+            </section>
+
+            <section>
+                <h2>2.0 油浴伝熱モデル：穏やかさが保存を作る</h2>
+                <p>油は水より沸点が高く、100℃を超えても液体のまま対流する。だから素材を低温域で均一に、過加熱なく芯まで温められる。<br>緩慢な加熱は細胞から水分を押し出し、水分活性を下げる。これが微生物の活動を抑える第一の防壁だ。<br>そして冷却後、油膜が素材表面を覆い、嫌気環境を作る。殺菌と封止、この連鎖が保存性の本体である。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Oil-Sealed Heat & Preservation Chain</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">油浴加熱</div>
+          <div class="node-sub">対流で均一に低温伝熱</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">細胞水の排出</div>
+          <div class="node-sub">水分活性が低下する</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">微生物の不活化</div>
+          <div class="node-sub">緩慢加熱で芯まで殺菌</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">油膜による嫌気封止</div>
+          <div class="node-sub">酸素と再汚染を遮断</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">長期保存の成立</div>
+          <div class="node-sub">脂質中で安定化</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：温度の最適点を外さない</h2>
+                <p>温度を上げれば殺菌は速いが、組織は崩れ、脂質は酸化する。低すぎれば芯まで殺菌が届かない。<br>保存性は単調には増えない。中温域に頂点を持つ山型の関係を描く。<br>狙うべきは82〜90℃の帯域だ。ここで殺菌と組織保持が両立し、油膜が最後の封をする。</p>
+                
+                <div class="visualization-container">
+                    <h3>Storage Life vs. Confit Temperature</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Storage Life vs. Confit Temperature">
+                        <defs><linearGradient id="g-a56-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a56" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 236.2 C 76.6 219.4, 144.3 169.0, 189.5 135.4 C 234.7 101.8, 279.8 36.7, 325.0 34.6 C 370.2 32.5, 415.3 91.3, 460.5 122.8 C 505.7 154.3, 573.4 206.8, 596.0 223.6 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a56-0)" stroke="none"/><path class="curve" d="M 54.0 236.2 C 76.6 219.4, 144.3 169.0, 189.5 135.4 C 234.7 101.8, 279.8 36.7, 325.0 34.6 C 370.2 32.5, 415.3 91.3, 460.5 122.8 C 505.7 154.3, 573.4 206.8, 596.0 223.6" stroke="#D4AF37" filter="url(#glow-a56)"/>
+                        <circle cx="325.0" cy="34.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="325.0" y="22.6" text-anchor="middle" fill="#D4AF37">殺菌と組織保持の両立点</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">60℃</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">85℃</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">120℃</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">短</text><text class="axis-label" x="46" y="51.2" text-anchor="end">長</text>
+                        
+                    </svg>
+                    <p class="caption">※低温は殺菌不足、高温は組織崩壊と脂質酸化を招く。中域に保存性の頂点がある。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 温度の固定</h3>
+                            <p>油温は82〜90℃を維持する。沸騰させず、気泡が静かに立つ状態を保つ。温度計で芯温を追い、緩慢な殺菌を成立させる。</p>
+                            <h3>Protocol B: 完全浸漬と脱気</h3>
+                            <p>素材は油面下に完全に沈める。露出部は酸化と乾燥の起点になる。重しや容器形状で常に油膜下に保つ。</p>
+                            <h3>Protocol C: 冷却と封止</h3>
+                            <p>加熱後は油ごと急冷し、清潔な容器で油が素材を覆ったまま冷蔵する。油膜が破れない限り、嫌気環境が保存性を支える。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

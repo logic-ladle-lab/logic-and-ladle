@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヴィネグレットの不安定性 なぜ油と酢は再び別れるのか - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.49</span>
+                <span class="category-tag">PHYSICS</span>
+                <h1 class="article-main-title">ヴィネグレットの不安定性<br>なぜ油と酢は再び別れるのか</h1>
+                <p class="lead">振れば混じり、置けば別れる。<br>その分離は失敗ではなく、熱力学の必然だ。<br>我々が戦うのは時間そのものである。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：振った直後に始まる崩壊</h2>
+                <p>ヴィネグレットは、激しく振った数十秒後にはもう層を作り始める。これはマヨネーズのような安定乳化とは根本的に異なる。<br>油と酢（水）は互いに溶け合わず、界面張力という壁が両者を隔てている。撹拌で無理やり作った微小な油滴は、放置すれば必ず合一し、密度差で浮上する。<br>つまり分離は調理の失敗ではない。系がエネルギーの低い状態へ戻ろうとする、避けがたい物理過程である。</p>
+            </section>
+
+            <section>
+                <h2>2.0 界面エネルギーモデル：分離を駆動する力</h2>
+                <p>油滴を細かくすればするほど総表面積は増え、界面に蓄えられる自由エネルギーは増大する。系はこのエネルギーを下げるため、油滴同士をくっつけ、表面積を最小化しようとする。<br>これがオストワルド熟成と合一の連鎖だ。小滴は大滴へ吸収され、大滴は浮上して油層となる。<br>乳化剤（マスタードのムチンや溶解した固形分）は界面張力を下げ、油滴の周囲に膜を作って合一を遅らせる。これは分離を止めるのではなく、時間を稼ぐ装置である。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Emulsion Breakdown Pathway</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">撹拌</div>
+          <div class="node-sub">油滴を微細化し界面積を最大化</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">クリーミング</div>
+          <div class="node-sub">密度差で油滴が上方へ浮上</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">凝集</div>
+          <div class="node-sub">油滴が接触し集合する</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">合一</div>
+          <div class="node-sub">界面膜が破れ油滴が融合</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">相分離</div>
+          <div class="node-sub">油層と水層へ完全に分離</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：粘度で時間を買う</h2>
+                <p>分離速度はストークスの法則に従う。油滴の浮上速度は半径の二乗に比例し、連続相の粘度に反比例する。<br>ゆえに制御点は二つ。油滴を小さく保つこと、そして水相の粘度を上げることだ。マスタードや少量の蜂蜜、ピューレ状の野菜は粘度を稼ぎ、浮上を物理的に鈍らせる。<br>完全な安定は望めない。我々が設計するのは「皿の上で持つ時間」であり、提供直前の再撹拌こそ最も確実な制御だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Separation vs. Continuous-Phase Viscosity</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Separation vs. Continuous-Phase Viscosity">
+                        <defs><linearGradient id="g-a49-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a49" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 34.6 C 76.6 45.1, 144.3 74.5, 189.5 97.6 C 234.7 120.7, 279.8 152.2, 325.0 173.2 C 370.2 194.2, 415.3 211.0, 460.5 223.6 C 505.7 236.2, 573.4 244.6, 596.0 248.8 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a49-0)" stroke="none"/><path class="curve" d="M 54.0 34.6 C 76.6 45.1, 144.3 74.5, 189.5 97.6 C 234.7 120.7, 279.8 152.2, 325.0 173.2 C 370.2 194.2, 415.3 211.0, 460.5 223.6 C 505.7 236.2, 573.4 244.6, 596.0 248.8" stroke="#D4AF37" filter="url(#glow-a49)"/>
+                        
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">低粘度</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">中</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">高粘度</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">遅</text><text class="axis-label" x="46" y="38.6" text-anchor="end">速</text>
+                        
+                    </svg>
+                    <p class="caption">※水相の粘度を上げるほど油滴の浮上は鈍り、分離速度は逓減する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: マスタード先行乳化</h3>
+                            <p>酢にマスタードを完全に溶かしてから油を細く垂らす。ムチンが界面膜を形成し、油滴の合一を遅らせて保持時間を延ばす。</p>
+                            <h3>Protocol B: 粘度設計</h3>
+                            <p>少量の蜂蜜やピューレ状の野菜を水相に加え粘度を上げる。ストークスの法則に従い油滴の浮上速度を物理的に鈍化させる。</p>
+                            <h3>Protocol C: 直前再撹拌</h3>
+                            <p>完全な安定は諦め、提供直前に瓶を激しく振り直す。分離を前提とし、最も新鮮な微細油滴の状態で皿に乗せる。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

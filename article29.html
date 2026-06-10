@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アルコールは飛ばない。 残留度という現実 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.29</span>
+                <span class="category-tag">REACTION</span>
+                <h1 class="article-main-title">アルコールは飛ばない。<br>残留度という現実</h1>
+                <p class="lead">「アルコールを飛ばす」は、ほぼ嘘である。<br>火を入れても、酒精は確実に残る。<br>消えるのは香り。残るのは度数だ。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：煮切りという幻想</h2>
+                <p>赤ワインソースを煮詰める。日本酒を煮切る。我々は「アルコールは飛んだ」と信じて皿を出す。<br>だが残留率を測定すれば、その楽観は崩れる。沸騰直後の鍋には、なお全アルコールの85%が残っている。<br>エタノールの沸点は78℃。水より低い。しかし水と混ざった溶液は共沸し、単純には抜けない。<br>「飛ばす」とは時間と表面積の関数であり、火を見ただけで判断してはならない。</p>
+            </section>
+
+            <section>
+                <h2>2.0 蒸散モデル：共沸が支配する</h2>
+                <p>エタノールと水は共沸混合物を作る。沸騰しても純粋なエタノールだけが先に逃げるわけではない。<br>蒸気には水とエタノールが一定比で含まれ、液中濃度が下がるほど蒸散効率も鈍る。<br>支配因子は三つ。加熱時間、液面の表面積、そして撹拌の有無だ。<br>フランベの一瞬の炎は表層しか焼かない。残留率を決めるのは、その後の「煮込み時間」である。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Ethanol Evaporation Pathway</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">加熱開始</div>
+          <div class="node-sub">エタノール沸点78℃に到達</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">共沸蒸散</div>
+          <div class="node-sub">水とエタノールが一定比で気化</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">液面から放出</div>
+          <div class="node-sub">表面積が律速段階</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">濃度低下で鈍化</div>
+          <div class="node-sub">残留率はゼロに漸近</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">残留度の確定</div>
+          <div class="node-sub">時間と表面積の積で決まる</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：時間で削る</h2>
+                <p>残留率は加熱時間に対して指数的に減衰する。だがゼロには漸近するのみで、決して到達しない。<br>15分の煮込みで約40%、1時間で約25%、2時間半でようやく5%前後まで落ちる。<br>浅く広い鍋は表面積を稼ぎ、減衰を加速する。蓋は蒸気を戻し、減衰を止める。<br>狙うのは消去ではなく制御だ。香りを残し度数を削る、その交点を時間で設計する。</p>
+                
+                <div class="visualization-container">
+                    <h3>Alcohol Retention vs Cooking Time</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Alcohol Retention vs Cooking Time">
+                        <defs><linearGradient id="g-a29-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a29" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 22.0 C 63.0 28.3, 81.1 36.7, 108.2 59.8 C 135.3 82.9, 180.5 137.5, 216.6 160.6 C 252.7 183.7, 284.4 185.8, 325.0 198.4 C 365.6 211.0, 415.3 225.7, 460.5 236.2 C 505.7 246.7, 573.4 257.2, 596.0 261.4 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a29-0)" stroke="none"/><path class="curve" d="M 54.0 22.0 C 63.0 28.3, 81.1 36.7, 108.2 59.8 C 135.3 82.9, 180.5 137.5, 216.6 160.6 C 252.7 183.7, 284.4 185.8, 325.0 198.4 C 365.6 211.0, 415.3 225.7, 460.5 236.2 C 505.7 246.7, 573.4 257.2, 596.0 261.4" stroke="#D4AF37" filter="url(#glow-a29)"/>
+                        
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">0分</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">60分</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">150分</text>
+                        <text class="axis-label" x="46" y="278.0" text-anchor="end">0%</text><text class="axis-label" x="46" y="152.0" text-anchor="end">50%</text><text class="axis-label" x="46" y="26.0" text-anchor="end">100%</text>
+                        
+                    </svg>
+                    <p class="caption">※残留率は指数的に減衰するが、ゼロには漸近するのみで完全には消えない。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 広面積・短時間</h3>
+                            <p>浅く口径の広い鍋を使い、液面の表面積を最大化する。同じ時間でも蒸散効率が上がり、香りを保ちつつ度数を効率的に削れる。蓋は外す。</p>
+                            <h3>Protocol B: 蓋の戦略的運用</h3>
+                            <p>蓋は蒸気を液に戻し、残留率の低下を止める。アルコールを抜きたい局面では開放、香りと水分を守りたい局面では密閉、と目的で切り替える。</p>
+                            <h3>Protocol C: 用途別の到達点設計</h3>
+                            <p>消去を目指さず交点を狙う。風味付けなら15分で十分、ノンアルコール志向の供食なら最低2時間半。完全な除去は不可能と前提し、許容残留度から逆算する。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

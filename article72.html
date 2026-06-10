@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>血は、最も古い乳化剤であり 最も繊細な凝固剤である - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.72</span>
+                <span class="category-tag">INGREDIENT</span>
+                <h1 class="article-main-title">血は、最も古い乳化剤であり<br>最も繊細な凝固剤である</h1>
+                <p class="lead">血は捨てる廃棄物ではない。<br>卵白と同じ、たんぱく質の溶液だ。<br>凝固点を読めば、料理が変わる。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：血液という名のたんぱく質溶液</h2>
+                <p>鴨や豚の血は、不気味な液体ではない。水に溶けたたんぱく質の懸濁液であり、その本質は卵白に近い。<br>血液の固形分の大半はヘモグロビンと血漿アルブミンが占め、いずれも熱で不可逆的に変性・凝固する。<br>サンギナッチョ、ブーダンノワール、鴨の血のソース。これらはすべて「たんぱく質を狙った温度で固める」という一点の技術に集約される。<br>血を扱うとは、卵を扱うのと同じ精度を要求される作業だ。</p>
+            </section>
+
+            <section>
+                <h2>2.0 凝固モデル：二段の変性温度を読む</h2>
+                <p>血液の凝固は単一の現象ではない。主役は二つのたんぱく質群であり、それぞれ異なる温度で固まる。<br>血漿アルブミンはおよそ65℃前後から変性を始め、ヘモグロビンを含む血球側はより低い温度域から凝集する。<br>加熱が進むと変性したたんぱく質が網目構造を形成し、内部の水を抱き込んでゲル化する。これがブーダンの滑らかな舌触りの正体だ。<br>逆に温度を上げすぎれば網目が収縮し、水を吐き出してボソボソに崩れる。凝固と離水は紙一重だ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Blood Protein Coagulation Pathway</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">血液（たんぱく質溶液）</div>
+          <div class="node-sub">アルブミン+ヘモグロビン</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">加熱開始 ~60℃</div>
+          <div class="node-sub">血球側が先に凝集</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">アルブミン変性 ~65℃</div>
+          <div class="node-sub">網目構造の形成開始</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">ゲル化 ~80℃</div>
+          <div class="node-sub">水を抱き込み固化</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">過加熱 >90℃</div>
+          <div class="node-sub">網目収縮・離水・崩壊</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：増粘か、凝固か、その分岐点</h2>
+                <p>血を「ソースの増粘剤」として使うか「主体として固める」かは、到達温度で決まる。<br>鴨の血のソースでは、70℃を超えさせない。アルブミンを完全凝固させず、半変性のとろみだけを引き出すのが要諦だ。<br>一方ブーダンやサンギナッチョは中心を80℃前後まで通し、構造を完全に固定する。<br>沸騰は厳禁。100℃に達した瞬間、たんぱく質は収縮し、なめらかさは失われ、鉄臭い粒の塊と化す。</p>
+                
+                <div class="visualization-container">
+                    <h3>Temperature vs. Water-Holding Capacity</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Temperature vs. Water-Holding Capacity">
+                        <defs><linearGradient id="g-a72-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a72" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 236.2 C 85.6 219.4, 189.5 169.0, 243.7 135.4 C 297.9 101.8, 338.5 36.7, 379.2 34.6 C 419.9 32.5, 451.5 91.3, 487.6 122.8 C 523.7 154.3, 577.9 206.8, 596.0 223.6 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a72-0)" stroke="none"/><path class="curve" d="M 54.0 236.2 C 85.6 219.4, 189.5 169.0, 243.7 135.4 C 297.9 101.8, 338.5 36.7, 379.2 34.6 C 419.9 32.5, 451.5 91.3, 487.6 122.8 C 523.7 154.3, 577.9 206.8, 596.0 223.6" stroke="#D4AF37" filter="url(#glow-a72)"/>
+                        <circle cx="379.2" cy="34.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="379.2" y="22.6" text-anchor="middle" fill="#D4AF37">80℃：保水のピーク</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">50℃</text><text class="axis-label" x="243.7" y="298" text-anchor="middle">65℃</text><text class="axis-label" x="379.2" y="298" text-anchor="middle">80℃</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">100℃</text>
+                        <text class="axis-label" x="46" y="227.6" text-anchor="end">離水</text><text class="axis-label" x="46" y="38.6" text-anchor="end">保水最大</text>
+                        
+                    </svg>
+                    <p class="caption">※80℃前後で網目の保水力は最大化し、それを超えると収縮して離水が進む。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 血のソースは70℃で止める</h3>
+                            <p>鴨やジビエの血をソースに使う際は、火から外し余熱で混ぜ込む。70℃を超えさせず、アルブミンを半変性に留めて絹のとろみだけを得る。再沸騰は分離を招く。</p>
+                            <h3>Protocol B: ブーダンは湯煎で中心80℃</h3>
+                            <p>腸詰めは直火ではなく80℃前後の湯で静かに火入れする。中心温度を測り、沸騰させないこと。均一なゲル化が滑らかな食感を生む。</p>
+                            <h3>Protocol C: 凝固前に必ず漉す</h3>
+                            <p>血液は加熱前に細かい網で漉し、繊維やフィブリンの塊を除く。均一なたんぱく質溶液にしておくことで、ダマのない一様な凝固が得られる。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>気体で熟れる果実 エチレン追熟の制御工学 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.54</span>
+                <span class="category-tag">INGREDIENT</span>
+                <h1 class="article-main-title">気体で熟れる果実<br>エチレン追熟の制御工学</h1>
+                <p class="lead">熟さぬ硬さは、欠陥ではなく未完成だ。<br>果実は一個の気体で会話している。<br>追熟とは、その気体を読む技術である。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：紙袋の中で起きていること</h2>
+                <p>硬い桃を紙袋に入れ、リンゴを一個添える。翌日には香りが立ち、果肉は指で潰れるほど柔らかくなる。<br>これは魔法ではない。リンゴが放出するエチレンという気体が、桃の追熟スイッチを押しているだけだ。<br>エチレンは植物ホルモンであり、果実が自ら発し、自ら受け取る。果実は気体で熟れていく。</p>
+            </section>
+
+            <section>
+                <h2>2.0 自己触媒モデル：エチレンが連鎖を呼ぶ</h2>
+                <p>メチオニンからACCを経てエチレンが生成され、その分子が受容体に結合する。<br>重要なのはこの反応が自己触媒的であること。生成されたエチレンが、さらなるエチレン生成を誘導する。<br>一度スイッチが入れば連鎖は止まらない。細胞壁が分解されて軟化し、デンプンが糖へ、緑が赤や黄へと変わる。一個の劣化が箱全体を巻き込むのはこのためだ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Ethylene Autocatalytic Cascade</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">ストレス・成熟シグナル</div>
+          <div class="node-sub">収穫・傷・低温が引き金</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">ACC合成酵素が活性化</div>
+          <div class="node-sub">メチオニン→ACCへ変換</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">ACC酸化酵素がエチレン生成</div>
+          <div class="node-sub">ACC→C2H4</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">エチレン受容体に結合</div>
+          <div class="node-sub">自己触媒的に生成を増幅</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">細胞壁分解・色素変化・糖化</div>
+          <div class="node-sub">軟化と甘味、香気の発現</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：呼吸の山を操作する</h2>
+                <p>クライマクテリック型果実（リンゴ、バナナ、アボカド、桃）は追熟のピークで呼吸量が急上昇する。この山を遅らせるか早めるかが制御の本質だ。<br>低温と低酸素・高二酸化炭素はエチレン合成と受容を抑え、山を平坦化する。逆に常温とエチレン源の付与は山を前倒しする。<br>柑橘やブドウなど非クライマクテリック型は追熟しない。買った時点が頂点であり、待っても甘くはならない。</p>
+                
+                <div class="visualization-container">
+                    <h3>Respiration Rate During Ripening</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Respiration Rate During Ripening">
+                        <defs><linearGradient id="g-a54-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a54" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 211.0 C 81.1 208.9, 166.9 227.8, 216.6 198.4 C 266.3 169.0, 311.5 45.1, 352.1 34.6 C 392.8 24.1, 419.9 108.1, 460.5 135.4 C 501.1 162.7, 573.4 187.9, 596.0 198.4 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a54-0)" stroke="none"/><path class="curve" d="M 54.0 211.0 C 81.1 208.9, 166.9 227.8, 216.6 198.4 C 266.3 169.0, 311.5 45.1, 352.1 34.6 C 392.8 24.1, 419.9 108.1, 460.5 135.4 C 501.1 162.7, 573.4 187.9, 596.0 198.4" stroke="#D4AF37" filter="url(#glow-a54)"/>
+                        <circle cx="352.1" cy="34.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="352.1" y="22.6" text-anchor="middle" fill="#D4AF37">エチレン自己触媒で呼吸が急上昇</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">未熟</text><text class="axis-label" x="352.1" y="298" text-anchor="middle">クライマクテリック</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">過熟</text>
+                        <text class="axis-label" x="46" y="227.6" text-anchor="end">低</text><text class="axis-label" x="46" y="38.6" text-anchor="end">高</text>
+                        
+                    </svg>
+                    <p class="caption">※クライマクテリック型果実は追熟のピークで呼吸量が急増し、食べ頃を過ぎると急速に劣化する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 紙袋追熟法</h3>
+                            <p>硬い果実を紙袋に入れ、リンゴかバナナを一本添えて常温に置く。放出されたエチレンが袋内に滞留し、追熟を一日単位で加速する。ビニール袋は呼吸で生じる水分がこもり腐敗を招くため避ける。</p>
+                            <h3>Protocol B: 冷蔵による停止</h3>
+                            <p>食べ頃に達した果実は冷蔵庫へ移す。低温はエチレン合成酵素の働きを鈍らせ、呼吸の山を平坦化して熟成を一時停止させる。ただしバナナやマンゴーなど熱帯果実は低温障害で黒変するため常温を維持する。</p>
+                            <h3>Protocol C: 隔離による保存</h3>
+                            <p>追熟させたくない葉物野菜や花は、エチレン源となるリンゴ・バナナ・完熟トマトから物理的に離して保管する。エチレンに敏感な品目は同じ密閉空間に置くだけで黄変や老化が早まる。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

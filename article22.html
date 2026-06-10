@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グルテン、その弾力の設計図 形成のメカニズムと阻害の技術 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.22</span>
+                <span class="category-tag">INGREDIENT</span>
+                <h1 class="article-main-title">グルテン、その弾力の設計図<br>形成のメカニズムと阻害の技術</h1>
+                <p class="lead">パンが膨らみ、麺がコシを得る。<br>その正体は一枚の弾力ある網だ。<br>水・力・時間が、粉を構造へと変える。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：粉に水を注いだ瞬間に始まる構造化</h2>
+                <p>小麦粉そのものに弾力はない。だが水を加えてこねた途端、生地は引けば伸び、放せば縮む粘弾性体へと変わる。<br>この変化を生むのが「グルテン」だ。<br>グルテンは粉の中に最初から存在するのではなく、加水と力によって新たに組み上げられる構造である。</p>
+            </section>
+
+            <section>
+                <h2>2.0 網目モデル：二つのタンパク質が結ぶ三次元構造</h2>
+                <p>小麦のタンパク質グリアジンとグルテニンは、水を得て展開する。<br>グリアジンは粘り、グルテニンは弾力を担い、こねる力でジスルフィド結合(S-S結合)が形成・架橋されていく。<br>こうして無数の鎖が連結し、ガスを抱え込む弾力ある三次元の網目=グルテンが完成する。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Gluten Network Formation</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">グリアジン + グルテニン</div>
+          <div class="node-sub">小麦粉中の2大タンパク質</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">加水</div>
+          <div class="node-sub">タンパク質が水を吸い展開する</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">物理的撹拌</div>
+          <div class="node-sub">こねてタンパク質を引き伸ばす</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">ジスルフィド結合</div>
+          <div class="node-sub">S-S結合で鎖が架橋される</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">グルテン網目</div>
+          <div class="node-sub">粘弾性をもつ三次元構造</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：締めるか、緩めるか</h2>
+                <p>グルテンは強ければ良いものではない。パンや麺ではコシを求めて締め、菓子や衣ではサクサクのために緩める。<br>塩は適量で網目を締めるが、過剰や強い酸性はタンパク質間の結合を乱し網目を弱める。<br>油脂はタンパク質を覆って結合を妨げ、糖は水を奪って形成を遅らせる。<br>目的の食感から逆算し、阻害要因を意図的に使い分けることが制御の本質だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Gluten Strength vs Salt / Acid</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Gluten Strength vs Salt / Acid">
+                        <defs><linearGradient id="g-a22-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a22" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 185.8 C 76.6 171.1, 144.3 120.7, 189.5 97.6 C 234.7 74.5, 279.8 40.9, 325.0 47.2 C 370.2 53.5, 415.3 106.0, 460.5 135.4 C 505.7 164.8, 573.4 208.9, 596.0 223.6 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a22-0)" stroke="none"/><path class="curve" d="M 54.0 185.8 C 76.6 171.1, 144.3 120.7, 189.5 97.6 C 234.7 74.5, 279.8 40.9, 325.0 47.2 C 370.2 53.5, 415.3 106.0, 460.5 135.4 C 505.7 164.8, 573.4 208.9, 596.0 223.6" stroke="#D4AF37" filter="url(#glow-a22)"/>
+                        <circle cx="325.0" cy="47.2" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="325.0" y="35.2" text-anchor="middle" fill="#D4AF37">塩1〜2%で網目が最大に締まる</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">塩ゼロ/中性</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">適量(1〜2%)</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">過剰/強酸</text>
+                        <text class="axis-label" x="46" y="227.6" text-anchor="end">弱</text><text class="axis-label" x="46" y="51.2" text-anchor="end">強</text>
+                        
+                    </svg>
+                    <p class="caption">※塩は適量でグルテンを締めるが、過剰や強い酸性は逆に網目を弱める。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 加水と休ませで網を育てる</h3>
+                            <p>こねた直後の生地はグルテンが緊張し、ちぎれやすい。ラップで包み15〜30分休ませると、水分が均一に行き渡りS-S結合が再配列して伸展性が回復する。成形前の休息は、こねの時間以上に網目の質を決める。</p>
+                            <h3>Protocol B: 塩は練り込み、油脂と糖は後入れ</h3>
+                            <p>塩はグルテンを締めるため最初から、油脂と糖は網目形成を妨げるため十分にこねてから加える。順序を守るだけで、同じ配合でも生地の伸びとコシが安定する。コシを抑えたい菓子では逆に早く加えてよい。</p>
+                            <h3>Protocol C: 阻害したいなら低タンパク・酸・脂で攻める</h3>
+                            <p>サクサクのクッキーやてんぷら衣ではグルテンは敵だ。薄力粉を選び、混ぜを最小限にし、油脂でタンパク質をコーティングする。レモン汁など酸を効かせれば網目はさらに緩み、軽い食感に仕上がる。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ガナッシュの乳化と転相点 —油中水滴か、水中油滴か - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.70</span>
+                <span class="category-tag">PHYSICS</span>
+                <h1 class="article-main-title">ガナッシュの乳化と転相点<br>—油中水滴か、水中油滴か</h1>
+                <p class="lead">なぜ滑らかなガナッシュは、突然ザラつき「分離」するのか。<br>カカオバターと水分の主導権争いが、その口溶けを決める。<br>転相点を越えるな。それが乳化を制御する唯一の鍵だ。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：分離はなぜ起こるか</h2>
+                <p>温めた生クリームをチョコレートに注ぐ。混ぜれば艶やかなガナッシュになるはずが、ある瞬間に油が浮き、ザラついて分離する。<br>これは失敗ではなく、相転移である。連続相が水から油へ入れ替わる「転相」が起きているのだ。<br>ガナッシュとは、カカオバターという油脂と、クリーム由来の水分を、無理やり同居させた準安定なエマルションに過ぎない。</p>
+            </section>
+
+            <section>
+                <h2>2.0 転相モデル：水中油滴と油中水滴</h2>
+                <p>理想的なガナッシュは「水中油滴型（O/W）」、すなわち水の海に油の粒が分散した状態だ。レシチンや乳タンパク、カカオ固形分がこの界面を安定させる。<br>しかし油脂比率が高まる、あるいは過度な攪拌でエネルギーを与えすぎると、界面は耐えきれず反転する。<br>連続相が油に入れ替わった「油中水滴型（W/O）」がザラつきと分離の正体だ。一度越えた転相点は、容易には戻らない。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Phase Inversion of Ganache</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">水中油滴型 O/W</div>
+          <div class="node-sub">水が連続相・油が分散粒。滑らかで安定</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">界面の飽和</div>
+          <div class="node-sub">油脂比上昇・過攪拌でエネルギー過多</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">転相点 PIT</div>
+          <div class="node-sub">連続相が反転する臨界点</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">油中水滴型 W/O</div>
+          <div class="node-sub">油が連続相に。ザラつき・分離</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：温度と水分比で相を縛る</h2>
+                <p>転相は油脂と水分の体積比に支配される。水分が少なすぎれば連続相を保てず、油側へ転相する。<br>制御の要は二つ。乳化に十分な水分量を確保すること、そして35〜40℃という結晶が崩れ流動する温度帯で穏やかに混ぜることだ。<br>分離したガナッシュは、少量の温水を加え中心から乳化し直せば、再び水中油滴型へ引き戻せる。温度は静かな味方だ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Stability vs Fat Ratio</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Stability vs Fat Ratio">
+                        <defs><linearGradient id="g-a70-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a70" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 223.6 C 76.6 200.5, 148.8 116.5, 189.5 85.0 C 230.2 53.5, 266.3 40.9, 297.9 34.6 C 329.5 28.3, 349.4 24.1, 379.2 47.2 C 409.0 70.3, 440.6 139.6, 476.8 173.2 C 512.9 206.8, 576.1 236.2, 596.0 248.8 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a70-0)" stroke="none"/><path class="curve" d="M 54.0 223.6 C 76.6 200.5, 148.8 116.5, 189.5 85.0 C 230.2 53.5, 266.3 40.9, 297.9 34.6 C 329.5 28.3, 349.4 24.1, 379.2 47.2 C 409.0 70.3, 440.6 139.6, 476.8 173.2 C 512.9 206.8, 576.1 236.2, 596.0 248.8" stroke="#D4AF37" filter="url(#glow-a70)"/>
+                        <circle cx="297.9" cy="34.6" r="4.5" fill="#D4AF37"/>
+      <text class="point-label" x="297.9" y="22.6" text-anchor="middle" fill="#D4AF37">乳化安定域 O/W</text>
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">水分過多</text><text class="axis-label" x="297.9" y="298" text-anchor="middle">最適比</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">油脂過多</text>
+                        <text class="axis-label" x="46" y="252.8" text-anchor="end">分離</text><text class="axis-label" x="46" y="38.6" text-anchor="end">安定</text>
+                        
+                    </svg>
+                    <p class="caption">※油脂比が転相点を越えると安定性は急落し、O/WからW/Oへ反転する。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 三分割注入法</h3>
+                            <p>温めたクリームをチョコレートへ一度に注がず三回に分ける。中心に濃い乳化核を作り、外へ広げる。各回しっかり乳化させてから次を加え、連続相を水側に保つ。</p>
+                            <h3>Protocol B: 35〜40℃の保持</h3>
+                            <p>カカオバターの結晶が崩れ流動する温度帯を維持する。高温は水分を飛ばし油脂比を上げ転相を招く。低温は粘度過多で混ざらない。湯煎で温度を縛れ。</p>
+                            <h3>Protocol C: 温水リカバリー</h3>
+                            <p>分離したら捨てず、40℃前後の温水か牛乳を小さじ単位で加える。連続相に水を補い、中心から円を描いて乳化し直す。W/OをO/Wへ引き戻す唯一の手だ。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

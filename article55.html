@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沸点を、超えろ。 圧力鍋という時短の物理学 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-generic">
+                <span class="article-id">Exp.55</span>
+                <span class="category-tag">TECHNIQUE</span>
+                <h1 class="article-main-title">沸点を、超えろ。<br>圧力鍋という時短の物理学</h1>
+                <p class="lead">水は100℃で止まる。だが、それは常圧の話だ。<br>蓋を密閉し、圧をかけた瞬間、沸点は動き出す。<br>時短の正体は「魔法」ではなく、温度と速度の方程式である。</p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：100℃の壁を破る</h2>
+                <p>通常の鍋では、どれだけ火力を上げても煮汁の温度は100℃で頭打ちになる。水が沸騰して蒸発に熱を奪われ、それ以上温度が上がらないからだ。<br>牛すじや豆が「何時間煮ても柔らかくならない」のは、火力不足ではなく温度上限の問題である。<br>圧力鍋は、この100℃という見えない壁を物理的に押し上げる装置だ。</p>
+            </section>
+
+            <section>
+                <h2>2.0 沸点上昇モデル：圧力が温度を引き上げる</h2>
+                <p>密閉された鍋内では蒸気が逃げ場を失い、内圧が上昇する。蒸気圧が高まると、水が沸騰するために必要な温度も連動して上がる。<br>一般的な家庭用圧力鍋（約2気圧）では、沸点はおよそ120℃前後まで上昇する。<br>たった20℃の差が、加熱の世界を一変させる。圧力こそが温度のレバーだ。</p>
+                
+                <div class="flow-diagram">
+                    <div class="flow-title">Pressure-to-Temperature Mechanism</div>
+                    <div class="flow-row"><div class="flow-node">
+          <div class="node-main">密閉・加熱</div>
+          <div class="node-sub">蒸気の逃げ場を封鎖</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">内圧上昇</div>
+          <div class="node-sub">蒸気圧が約2気圧へ</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node">
+          <div class="node-main">沸点上昇</div>
+          <div class="node-sub">水が120℃でも液体を維持</div>
+        </div><div class="flow-arrow"><span>→</span></div><div class="flow-node is-accent">
+          <div class="node-main">反応加速</div>
+          <div class="node-sub">分解・糊化が指数的に進行</div>
+        </div></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：20℃が時間を圧縮する</h2>
+                <p>化学反応速度は温度に対して指数関数的に増す。温度が約10℃上がるごとに反応速度はおよそ2倍になるという経験則がある。<br>120℃では100℃に比べ、コラーゲンの分解やでんぷんの糊化が劇的に加速し、調理時間は数分の一に短縮される。<br>時短とは、温度を上げて時間を「買う」取引なのだ。</p>
+                
+                <div class="visualization-container">
+                    <h3>Temperature vs. Cooking Time</h3>
+                    <svg class="chart-svg" viewBox="0 0 620 320" role="img" aria-label="Temperature vs. Cooking Time">
+                        <defs><linearGradient id="g-a55-0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient><filter id="glow-a55" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter></defs>
+                        <line class="grid" x1="54" y1="211.0" x2="596" y2="211.0"/><line class="grid" x1="54" y1="148.0" x2="596" y2="148.0"/><line class="grid" x1="54" y1="85.0" x2="596" y2="85.0"/>
+                        <line class="axis" x1="54" y1="22" x2="54" y2="274"/>
+                        <line class="axis" x1="54" y1="274" x2="596" y2="274"/>
+                        <path d="M 54.0 34.6 C 76.6 51.4, 144.3 107.3, 189.5 135.4 C 234.7 163.5, 279.8 185.8, 325.0 203.4 C 370.2 221.1, 415.3 232.0, 460.5 241.2 C 505.7 250.5, 573.4 255.9, 596.0 258.9 L 596.0 274.0 L 54.0 274.0 Z" fill="url(#g-a55-0)" stroke="none"/><path class="curve" d="M 54.0 34.6 C 76.6 51.4, 144.3 107.3, 189.5 135.4 C 234.7 163.5, 279.8 185.8, 325.0 203.4 C 370.2 221.1, 415.3 232.0, 460.5 241.2 C 505.7 250.5, 573.4 255.9, 596.0 258.9" stroke="#D4AF37" filter="url(#glow-a55)"/>
+                        
+                        <text class="axis-label" x="54.0" y="298" text-anchor="middle">100℃</text><text class="axis-label" x="325.0" y="298" text-anchor="middle">110℃</text><text class="axis-label" x="596.0" y="298" text-anchor="middle">120℃</text>
+                        <text class="axis-label" x="46" y="278.0" text-anchor="end">短</text><text class="axis-label" x="46" y="26.0" text-anchor="end">長</text>
+                        
+                    </svg>
+                    <p class="caption">※温度上昇に伴い必要調理時間は指数関数的に減少する（定性的傾向）。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                
+                            <h3>Protocol A: 高圧で硬質食材を攻める</h3>
+                            <p>牛すじ・豆・玄米など分解に時間を要する食材は最高圧で加熱する。120℃域でコラーゲンが一気にゼラチン化し、常圧の数分の一で軟化する。</p>
+                            <h3>Protocol B: 自然放置で余熱を使い切る</h3>
+                            <p>加圧終了後すぐに減圧せず、圧が自然に下がるまで放置する。高温が持続するこの間も反応は進行し、火を止めた後の時間まで調理に変換できる。</p>
+                            <h3>Protocol C: 香り食材は減圧後に加える</h3>
+                            <p>高温は香気成分を飛ばす。ハーブや薬味は加圧調理後、蓋を開けてから投入し、120℃の暴力から繊細な揮発成分を守る。</p>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>
